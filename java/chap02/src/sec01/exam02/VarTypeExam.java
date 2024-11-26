@@ -40,8 +40,8 @@ public class VarTypeExam {
 		System.out.println("s3 : " + s3);
 		System.out.println("s4 : " + s4);
 
-		String s5 = "홍길동\n김자바"; //enter
-		System.out.println("s5 : " + s5);
+		String s5 = "\n홍길동\n김자바"; //enter
+		System.out.println("s5 는 " + s5);
 
 
 	}
