@@ -25,9 +25,20 @@ public class VarExam {
 			x = y; // X와 Y값 지정??
 			System.out.println("x의 값은 : "+ x);
 			
-			System.out.println(j); // j값을 지정하지 않았으므로 에러나옴(변수값을 지정해야함)
+//			System.out.println(j); // j값이 범위밖에 있었으므로 에러나옴
 			int j = 1;
-			System.out.println("j : "+j);
-	}
+			System.out.println("j : "+ j);
+			
+			{
+				System.out.println("j : "+ j);
+			}
+			
+			{
+				int i = 0;
+				System.out.println("i : "+ i);
+			} // i변수 활용 가능구역
+//			System.out.println("i : "+ i); // i값이 범위밖에 있었으므로 에러나옴(i는 사라진 상태)
+			int i = 100; //이때는 다시 선언가능함(범위밖이므로)
+	} // j변수 활용 가능구역
 
 }
