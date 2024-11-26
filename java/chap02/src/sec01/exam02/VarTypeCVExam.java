@@ -53,6 +53,13 @@ public class VarTypeCVExam {
 		System.out.println(i_result);
 		
 //		int i_result2 = (int)total / count
+		
+	
+		//주최자가 내야하는 비용
+		double e2 = (total / count);
+		double f2 = e2;
+		System.out.println(f2);
+		 
 	}
 
 }
