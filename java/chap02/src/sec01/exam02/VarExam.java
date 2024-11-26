@@ -15,6 +15,19 @@ public class VarExam {
 			
 			int totalSecond = (totalMinute * 60);
 			System.out.println("총 " + totalSecond +"초");
+			
+			int x = 10;
+			int y = 20;
+			System.out.println("x의 값은 : "+ x);
+			System.out.println("x+y의 값은 : "+ (x+y)); // 변수지정을 하지 않았으므로 사라짐
+			// 'syso' + ctrl + space : 단축함수(System.out.println)
+			
+			x = y; // X와 Y값 지정??
+			System.out.println("x의 값은 : "+ x);
+			
+			System.out.println(j); // j값을 지정하지 않았으므로 에러나옴(변수값을 지정해야함)
+			int j = 1;
+			System.out.println("j : "+j);
 	}
 
 }
