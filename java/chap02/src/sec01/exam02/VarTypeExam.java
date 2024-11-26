@@ -42,8 +42,22 @@ public class VarTypeExam {
 
 		String s5 = "\n홍길동\n김자바"; //enter
 		System.out.println("s5 는 " + s5);
-
-
+		
+		System.out.print(1);
+		System.out.print(2);
+		System.out.println(3); // = 글씨 \n
+		//println : 다음줄부터 나옴, print : 이어서 나옴
+		
+		//double과 float와의 차이
+		double d = 0.1234567890123456789;
+		System.out.println("d : "+ d); // double 소수점 15자리 보장(17)
+		
+		float f = 0.1234567890123456789f;
+		System.out.println("f : "+ f); // float 소수점 7자리 보장(9)
+		
+		boolean b1 = true;
+		boolean b2 = false;
+		
 	}
 
 }
