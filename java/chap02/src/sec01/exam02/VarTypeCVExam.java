@@ -54,11 +54,12 @@ public class VarTypeCVExam {
 		
 //		int i_result2 = (int)total / count
 		
-	
 		//주최자가 내야하는 비용
 		double e2 = (total / count);
-		double f2 = e2;
-		System.out.println(f2);
+		int g2 = count / count;
+		float h2 = (float) ((e2 - g2) * count);
+		float f2 = (float) h2 + g2;
+		System.out.println("총 금액은 " + f2 + "만원입니다.\n슬퍼하지 마세요. 더치페이로 다시 돌려드릴게요.");
 		 
 	}
 
