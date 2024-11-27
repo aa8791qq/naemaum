@@ -60,8 +60,57 @@ public class OpExam {
 			(hm2 + "원 중에서 5000원짜리는 " + nm5000 + "개, 1000원짜리는 " + nm1000 + "개, 500원짜리는 "
 			+ nm500 + "개, 100원짜리는 " + nm100 + "개, 50원짜리는 " + nm50 + "개, 10원짜리는 " + nm10
 			+ "개, 1원짜리는 " + nm1t + "개입니다.");
-
-
+		
+		//모범답안
+		int money1 = 7234;
+		int cnt5000 = money1 / 5000;
+			int money2 = money1 % 5000;
+		int m1000 = money2 / 1000;
+			money2 = money1 % 1000;
+		int m500 = money2 / 500;
+			money2 = money1 % 500;
+		int m100 = money2 / 100;
+			money2 = money1 % 100;
+		int m50 = money2 / 50;
+			money2 = money1 % 50;
+		int m10 = money2 / 10;
+			money2 = money1 % 10;
+		int m1 = money2 / 1;
+		System.out.println
+			(money1 + "원 중에서 5000원짜리는 " + cnt5000 + "개, 1000원짜리는 " + m1000 + "개, 500원짜리는 "
+			+ m500 + "개, 100원짜리는 " + m100 + "개, 50원짜리는 " + m50 + "개, 10원짜리는 " + m10
+			+ "개, 1원짜리는 " + nm1t + "개입니다.");
+		
+		char C1 = 'A';
+		char t01 = (char)(C1 + 1);
+		System.out.println("" + 3 + 3.0);//숫자를 문자로 바꿀수 있는 가장쉬운방법
+	
+		String c2 = "100";
+		int c3 = Integer.parseInt(c2);
+		System.out.println(c3 + 3);
+		
+		boolean bool = 3 > 5;
+		System.out.println(bool);
+		
+		System.out.println(1 == 1);
+		System.out.println(1 == 1.0);
+		System.out.println(1 == 1.0f);
+		System.out.println("소수점");
+		System.out.println(1.01==1.01f); //소수점 이하는 정확하지 않아서 매번 값이 다르다.(형변환 필수다.)
+		System.out.println((float)1.01 == 1.01f);
+		System.out.println("문자비교");
+		System.out.println( 'c' < 'j'); //비교가능(아스키코드로 기억)
+//		System.out.println( "ab" < "ac" ); 안된다.
+		
+		System.out.println(" 3 != 3 : " + (3 != 3));
+		
+		String s1 = "안유진";
+		String s2 = "안유진";
+		System.out.println(s1 == s2); // 이렇게 해선 안된다.(글씨)
+		System.out.println(s1.equals(s2)); // 이렇게 해야 함(글씨, string 변수는 .equals 비교)
+		System.out.println(!s1.equals(s2)); // 이렇게 해야 함(글씨, string 변수는 .equals 비교)
+		
+		
 	}
 
 }
