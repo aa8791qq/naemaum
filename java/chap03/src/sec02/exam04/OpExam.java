@@ -110,6 +110,68 @@ public class OpExam {
 		System.out.println(s1.equals(s2)); // 이렇게 해야 함(글씨, string 변수는 .equals 비교)
 		System.out.println(!s1.equals(s2)); // 이렇게 해야 함(글씨, string 변수는 .equals 비교)
 		
+		int i1 = 87;
+		System.out.println(i1 + "은 b학점인가?");
+		System.out.println(	(i1 > 80) && (i1 < 90) );
+		System.out.println(	(i1 > 80) || (i1 < 90) );
+		
+//		숨겨진 비트연산 보기 필수		
+		System.out.println( 10 | 1 );
+		System.out.println( 10 | 3 );
+		
+		int k1 = 7;
+		int k2 = 15;
+		int k3 = 17;
+		System.out.println("k3이 가장 큰값인가?");
+		//k3가 k1보다 크거나 같고, k3가 k2보다 크거나 같으면
+		boolean bool2 = (k1 < k3 && k2 < k3);
+		System.out.println(bool2);
+		
+		int m01 = 5;
+		m01 += 2; //m1 = m1 + 2
+		
+		int n1 = 10;
+		n1 += 1;
+		n1++;
+		
+		n1 -= 1;
+		n1--;
+		
+		int n2 = 10;
+		System.out.println(++n2);
+		System.out.println(n2++);
+		// n2 == 12
+		System.out.println(n2);
+		
+		int x = 1;
+		int y = 1;
+		int res1 = ++x + 10; //11  //*12(정답)
+		int res2 = y++ + 10; //10  //*11(정답)
+		System.out.println(res1);
+		System.out.println(res2);
+		
+		int z = 1;
+		//				    1  +  3
+		System.out.println(z++ + ++z); // 쓰고 더하고, 더하고 쓰고
+		
+		int z1 = 8;
+		z = z + 1;
+		
+		z = z + 1;
+		int z2 = 9;
+		
+		System.out.println(z1+z2);
+		
+		System.out.println(z);
+		
+		int score = 95;
+		char grade = (score > 90) ? 'A' : 'B'; //if 축약형
+		
+		//q5.
+		
+		
+		//q6.
+		
 		
 	}
 
