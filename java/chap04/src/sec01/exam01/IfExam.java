@@ -208,7 +208,7 @@ public class IfExam {
 //		} else if (month >= 9 && month <= 11) {
 //			System.out.println("가을");
 //		} else if (month = 12 && month <= 2) {
-//				System.out.println("겨울");
+//		1		System.out.println("겨울");
 //		}
 //		//정답
 		int month = 11;
