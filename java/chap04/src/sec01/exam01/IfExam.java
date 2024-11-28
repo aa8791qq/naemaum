@@ -212,9 +212,10 @@ public class IfExam {
 //		}
 //		//정답
 		int month = 11;
-		// 방어코딩----------------->
-//		if(month < 1) month = 1;
-//		if(month > 12) month = 12; 
+		// 방어코딩----------------->??
+		if(month < 1) month = 1;
+		if(month > 12) month = 12;
+		// -------------------------->
 		if( month >= 1 && month <= 12 ) {		
 			if (month >= 3 && month <= 5) {
 				System.out.println("봄");
@@ -266,6 +267,6 @@ public class IfExam {
 	String inputdata = scanner.nextLine();
 }
 		
-		// Scanner scan = new Scanner(System.in);
-//	System.out.println("월을 입력해볼래?");
+// Scanner scan = new Scanner(System.in);
+//	System.out.println("월을 입력해볼래1?");
 //	int zz = scan.nextInt();
