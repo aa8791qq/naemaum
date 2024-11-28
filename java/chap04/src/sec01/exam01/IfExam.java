@@ -7,7 +7,8 @@ public class IfExam {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int score = 93;
+		int score = 96;
+//		변수를 입력해서 나오게 하는 방법
 //		Scanner scan = new Scanner(System.in);
 //		int score = scan.nextInt();
 		
@@ -20,5 +21,66 @@ public class IfExam {
 			System.out.println("점수가 90보다 작습니다.");
 			System.out.println("등급은 B입니다");
 		}
+	
+		// if(!(score >= 90))
+		if(score >= 90) {
+			System.out.println("점수가 90보다 큽니다");
+			System.out.println("등급은 A입니다.");
+		} else {
+			System.out.println("점수가 90보다 작습니다.");
+			System.out.println("등급은 B입니다");
+		}
+		
+		if(score >= 90) {
+			System.out.println("\n90점 이상입니다");
+			System.out.println("등급 A");
+		} else if (score < 90 && score >= 80 ) {
+			System.out.println("80~ 90점입니다");
+			System.out.println("등급 B");
+		} else if (score < 80 && score >= 70 ) {
+			System.out.println("70~ 80점입니다");
+			System.out.println("등급 C");
+		} else if (score < 70 && score >= 60 ) {
+			System.out.println("70~79점입니다");
+			System.out.println("등급 D");
+		} else {
+			System.out.println("60점 미만입니다");
+			System.out.println("등급 E");
+		}
+
+//케이스 2(그리고~, 연관이 있음)
+		if(score >= 90) {
+			System.out.println("90점 이상입니다");
+			
+			if(score >= 95) {
+				System.out.println("장학금 대상입니다");
+			}
+		}
+		
+//케이스 3(독립작동, 연관이 없음)
+		if(score >= 90) {
+			System.out.println("\n90점 이상입니다");
+		}	
+		if(score >= 95) {
+			System.out.println("장학금 대상입니다");
+		}
+		
+//문제1.
+		// z1이 x1과 y1사이에 있는가?
+		int x1 = 15;
+		int y1 = 20;
+		int z1 = 17;
+		
+//		boolean R1 = z1 >= x1;
+//		boolean R2 = z1 <= y1;
+
+		if( z1 >= x1 && z1 <= y1) {
+		/* if( ! (z1 >= x1 && z1 <= y1) )
+	* --> if( (z1 < x1) || (z1 > y1) ) */
+			System.out.println(z1 +"사이");
+		} else {
+			System.out.println(z1 + "사이아님");
+		}
+		
 	}
 }
