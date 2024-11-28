@@ -51,10 +51,9 @@ public class IfExam {
 //케이스 2(그리고~, 연관이 있음)
 		if (score >= 90) {
 			System.out.println("90점 이상입니다");
-
 			if (score >= 95) {
 				System.out.println("장학금 대상입니다");
-			}
+			}	
 		}
 
 //케이스 3(독립작동, 연관이 없음)
@@ -116,16 +115,57 @@ public class IfExam {
 //			}
 //		}
 		
-		//정답
+		//정답 --->
+		int yt = 3;
+		int t = 1;
 		
+		if(t <= 0) {
+			System.out.println("영하");
+			System.out.println("영하 " + -t + "도 입니다");
+		} else {
+			System.out.println("영상");
+			System.out.println("영상 " + t + "도 입니다");
+		}
+		
+		int diff = yt - t;
+		if(diff < 0) {
+			diff *= -1;
+		}
+		if(t > yt) {
+			System.out.println("어제보다 온도가 높습니다.");
+			System.out.printf("어제보다 %d가 높습니다", diff);
+		} else {
+			System.out.println("어제보다 온도가 낮습니다.");
+			System.out.printf("어제보다 %d가 낮습니다", diff);
+		}
 
 // 문제3.
 		/*
 		 * 어떤 수가 있을 때 " 입력한 수는 100보다 크/작거나 같으며 양(0포함)/음수이고 홀/짝수입니다"
 		 */
 		
-		//정답
+		//정답 --->
+		int q3 = 123;
+		if(q3 > 100) {
+			System.out.println("입력한 수는 100보다 큰 수 이며");
+		} else if (q3 < 100) {
+			System.out.println("입력한 수는 100보다 작은 수 이며");
+		} else {
+			System.out.println("입력한 수는 100과 같은 수 이며");
+		}
 
+		if(q3>= 0) {
+			System.out.println("양수이고");
+		} else {
+			System.out.println("음수이고");
+		}
+		
+		if(q3 % 2 == 0) {
+			System.out.println("짝수입니다.");
+		} else {
+			System.out.println("홀수입니다.");
+		}
+		
 //문제 4
 		/*
 		 * a, b 두 수가 있을떼 둘 중에 큰값 출력
@@ -153,6 +193,7 @@ public class IfExam {
 		} else {
 			System.out.println("그 외");
 		}
+		
 //문제 6
 		/*
 		 * 월에 따라서 4계절을 출력하시오(봄-> 3~5, 여름 -> 6~8, 가을-> 9~11, 겨울 -> 12~2)
@@ -170,10 +211,20 @@ public class IfExam {
 //				System.out.println("겨울");
 //		}
 //		//정답
-		
+		int month = 11;
+		if (month >= 3 && month <= 5) {
+			System.out.println("봄");
+		} else if (month >= 6 && month <= 8) {
+			System.out.println("여름");
+		} else if (month >= 9 && month <= 11) {
+			System.out.println("가을");
+		} else {
+			System.out.println("겨울");
+		}
+		// else if( m == 12 || m ==1 || m == 2)
+		}
+}
 		
 		// Scanner scan = new Scanner(System.in);
 //	System.out.println("월을 입력해볼래?");
 //	int zz = scan.nextInt();
-	}
-}
