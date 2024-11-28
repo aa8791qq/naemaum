@@ -236,7 +236,18 @@ public class IfExam {
 		 */
 		double rand = Math.random();
 		System.out.println(rand);
-		랜덤게임1
+		
+		double rand2 = Math.random()*6;
+				int rand3 = (int)rand2;
+				int rand4 = rand3+1;
+				System.out.println(rand4);
+		
+		/*주사위 : 1~6
+		 * (0~5) + 1 //시작값
+		 * 0*5+1 < rand*5 < 1*5
+		 * 0*(5+1) < rand *(5+1) < 1*(5+1)
+		 * int(rand)+1
+		 */
 	}
 	
 }
