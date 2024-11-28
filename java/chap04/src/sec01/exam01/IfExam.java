@@ -236,7 +236,7 @@ public class IfExam {
 		 */
 		double rand = Math.random();
 		System.out.println(rand);
-		랜덤게임
+		랜덤게임1
 	}
 	
 }
