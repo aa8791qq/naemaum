@@ -147,7 +147,7 @@ public class IfExam {
 		//정답 --->
 		int q3 = 123;
 		if(q3 > 100) {
-			System.out.println("입력한 수는 100보다 큰 수 이며");
+			System.out.println("\n입력한 수는 100보다 큰 수 이며");
 		} else if (q3 < 100) {
 			System.out.println("입력한 수는 100보다 작은 수 이며");
 		} else {
@@ -212,7 +212,7 @@ public class IfExam {
 //		}
 //		//정답
 		int month = 11;
-		// 방어코딩
+		// 방어코딩----------------->
 //		if(month < 1) month = 1;
 //		if(month > 12) month = 12; 
 		if( month >= 1 && month <= 12 ) {		
@@ -229,7 +229,7 @@ public class IfExam {
 		} else {
 				System.out.println("정확한 월을 입력해주면 안되니??");
 		}
-	//random 사용법
+	//random 사용법 ------------------>
 		/*
 		 * Math.random();
 		 * 0 <= Math.random() < 1
