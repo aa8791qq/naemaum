@@ -157,19 +157,19 @@ public class IfExam {
 		/*
 		 * 월에 따라서 4계절을 출력하시오(봄-> 3~5, 여름 -> 6~8, 가을-> 9~11, 겨울 -> 12~2)
 		 */
-		int month = 11;
-		if( 0 > month && month <=12) {
-			System.out.println("출력금지");
-		} else if (month >= 3 && month <= 5) {
-			System.out.println("봄");
-		} else if (month >= 6 && month <= 8) {
-			System.out.println("여름");
-		} else if (month >= 9 && month <= 11) {
-			System.out.println("가을");
-		} else if (month = 12 && month <= 2) {
-				System.out.println("겨울");
-		}
-		//정답
+//		int month = 11;
+//		if( 0 > month && month <=12) {
+//			System.out.println("출력금지");
+//		} else if (month >= 3 && month <= 5) {
+//			System.out.println("봄");
+//		} else if (month >= 6 && month <= 8) {
+//			System.out.println("여름");
+//		} else if (month >= 9 && month <= 11) {
+//			System.out.println("가을");
+//		} else if (month = 12 && month <= 2) {
+//				System.out.println("겨울");
+//		}
+//		//정답
 		
 		
 		// Scanner scan = new Scanner(System.in);
