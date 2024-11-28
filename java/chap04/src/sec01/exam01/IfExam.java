@@ -257,6 +257,13 @@ public class IfExam {
 		
 	}
 	
+	//주사위의 번호 뽑기
+	
+	
+	//문제
+	//가위바위보해서 이기게 만들어보세요~(스캐너랑 랜덤으로 뽑기)
+	Scanner scanner = new Scanner(System.in);
+	String inputdata = scanner.nextLine();
 }
 		
 		// Scanner scan = new Scanner(System.in);
