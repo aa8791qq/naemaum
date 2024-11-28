@@ -82,5 +82,7 @@ public class IfExam {
 			System.out.println(z1 + "사이아님");
 		}
 		
+		??
+		
 	}
 }
