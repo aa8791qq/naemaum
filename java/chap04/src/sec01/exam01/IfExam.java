@@ -194,7 +194,7 @@ public class IfExam {
 			System.out.println("그 외");
 		}
 		
-//문제 6
+//문제 6 ---------->
 		/*
 		 * 월에 따라서 4계절을 출력하시오(봄-> 3~5, 여름 -> 6~8, 가을-> 9~11, 겨울 -> 12~2)
 		 */
@@ -212,17 +212,33 @@ public class IfExam {
 //		}
 //		//정답
 		int month = 11;
-		if (month >= 3 && month <= 5) {
-			System.out.println("봄");
-		} else if (month >= 6 && month <= 8) {
-			System.out.println("여름");
-		} else if (month >= 9 && month <= 11) {
-			System.out.println("가을");
+		// 방어코딩
+//		if(month < 1) month = 1;
+//		if(month > 12) month = 12; 
+		if( month >= 1 && month <= 12 ) {		
+			if (month >= 3 && month <= 5) {
+				System.out.println("봄");
+			} else if (month >= 6 && month <= 8) {
+				System.out.println("여름");
+			} else if (month >= 9 && month <= 11) {
+				System.out.println("가을");
+			} else {
+				System.out.println("겨울");
+			}
+			// else if( m == 12 || m ==1 || m == 2)
 		} else {
-			System.out.println("겨울");
+				System.out.println("정확한 월을 입력해주면 안되니??");
 		}
-		// else if( m == 12 || m ==1 || m == 2)
-		}
+	//random 사용법
+		/*
+		 * Math.random();
+		 * 0 <= Math.random() < 1
+		 */
+		double rand = Math.random();
+		System.out.println(rand);
+		
+	}
+	
 }
 		
 		// Scanner scan = new Scanner(System.in);
