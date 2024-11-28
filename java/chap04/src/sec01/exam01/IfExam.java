@@ -252,6 +252,9 @@ public class IfExam {
 		//쉽게 사용하기
 		int rnd1 = (int) (Math.random()*60);
 		int rnd2 = rnd1 % 6;
+		int rnd3 = rnd2 + 1;
+		System.out.println(rnd3);
+		
 	}
 	
 }
