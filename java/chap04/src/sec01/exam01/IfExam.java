@@ -53,7 +53,7 @@ public class IfExam {
 			System.out.println("90점 이상입니다");
 			if (score >= 95) {
 				System.out.println("장학금 대상입니다");
-			}	
+			}
 		}
 
 //케이스 3(독립작동, 연관이 없음)
@@ -114,24 +114,24 @@ public class IfExam {
 //				}
 //			}
 //		}
-		
-		//정답 --->
+
+		// 정답 --->
 		int yt = 3;
 		int t = 1;
-		
-		if(t <= 0) {
+
+		if (t <= 0) {
 			System.out.println("영하");
 			System.out.println("영하 " + -t + "도 입니다");
 		} else {
 			System.out.println("영상");
 			System.out.println("영상 " + t + "도 입니다");
 		}
-		
+
 		int diff = yt - t;
-		if(diff < 0) {
+		if (diff < 0) {
 			diff *= -1;
 		}
-		if(t > yt) {
+		if (t > yt) {
 			System.out.println("어제보다 온도가 높습니다.");
 			System.out.printf("어제보다 %d가 높습니다", diff);
 		} else {
@@ -143,10 +143,10 @@ public class IfExam {
 		/*
 		 * 어떤 수가 있을 때 " 입력한 수는 100보다 크/작거나 같으며 양(0포함)/음수이고 홀/짝수입니다"
 		 */
-		
-		//정답 --->
+
+		// 정답 --->
 		int q3 = 123;
-		if(q3 > 100) {
+		if (q3 > 100) {
 			System.out.println("\n입력한 수는 100보다 큰 수 이며");
 		} else if (q3 < 100) {
 			System.out.println("입력한 수는 100보다 작은 수 이며");
@@ -154,18 +154,18 @@ public class IfExam {
 			System.out.println("입력한 수는 100과 같은 수 이며");
 		}
 
-		if(q3>= 0) {
+		if (q3 >= 0) {
 			System.out.println("양수이고");
 		} else {
 			System.out.println("음수이고");
 		}
-		
-		if(q3 % 2 == 0) {
+
+		if (q3 % 2 == 0) {
 			System.out.println("짝수입니다.");
 		} else {
 			System.out.println("홀수입니다.");
 		}
-		
+
 //문제 4
 		/*
 		 * a, b 두 수가 있을떼 둘 중에 큰값 출력
@@ -178,7 +178,7 @@ public class IfExam {
 		} else {
 			System.out.println(b);
 		}
-		
+
 //문제 5
 		/*
 		 * 숫자가 1~3은 일, 이, 삼 .. 그 외에는 "그외"
@@ -193,7 +193,7 @@ public class IfExam {
 		} else {
 			System.out.println("그 외");
 		}
-		
+
 //문제 6 ---------->
 		/*
 		 * 월에 따라서 4계절을 출력하시오(봄-> 3~5, 여름 -> 6~8, 가을-> 9~11, 겨울 -> 12~2)
@@ -213,10 +213,12 @@ public class IfExam {
 //		//정답
 		int month = 11;
 		// 방어코딩----------------->??
-		if(month < 1) month = 1;
-		if(month > 12) month = 12;
+		if (month < 1)
+			month = 1;
+		if (month > 12)
+			month = 12;
 		// -------------------------->
-		if( month >= 1 && month <= 12 ) {		
+		if (month >= 1 && month <= 12) {
 			if (month >= 3 && month <= 5) {
 				System.out.println("봄");
 			} else if (month >= 6 && month <= 8) {
@@ -228,45 +230,87 @@ public class IfExam {
 			}
 			// else if( m == 12 || m ==1 || m == 2)
 		} else {
-				System.out.println("정확한 월을 입력해주면 안되니??");
+			System.out.println("정확한 월을 입력해주면 안되니??");
 		}
-	//random 사용법 ------------------>
+		// random 사용법 ------------------>
 		/*
-		 * Math.random();
-		 * 0 <= Math.random() < 1
+		 * Math.random(); 0 <= Math.random() < 1
 		 */
 		double rand = Math.random();
 		System.out.println(rand);
-		
-		double rand2 = Math.random()*6;
-				int rand3 = (int)rand2;
-				int rand4 = rand3+1;
-				System.out.println(rand4);
-		
-		/*주사위 : 1~6
-		 * (0~5) + 1 //시작값
-		 * 0*5+1 < rand*5 < 1*5
-		 * 0*(5+1) < rand *(5+1) < 1*(5+1)
-		 * int(rand)+1
+
+		double rand2 = Math.random() * 6;
+		int rand3 = (int) rand2;
+		int rand4 = rand3 + 1;
+		System.out.println(rand4);
+
+		/*
+		 * 주사위 : 1~6 (0~5) + 1 //시작값 0*5+1 < rand*5 < 1*5 0*(5+1) < rand *(5+1) <
+		 * 1*(5+1) int(rand)+1
 		 */
-				
-		//쉽게 사용하기
-		int rnd1 = (int) (Math.random()*60);
+
+		// 쉽게 사용하기
+		int rnd1 = (int) (Math.random() * 60);
 		int rnd2 = rnd1 % 6;
 		int rnd3 = rnd2 + 1;
 		System.out.println(rnd3);
 		
-	}
-	
-	//주사위의 번호 뽑기
-	
-	
-	//문제
-	//가위바위보해서 이기게 만들어보세요~(스캐너랑 랜덤으로 뽑기)
-	Scanner scanner = new Scanner(System.in);
-	String inputdata = scanner.nextLine();
-}
+		// 주사위의 번호 뽑기
+
+		// 문제
+		// 가위바위보해서 이기게 만들어보세요~(스캐너랑 랜덤으로 뽑기)
+//		Scanner scanner = new Scanner(System.in);
+//		String inputdata = scanner.nextLine();
+//		System.out.println(inputdata);
+
+		// 어려운 문제 1.
+		// 두자리 정수가 10의 자리와 1의자리가 같은지 판단(못품)
+		int nx = 33;
+		nx = 64;
 		
+		int n10 = nx / 10;
+		int n1	= nx % 10;
+		
+		if(n10 == n1) {
+			System.out.println("같음");
+		} else {
+			System.out.println("다름");
+		}
+
+		// 어려운 문제 2.
+		// 사각형의 한쪽 모서리 : xa: 10, ya: 20
+		// 다른쪽 모서리 : xb: 90, yb: 100
+		// 새로운 점 : xc, yc가 사각형에 포함 되는가?
+		int xx1 = 10;
+		int yy1 = 20;
+		
+		int xx2 = 90;
+		int yy2 = 100;
+		
+		int xx3 = 30;
+		int yy3 = 40;
+		
+		if (xx1 <= xx3 && xx2 >= xx3) {
+		}
+		
+		
+		// swap
+		// 수박, 볼링공
+		String str1 = "수박";
+		String str2 = "볼링공";
+		
+		String temp = str1;
+		str1 = str2;
+		str2 = temp;
+		System.out.println(str1);
+		System.out.println(str2);
+		
+
+	}
+
+	
+}
+
 // Scanner scan = new Scanner(System.in);
 //	System.out.println("월을 입력해볼래1?");
 //	int zz = scan.nextInt();
