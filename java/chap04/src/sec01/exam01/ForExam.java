@@ -6,83 +6,114 @@ public class ForExam {
 		// TODO Auto-generated method stub
 
 		int sum = 0;
-		
-		//1씩 5번 증가하고 싶어.....
+
+		// 1씩 5번 증가하고 싶어.....
 		sum = sum + 1;
 		sum = sum + 1;
 		sum = sum + 1;
 		sum = sum + 1;
 		sum = sum + 1;
 		System.out.println(sum);
-		
+
 		// n(n+1) / 2 : n까지의 합
 		sum = 0;
-		sum = sum +1;
-		sum = sum +2;
-		sum = sum +3;
-		sum = sum +4;
-		sum = sum +5;
+		sum = sum + 1;
+		sum = sum + 2;
+		sum = sum + 3;
+		sum = sum + 4;
+		sum = sum + 5;
 		System.out.println(sum);
-		
+
 		sum = 0;
-		int i= 1;
+		int i = 1;
 		i++;
-		sum = sum + i; //1
+		sum = sum + i; // 1
 		i++;
-		sum = sum + i; //2
-		
+		sum = sum + i; // 2
+
 		/*
-		 * 반복문을 만드는 원리
-		 * 1. 반복되는 것을 찾기
-		 * 		ctrl + c, v 했을 때 그대로인것.
-		 * 2. 반복되지 않는 것을 찾기
-		 * 		규칙(패턴)을 찾는다.
-		 * 		변수를 만들어서 더 이상 바뀌지 않게 만든다.
-		 * 3. 시작 조건 찾기
-		 * 4. 종료 조건 찾기
+		 * 반복문을 만드는 원리 1. 반복되는 것을 찾기 ctrl + c, v 했을 때 그대로인것. 2. 반복되지 않는 것을 찾기 규칙(패턴)을
+		 * 찾는다. 변수를 만들어서 더 이상 바뀌지 않게 만든다. 3. 시작 조건 찾기 4. 종료 조건 찾기
 		 * 
-		 * 반복횟수를 아는 경우 : for
-		 * 반복횟수를 모를 경우 : while
+		 * 반복횟수를 아는 경우 : for 반복횟수를 모를 경우 : while
 		 */
-		
+
 		int sum2 = 0;
-		for(int e = 1; e <= 100000; e++) {
+		for (int e = 1; e <= 100000; e++) {
 			sum2 = sum2 + e;
 		}
 		System.out.println(sum2);
-		
+
 		int sum3 = 0;
-		for(int e = 1; e <= 100; e++) {
+		for (int e = 1; e <= 100; e++) {
 //			System.out.println(e);
 			sum3 = sum3 + e;
 //			System.out.println(sum3);
 		}
 		System.out.println(sum3);
-		
-		//1부터 10까지 실행
+
+		// 1부터 10까지 실행
 		int number = 1;
-		for(int e = 1 ; e <= 10 ; e++) {
+		for (int e = 1; e <= 10; e++) {
 			System.out.println(e);
 		}
-		
-		//100까지 합
+
+		// 100까지 합
 		int sum100for = 0;
-		for(int i2=1; i2<=100; i2 += 1) {
+		for (int i2 = 1; i2 <= 100; i2 += 1) {
 			sum100for += i2;
 		}
 		System.out.println(sum100for);
-		
+
 		// q
 		// 10~1 출력하세요
 //		int number2 = 10;
 //		for(int e = 10; e >= 1 && e <= 10;) {
 //			number2 -= e;
 //			System.out.println(number2);
-		
-		int number2 = 10;
-		for(int e = 10; e >= 1 && e <= 10; e -= 1) {
+
+//		int number2 = 10; //불필요한 코드
+		for (int e = 10; e >= 1; e -= 1) {
 			System.out.println(e);
 		}
+
+//		1~ 20 까지 짝수만 출력하시오
+//		for(int in1 = 1; in1 <= 20; in1 += 1) {
+//		int e = 20;
+		for (int ij1 = 0; ij1 <= 20; ij1 += 2) {
+			System.out.println(ij1);
+		}
+
+//		1~ 20 까지 3의 배수만 출력하시오
+		for (int ic1 = 0; ic1 < 20; ic1 += 3) {
+			System.out.println(ic1);
+		}
+
+//		1~5 까지 모두 출력하면서 홀짝구분(1:홀수)
+		for (int ih1 = 1; ih1 <= 5; ih1 += 1) {
+			if (ih1 % 2 != 0) {
+				System.out.println(ih1 + " : 홀수");
+			} else {
+				System.out.println(ih1 + " : 짝수");
+			}
+		}
+
+//		1~20까지 홀수의 합
+		int hvalue = 1;
+		for (int hhap = 1; hhap <= 20; hhap += 1) {
+			if (hhap % 2 == 0) {
+				hvalue += 1;
+			}
+			System.out.println(hvalue);
+
+		}
+
+//		1~20까지 홀수의 갯수
+
+//		1~10까지 옆으로 3개씩 출력( 1 2 3 / 4 5 6)
+
+//		구구단 2단 (2 * 1 = 2)
+
 	}
 
 }
