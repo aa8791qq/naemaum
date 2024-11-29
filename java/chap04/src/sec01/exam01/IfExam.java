@@ -312,9 +312,9 @@ public class IfExam {
 		int upc = 1; // scanner
 		int npc = 3; // random
 		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("뭘 낼래?");
-		upc = scan.nextInt();
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("뭘 낼래?");
+//		upc = scan.nextInt();
 
 		// 1 ~ 3 (0 ~ 2)+1
 		npc = (int)(Math.random()*3) + 1;
@@ -424,10 +424,52 @@ public class IfExam {
 			System.out.println("다시입력해줘");
 			break;
 		}
-	}
-
+		
+		// 통장잔액이 만원이 있을때 출금액을 입력 받아서 출금하시오
+		// (만원보다 높으면 잔액부족, 이하이면 얼마 출금했고 얼마남았습니다.)
+		// 음수 입력시 정확히 입력해주세요. (변수변경(금액대신 am변수), 잔액 재선언)
+		
+		int am = 10000;
+		int aom = am;
+		int fim = am;
+		boolean x = true;
+		boolean y = false;
+		Scanner scan2 = new Scanner(System.in);
+		System.out.println("출금액을 입력해주세요?");
+		aom = scan2.nextInt();
+		
+		if(aom > am) {
+			System.out.println("잔액이 부족합니다");
+		} else if ( aom < 0 ) {
+			System.out.println("다시입력해주세요. 아니면 마이너스통장을 개설하시겠습니까?");
+		} else if ( aom > 0 && aom < am) {
+			System.out.println(aom + "출금했고 " + (am - aom) + "남았습니다");
+		} else if ( (am-aom) == 0) {
+			System.out.println("잔액이 0원입니다. /n 추가입금을 하시겠습니까?");
+		} 
+		
+		Scanner scan4 = new Scanner(System.in);
+		System.out.println("추가 입금하시겠습니끼?");
+		am = scan4.nextInt(); // 아니오, 예에서 예를 하면 이어서 아니오하면 멈추기
+		  //스위치
+		am = am - aom; //
+		
+		switch(am) {
+		case 0:
+			Scanner scan3 = new Scanner(System.in);
+			System.out.println("입금액을 입력해주세요?");
+			fim = scan3.nextInt();
+			if (fim <= 0) {
+				System.out.println("다시 입력해주세요");
+			} else if( fim >1 ) {
+				System.out.println(fim + "원을 입금했습니다 현재 잔액은 " + (fim + am) + "원입니다");
+			}
+		default:
+			am = am - fim;
+		}
+	
 }
-
+}
 // Scanner scan = new Scanner(System.in);
 //	System.out.println("월을 입력해볼래1?");
 //	int zz = scan.nextInt();
