@@ -44,6 +44,20 @@ public class ForExam {
 		 * 반복횟수를 아는 경우 : for
 		 * 반복횟수를 모를 경우 : while
 		 */
+		
+		int sum2 = 0;
+		for(int e = 1; e <= 100000; e++) {
+			sum2 = sum2 + e;
+		}
+		System.out.println(sum2);
+		
+		int sum3 = 0;
+		for(int e = 1; e <= 100; e++) {
+//			System.out.println(e);
+			sum3 = sum3 + e;
+//			System.out.println(sum3);
+		}
+		System.out.println(sum3);
 	}
 
 }

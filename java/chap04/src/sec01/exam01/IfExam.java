@@ -432,8 +432,7 @@ public class IfExam {
 		int am = 10000;
 		int aom = am;
 		int fim = am;
-		boolean x = true;
-		boolean y = false;
+		String ans1 = "y";
 		Scanner scan2 = new Scanner(System.in);
 		System.out.println("출금액을 입력해주세요?");
 		aom = scan2.nextInt();
@@ -450,9 +449,13 @@ public class IfExam {
 		
 		Scanner scan4 = new Scanner(System.in);
 		System.out.println("추가 입금하시겠습니끼?");
-		am = scan4.nextInt(); // 아니오, 예에서 예를 하면 이어서 아니오하면 멈추기
+		ans1 = scan4.nextLine(); // 아니오, 예에서 예를 하면 이어서 아니오하면 멈추기
+		
+		case
+		
 		  //스위치
-		am = am - aom; //
+		
+		am = am - aom;
 		
 		switch(am) {
 		case 0:
