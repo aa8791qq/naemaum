@@ -257,12 +257,6 @@ public class IfExam {
 		
 		// 주사위의 번호 뽑기
 
-		// 문제
-		// 가위바위보해서 이기게 만들어보세요~(스캐너랑 랜덤으로 뽑기)
-//		Scanner scanner = new Scanner(System.in);
-//		String inputdata = scanner.nextLine();
-//		System.out.println(inputdata);
-
 		// 어려운 문제 1.
 		// 두자리 정수가 10의 자리와 1의자리가 같은지 판단(못품)
 		int nx = 33;
@@ -290,9 +284,15 @@ public class IfExam {
 		int xx3 = 30;
 		int yy3 = 40;
 		
-		if (xx1 <= xx3 && xx2 >= xx3) {
+		if ( 
+				(xx1 <= xx3 && xx2 >= xx3)
+				&&
+				(yy1 <= yy3 && yy3 <= yy2)
+			) {
+			System.out.println("사각형과 충돌");
+		} else {
+			System.out.println("사각형과 충돌하지 않음");
 		}
-		
 		
 		// swap
 		// 수박, 볼링공
@@ -305,10 +305,127 @@ public class IfExam {
 		System.out.println(str1);
 		System.out.println(str2);
 		
+		// 문제
+		// 가위바위보해서 이기게 만들어보세요~(스캐너랑 랜덤으로 뽑기)
+		// 가위바위보 게임(숫자)
+		// 1 = 가위, 2 = 바위, 3 = 보
+		int upc = 1; // scanner
+		int npc = 3; // random
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("뭘 낼래?");
+		upc = scan.nextInt();
 
+		// 1 ~ 3 (0 ~ 2)+1
+		npc = (int)(Math.random()*3) + 1;
+		System.out.println(npc);
+		
+		
+//		if (upc == npc)
+		if (upc == 1 && npc == 1) {
+			System.out.println("비김");
+		} else if (upc == 1 && npc == 3 ) {
+			System.out.println("이김");
+		} else if (upc == 1 && npc == 2 ) {
+			System.out.println("짐");
+		} else if (upc == 2 && npc == 1) {
+			System.out.println("비김");
+		} else if (upc == 2 && npc == 3 ) {
+			System.out.println("이김");
+		} else if (upc == 2 && npc == 2 ) {
+			System.out.println("짐");
+		} else if (upc == 3 && npc == 1) {
+			System.out.println("비김");
+		} else if (upc == 3 && npc == 3 ) {
+			System.out.println("이김");
+		} else if (upc == 3 && npc == 2 ) {
+			System.out.println("짐");
+		}
+		
+		//복권
+		System.out.println((int)((Math.random()*45) + 1));
+		
+		//주사위
+		int p21 = /* (int) (Math.random() * 6) + 1 */ 1;
+		
+		
+		// 주사위(스위치)
+		switch(p21) {
+			case 1 :
+				System.out.println(p21);
+				break;
+			case 2 :
+				System.out.println(p21);
+				break;
+			case 3 :
+				System.out.println(p21);
+				break;
+			case 4 :
+				System.out.println(p21);
+				break;	
+			case 5 :
+				System.out.println(p21);
+				break;
+			case 6 :
+				System.out.println(p21);
+				break;
+			default :
+				System.out.println("주사위 허용범위 밖인데... 다시 입력해줄래?");
+				break;
+		}
+		
+		// 계절추출
+		int mn1 = 11;
+		/*	case : 1
+			case : 2
+			case : 3
+			syso
+			break
+		*/
+		
+		switch (mn1) {
+		case 1 :
+			System.out.println("겨울");
+			break;
+		case 2 :
+			System.out.println("겨울");
+			break;
+		case 3 :
+			System.out.println("봄");
+			break;
+		case 4 :
+			System.out.println("봄");
+			break;
+		case 5 :
+			System.out.println("봄");
+			break;
+		case 6 :
+			System.out.println("여름");
+			break;
+		case 7 :
+			System.out.println("여름");
+			break;
+		case 8 :
+			System.out.println("여름");
+			break;
+		case 9 :
+			System.out.println("가을");
+			break;
+		case 10 :
+			System.out.println("가을");
+			break;
+		case 11 :
+			System.out.println("가울");
+			break;
+		case 12 :
+			System.out.println("겨울");
+			break;
+		default :
+			System.out.println("다시입력해줘");
+			break;
+		}
 	}
 
-	
 }
 
 // Scanner scan = new Scanner(System.in);
