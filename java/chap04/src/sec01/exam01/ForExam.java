@@ -98,17 +98,17 @@ public class ForExam {
 			}
 		}
 
-//		1~20까지 홀수의 합
-		int hvalue = 1;
-		for (int hhap = 1; hhap <= 20; hhap += 1) {
-			if (hhap % 2 == 0) {
-				hvalue += 1;
+//		1~20까지 홀수의 합 //------------------
+		int hao2 = 1;
+		for (int hhap = 1; (hhap <= 20); hhap += 2) {
+			System.out.println(hao2 = hhap);
 			}
-			System.out.println(hvalue);
 
-		}
-
-//		1~20까지 홀수의 갯수
+////		1~20까지 홀수의 갯수 //-------------------
+//		for (int ih1 = 1; ih1 <= 20; ih1 += 1) {
+//			if (ih1 % 2 != 0) {
+//				System.out.println(ih1);
+//			}
 
 //		1~10까지 옆으로 3개씩 출력( 1 2 3 / 4 5 6)
 
