@@ -58,6 +58,27 @@ public class ForExam {
 //			System.out.println(sum3);
 		}
 		System.out.println(sum3);
+		
+		//1부터 10까지 실행
+		int number = 1;
+		for(int e = 1 ; e <= 10 ; e++) {
+			System.out.println(e);
+		}
+		
+		//100까지 합
+		int sum100for = 0;
+		for(int i2=1; i2<=100; i2 += 1) {
+			sum100for += i2;
+		}
+		System.out.println(sum100for);
+		
+		// q
+		// 10~1 출력하세요
+		int number2 = 10;
+		for(int e = 0; e >= 0; e -= 1) {
+			number -= e;
+			System.out.println(number2);
+		}
 	}
 
 }
