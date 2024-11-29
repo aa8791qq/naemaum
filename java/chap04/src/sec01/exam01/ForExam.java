@@ -74,10 +74,14 @@ public class ForExam {
 		
 		// q
 		// 10~1 출력하세요
+//		int number2 = 10;
+//		for(int e = 10; e >= 1 && e <= 10;) {
+//			number2 -= e;
+//			System.out.println(number2);
+		
 		int number2 = 10;
-		for(int e = 0; e >= 0; e -= 1) {
-			number -= e;
-			System.out.println(number2);
+		for(int e = 10; e >= 1 && e <= 10; e -= 1) {
+			System.out.println(e);
 		}
 	}
 
