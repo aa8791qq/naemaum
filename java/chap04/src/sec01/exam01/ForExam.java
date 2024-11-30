@@ -77,6 +77,8 @@ public class ForExam {
 			System.out.println(e);
 		}
 
+		System.out.println("-----문제라인-------");
+
 //		1~ 20 까지 짝수만 출력하시오
 //		for(int in1 = 1; in1 <= 20; in1 += 1) {
 //		int e = 20;
@@ -85,7 +87,7 @@ public class ForExam {
 		}
 
 //		1~ 20 까지 3의 배수만 출력하시오
-		for (int ic1 = 0; ic1 < 20; ic1 += 3) {
+		for (int ic1 = 3; ic1 < 20; ic1 += 3) {
 			System.out.println(ic1);
 		}
 
@@ -98,22 +100,32 @@ public class ForExam {
 			}
 		}
 
-//		1~20까지 홀수의 합 //------------------
-		int hao2 = 1;
-		for (int hhap = 1; (hhap <= 20); hhap += 2) {
-			System.out.println(hao2 = hhap);
-			}
+//		1~20까지 홀수의 합 // ( 증감연산자를 빠뜨리고 변수를 잘못 넣었음)
+		int hao2 = 0;
+		for (int hhap = 1; hhap <= 20; hhap += 2) {
+			hao2 += hhap; // 변수지정 잘못해서 수정함
+		}
+		System.out.println(hao2);
 
-////		1~20까지 홀수의 갯수 //-------------------
-//		for (int ih1 = 1; ih1 <= 20; ih1 += 1) {
+////		1~20까지 홀수의 갯수 //------------------- 홀수가 먼지까지 출력함
+//		for (int ih1 = 1; ih1 <= 20; ih1 += 2) {
 //			if (ih1 % 2 != 0) {
-//				System.out.println(ih1);
+////				System.out.println(ih1);
 //			}
+//			System.out.println(ih1 / 2);
+//			if (ih1 == 20) {
+//				break;
+//			}
+//		}
 
 //		1~10까지 옆으로 3개씩 출력( 1 2 3 / 4 5 6)
+		
 
-//		구구단 2단 (2 * 1 = 2)
-
+//		구구단 2단 (2 * 1 = 2) // 책참고 ( 불필요한 for문을 넣었음)
+		int m = 2;
+		for (int n = 1; n <= 9; n++) {
+			System.out.println(m + "x" + n + "=" + (m * n));
+		}
 	}
 
 }
