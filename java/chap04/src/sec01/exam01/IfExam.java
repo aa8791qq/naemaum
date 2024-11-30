@@ -446,16 +446,15 @@ public class IfExam {
 // 		break;
 // 		}
 		switch (tf) {
-		case "y":
-			System.out.println("다음 창에서 입력해주세요");
-			break;
 		case "n":
 			System.out.println("멈춤");
 			break;
 		default:
 			System.out.println("다시");
 			break;
-
+		case "y":
+			System.out.println("다음 창에서 입력해주세요");
+			break;
 		}
 // 		}
 
