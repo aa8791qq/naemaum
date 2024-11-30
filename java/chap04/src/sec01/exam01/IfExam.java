@@ -446,21 +446,39 @@ public class IfExam {
 // 		break;
 // 		}
 		switch (tf) {
+		case "y":
+			System.out.println("다음 창에서 입력해주세요");
+			break;
 		case "n":
 			System.out.println("멈춤");
 			break;
 		default:
 			System.out.println("다시");
 			break;
-		case "y":
-			System.out.println("다음 창에서 입력해주세요");
-			break;
 		}
+//		char not = n;
+//			if( tf == 'n') {
+//			break;
+//		} else  {
+		Scanner scan3 = new Scanner(System.in);
+		System.out.println("입금액을 입력해주세요?");
+
+		fim = scan3.nextInt();
+		if (fim <= 0) {
+			System.out.println("다시 입력해주세요");
+		} else if (fim > 1) {
+			System.out.println(fim + "원을 입금했습니다 현재 잔액은 " + (fim + am) + "원입니다");
+		}
+//			default:
+		am = am - fim;
+
+//		}
+//		}
 // 		}
 
 //		String tf;
 //		tf = scan4.nextInt()
-		
+
 // 		if(tf.equals("n")) {
 // 		break;
 // 		}
@@ -471,17 +489,17 @@ public class IfExam {
 
 //		switch (am) {
 //		case 0:
-		Scanner scan3 = new Scanner(System.in);
-		System.out.println("입금액을 입력해주세요?");
-		
-		fim = scan3.nextInt();
-		if (fim <= 0) {
-			System.out.println("다시 입력해주세요");
-		} else if (fim > 1) {
-			System.out.println(fim + "원을 입금했습니다 현재 잔액은 " + (fim + am) + "원입니다");
-		}
+//		Scanner scan3 = new Scanner(System.in);
+//		System.out.println("입금액을 입력해주세요?");
+//		
+//		fim = scan3.nextInt();
+//		if (fim <= 0) {
+//			System.out.println("다시 입력해주세요");
+//		} else if (fim > 1) {
+//			System.out.println(fim + "원을 입금했습니다 현재 잔액은 " + (fim + am) + "원입니다");
+//		}
 //		default:
-		am = am - fim;
+//		am = am - fim;
 	}
 }
 //}
