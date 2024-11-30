@@ -460,6 +460,10 @@ public class IfExam {
 
 //		String tf;
 //		tf = scan4.nextInt()
+		
+// 		if(tf.equals("n")) {
+// 		break;
+// 		}
 
 		// 스위치
 
@@ -469,6 +473,7 @@ public class IfExam {
 //		case 0:
 		Scanner scan3 = new Scanner(System.in);
 		System.out.println("입금액을 입력해주세요?");
+		
 		fim = scan3.nextInt();
 		if (fim <= 0) {
 			System.out.println("다시 입력해주세요");
