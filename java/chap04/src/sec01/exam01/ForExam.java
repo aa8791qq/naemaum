@@ -87,7 +87,7 @@ public class ForExam {
 		}
 
 //		1~ 20 까지 3의 배수만 출력하시오
-		for (int ic1 = 3; ic1 < 20; ic1 += 3) {
+		for (int ic1 = 3; ic1 <= 20; ic1 += 3) {
 			System.out.println(ic1);
 		}
 
@@ -101,7 +101,7 @@ public class ForExam {
 		}
 
 //		1~20까지 홀수의 합 // ( 증감연산자를 빠뜨리고 변수를 잘못 넣었음)
-		int hao2 = 0;
+		int hao2 = 0; // 변수1 -> 0으로 수정( 같은 수 중복 출력)
 		for (int hhap = 1; hhap <= 20; hhap += 2) {
 			hao2 += hhap; // 변수지정 잘못해서 수정함
 		}
@@ -122,7 +122,7 @@ public class ForExam {
 		
 
 //		구구단 2단 (2 * 1 = 2) // 책참고 ( 불필요한 for문을 넣었음)
-		int m = 2;
+		int m = 2; // ( 불필요한 for문 삭제)
 		for (int n = 1; n <= 9; n++) {
 			System.out.println(m + "x" + n + "=" + (m * n));
 		}
