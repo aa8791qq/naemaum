@@ -79,16 +79,30 @@ public class ForExam {
 
 		System.out.println("-----문제라인-------");
 
-//		1~ 20 까지 짝수만 출력하시오
+//		1~ 20 까지 짝수만 출력하시오 //변수를 0에서 2로 바꿈(오답)
 //		for(int in1 = 1; in1 <= 20; in1 += 1) {
 //		int e = 20;
-		for (int ij1 = 0; ij1 <= 20; ij1 += 2) {
+		for (int ij1 = 2; ij1 <= 20; ij1 += 2) {
 			System.out.println(ij1);
+		}
+
+		// 다른 답안
+		for (int ij2 = 1; ij2 <= 20; ij2++) {
+			if (ij2 % 2 == 0) {
+				System.out.println(ij2);
+			}
 		}
 
 //		1~ 20 까지 3의 배수만 출력하시오
 		for (int ic1 = 3; ic1 <= 20; ic1 += 3) {
 			System.out.println(ic1);
+		}
+
+		// 다른답안
+		for (int ij2 = 3; ij2 <= 20; ij2++) {
+			if (ij2 % 3 == 0) {
+				System.out.println(ij2);
+			}
 		}
 
 //		1~5 까지 모두 출력하면서 홀짝구분(1:홀수)
@@ -100,10 +114,37 @@ public class ForExam {
 			}
 		}
 
-//		1~20까지 홀수의 합 // ( 증감연산자를 빠뜨리고 변수를 잘못 넣었음)
+		// 다른방법
+		for (int ih1 = 1; ih1 <= 5; ih1 += 1) {
+			if (ih1 % 2 != 0) {
+				System.out.println(ih1 + " : 홀수");
+			} else {
+				System.out.println(ih1 + " : 짝수");
+			}
+
+			String ea = "홀수";
+			if (ih1 % 2 == 0) {
+				ea = "짝수";
+			}
+			System.out.println(ih1 + " : " + "홀수");
+
+			String ae = (ih1 % 2 == 0) ? "짝수" : "홀수";
+			System.out.println(ih1 + " : " + ae);
+		}
+
+//		1~20까지 홀수의 합 // (증감연산자를 빠뜨리고 변수를 잘못 넣었음, 함수도 잘못 넣음)
 		int hao2 = 0; // 변수1 -> 0으로 수정( 같은 수 중복 출력)
 		for (int hhap = 1; hhap <= 20; hhap += 2) {
 			hao2 += hhap; // 변수지정 잘못해서 수정함
+		}
+		System.out.println(hao2);
+
+		// 다른방법
+		int hao3 = 0;
+		for (int hhap = 1; hhap <= 20; hhap++) {
+			if (hhap % 2 == 1) {
+				hao3 += hhap; // 변수지정 잘못해서 수정함
+			}
 		}
 		System.out.println(hao2);
 
@@ -117,9 +158,17 @@ public class ForExam {
 //				break;
 //			}
 //		}
+		
+		//답안
+		int summ5 = 0;
+		for(int q4 = 1; q4<= 20; q4++) {
+			if(q4 % 2 ==1) {
+				summ5 += 1;
+			}
+		}
+		System.out.println(summ5);
 
 //		1~10까지 옆으로 3개씩 출력( 1 2 3 / 4 5 6)
-		
 
 //		구구단 2단 (2 * 1 = 2) // 책참고 ( 불필요한 for문을 넣었음)
 		int m = 2; // ( 불필요한 for문 삭제)
