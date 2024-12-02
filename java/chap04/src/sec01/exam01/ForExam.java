@@ -1,5 +1,7 @@
 package sec01.exam01;
 
+import java.util.Scanner;
+
 public class ForExam {
 
 	public static void main(String[] args) {
@@ -132,10 +134,10 @@ public class ForExam {
 			System.out.println(ih1 + " : " + ae);
 		}
 
-//		1~20까지 홀수의 합 // (증감연산자를 빠뜨리고 변수를 잘못 넣었음, 함수도 잘못 넣음)
+//		1~20까지 홀수의 합 // (증감연산자를 빠뜨리고 변수를 잘못 넣었음, 함수도 잘못 넣음(if))
 		int hao2 = 0; // 변수1 -> 0으로 수정( 같은 수 중복 출력)
 		for (int hhap = 1; hhap <= 20; hhap += 2) {
-			hao2 += hhap; // 변수지정 잘못해서 수정함
+			hao2 += hhap; // 변수지정 잘못해서 수정함(sum 함수를 넣었음)
 		}
 		System.out.println(hao2);
 
@@ -158,22 +160,59 @@ public class ForExam {
 //				break;
 //			}
 //		}
-		
-		//답안
+
+		// 답안
 		int summ5 = 0;
-		for(int q4 = 1; q4<= 20; q4++) {
-			if(q4 % 2 ==1) {
-				summ5 += 1;
+		for (int q4 = 1; q4 <= 20; q4++) {
+			if (q4 % 2 == 1) {
+				summ5 += 1; // 이 코드를 생각 못했음
 			}
 		}
 		System.out.println(summ5);
 
 //		1~10까지 옆으로 3개씩 출력( 1 2 3 / 4 5 6)
+		for (int q = 1; q <= 10; q++) {
+			System.out.print(q + " ");
+			if (q % 3 == 0) {
+				System.out.println();
+			}
+		}
+
+		System.out.println();
+
+		// 다른 방법
+		for (int q = 1; q <= 10; q++) {
+			if (q % 3 != 0) {
+				System.out.print(q + " ");
+			} else {
+				System.out.println(q);
+			}
+		}
+
+		System.out.println();
 
 //		구구단 2단 (2 * 1 = 2) // 책참고 ( 불필요한 for문을 넣었음)
 		int m = 2; // ( 불필요한 for문 삭제)
 		for (int n = 1; n <= 9; n++) {
 			System.out.println(m + "x" + n + "=" + (m * n));
+		}
+
+//		1~n (n은 입력받은 수)까지의 합 또는 짝수의 합
+		Scanner scan2 = new Scanner(System.in);
+		System.out.println("숫자??"); // 출력이 안되거나 오류또는 원치않은 값이 나옴
+		int n = scan2.nextInt();
+
+		int nsum = 0;
+		for (int q = 1; q <= n; q++) {
+			nsum += q;
+		}
+		System.out.println(nsum);
+
+		// 구구단
+		for (int o = 2; o <= 9; o++) {
+			for (int p = 1; p <= 9; p++) {
+				System.out.println(o + "x" + p + "=" + (o * p));
+			}
 		}
 	}
 
