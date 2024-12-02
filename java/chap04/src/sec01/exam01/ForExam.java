@@ -198,20 +198,31 @@ public class ForExam {
 		}
 
 //		1~n (n은 입력받은 수)까지의 합 또는 짝수의 합
-		Scanner scan2 = new Scanner(System.in);
-		System.out.println("숫자??"); // 출력이 안되거나 오류또는 원치않은 값이 나옴
-		int n = scan2.nextInt();
-
-		int nsum = 0;
-		for (int q = 1; q <= n; q++) {
-			nsum += q;
-		}
-		System.out.println(nsum);
+//		Scanner scan2 = new Scanner(System.in);
+//		System.out.println("숫자??"); // 출력이 안되거나 오류또는 원치않은 값이 나옴
+//		int n = scan2.nextInt();
+//
+//		int nsum = 0;
+//		for (int q = 1; q <= n; q++) {
+//			nsum += q;
+//		}
+//		System.out.println(nsum);
 
 		// 구구단
 		for (int o = 2; o <= 9; o++) {
 			for (int p = 1; p <= 9; p++) {
 				System.out.println(o + "x" + p + "=" + (o * p));
+			}
+		}
+
+		// 한줄에 1단씩 출력 (2*1=2 3*1=3 4*1=4)
+		for (int li2 = 2; li2 <= 9; li2++) {
+			for (int liv2 = 1; liv2 <= 9; liv2++) {
+				if (liv2 % 3 != 0) { //==에서 !=으로 바꿈
+					System.out.print(li2 + "x" + liv2 + "=" + (li2 * liv2)+ " ");
+				} else {
+					System.out.println(" " + li2 + "x" + liv2 + "=" + (li2 * liv2));
+				}
 			}
 		}
 	}
