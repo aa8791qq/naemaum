@@ -216,6 +216,7 @@ public class ForExam {
 		}
 
 		// 한줄에 1단씩 출력 (2*1=2 3*1=3 4*1=4)
+		System.out.println();
 		for (int li2 = 2; li2 <= 9; li2++) {
 			for (int liv2 = 1; liv2 <= 9; liv2++) {
 				if (liv2 % 9 != 0) { // ==에서 !=으로 바꿈, 3에서 9로 바꿈, 각종 불필요한 구문 삭제
@@ -226,16 +227,43 @@ public class ForExam {
 			}
 		}
 
-		// 두~세 단씩 옆으로 출력 ( 2x1=2 3x1=3 )
-		for (int liv2 = 2; liv2 <= 9; liv2++) {
-			for (int li2 = 2; li2 <= 9; li2++) {
-				if (liv2 % 9 != 0) { // ==에서 !=으로 바꿈, 3에서 9로 바꿈, 각종 불필요한 구문 삭제
-					System.out.print(li2 + "x" + liv2 + "=" + (li2 * liv2) + " ");
-				} else {
-					System.out.println(li2 + "x" + liv2 + "=" + (li2 * liv2));
-				}
+		// 다른방법
+		System.out.println();
+		for (int i8 = 2; i8 <= 9; i8++) {
+			for (int i4 = 1; i4 <= 9; i4++) {
+				System.out.print(i8 + "x" + i4 + "=" + (i8 * i4) + " ");
 			}
+			System.out.println();
 		}
+
+		// 두~세 단씩 옆으로 출력 ( 2x1=2 3x1=3 ) ----> 구구단 출력까지는 함
+//		for (int li2 = 1; li2 <= 9; li2++) {
+//			for (int liv2 = 2; liv2 <= 9; liv2++) {
+//				if (liv2 % 9 != 0) { // ==에서 !=으로 바꿈, 3에서 9로 바꿈, 각종 불필요한 구문 삭제
+//					System.out.print(liv2 + "x" + li2 + "=" + (li2 * liv2) + " ");
+//				} else {
+//					System.out.println(liv2 + "x" + li2 + "=" + (li2 * liv2));
+//				}
+//			}
+//		}
+
+		// 정답
+		System.out.println("---------규칙소스-----------------");
+		int m2 = 2;
+		int m3 = m + 1;
+		for (int k2 = 1; k2 <= 9; k2++) {
+			System.out.println(m2 + "x" + k2 + "=" + (m2 * k2) + " " + m3 + "x" + k2 + "=" + (m3 * k2)+ " ");
+		}
+		System.out.println();
+		
+		System.out.println("--------------------------");
+		for(int p = 2; p <= 9; p += 2) {
+			for (int k2 = 1; k2 <= 9; k2++) {
+				System.out.println(p + "x" + k2 + "=" + (p * k2) + " " + (p + 1) + "x" + k2 + "=" + ((p + 1) * k2)+ " ");
+			}
+			System.out.println();
+		}
+
 	}
 
 }
