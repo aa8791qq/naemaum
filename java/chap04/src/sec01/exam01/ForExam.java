@@ -355,9 +355,7 @@ public class ForExam {
 //				}
 			}
 			System.out.println("");
-//		}
 		}
-		System.out.println();
 		
 		// 5단계
 		/*
