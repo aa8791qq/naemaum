@@ -310,14 +310,13 @@ public class ForExam {
 			}
 			System.out.print("\n");
 		}
-
+		System.out.println();
 		// 3단계
 		/*
 		 * 
 		 * + + + + +
 		 * 
 		 */
-		System.out.println();
 		
 		for (int i3 = 1; i3 <= 5; i3++) {
 			System.out.print("+");
@@ -325,20 +324,40 @@ public class ForExam {
 				System.out.print(" ");
 			}
 		}
+		System.out.println();
+		
+		// 3.5단계
+		/*
+		 1
+		 22
+		 333
+		 4444
+		 55555
+		 */
+		System.out.println();
+		
 		
 		// 4단계
 		/*
-		 
 		 +
 		 ++
 		 +++
 		 ++++
 		 +++++
-		 
 		 */
 		System.out.println();
 		
-		
+		int i3 = 1;
+		for (i3 = 1; i3 <= 5; i3++) {
+			System.out.println("+");
+			for (i3 = 5; i3 <= 7; i3++) {
+				System.out.print("+");
+				for (i3 = 7; i3 <= 10; i3++) {
+					System.out.print("+");
+				}
+			}
+		}
+		System.out.println();
 		
 		// 5단계
 		/*
