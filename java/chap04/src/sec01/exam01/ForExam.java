@@ -259,50 +259,73 @@ public class ForExam {
 		System.out.println("--------------------------");
 		for (int p = 2; p <= 9; p += 2) {
 			for (int k2 = 1; k2 <= 9; k2++) {
-				System.out.println(p + "x" + k2 + "=" + (p * k2) + " " + (p + 1) + "x" + k2 + "=" + ((p + 1) * k2) + " ");
+				System.out
+						.println(p + "x" + k2 + "=" + (p * k2) + " " + (p + 1) + "x" + k2 + "=" + ((p + 1) * k2) + " ");
 			}
 			System.out.println();
 		}
-		/* ...+...
+		/*
+		 * ...+...
 		 * ..+++..
 		 * .+++++.
 		 * +++++++
 		 */
-	
+
 		// 0단계
 		/*
-		 
-		 +
-		 +
-		 +
-		 +
-		 +
-		 
+		 * 
+		 * + + + + +
+		 * 
 		 */
+
+		for (int i3 = 1; i3 <= 5; i3++) {
+			System.out.println("+");
+		}
 
 		// 1단계
 		/*
-		 
-		 +++++
-		 
+		 * +++++
+		 * 
 		 */
+		System.out.println();
+		
+		for (int i3 = 1; i3 <= 5; i3++) {
+			System.out.print("+");
+		}
+		System.out.println();
 
 		// 2단계
 		/*
-		 
-		 +++++
-		 +++++
-		 +++++
-		 
+		 * +++++
+		 * +++++
+		 * +++++
+		 * 
 		 */
+		System.out.println();
+		
+		for (int i3 = 1; i3 <= 3; i3++) {
+			System.out.print("+");
+			for (int i4 = 2; i4 <= 5; i4++) {
+				System.out.print("+");
+			}
+			System.out.print("\n");
+		}
 
 		// 3단계
 		/*
-		 
-		 + + + + +
-		 
+		 * 
+		 * + + + + +
+		 * 
 		 */
-
+		System.out.println();
+		
+		for (int i3 = 1; i3 <= 5; i3++) {
+			System.out.print("+");
+			for (int i5 = 1; i5 <= 1; i5++) {
+				System.out.print(" ");
+			}
+		}
+		
 		// 4단계
 		/*
 		 
@@ -313,7 +336,10 @@ public class ForExam {
 		 +++++
 		 
 		 */
-
+		System.out.println();
+		
+		
+		
 		// 5단계
 		/*
 		 
