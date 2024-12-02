@@ -218,13 +218,17 @@ public class ForExam {
 		// 한줄에 1단씩 출력 (2*1=2 3*1=3 4*1=4)
 		for (int li2 = 2; li2 <= 9; li2++) {
 			for (int liv2 = 1; liv2 <= 9; liv2++) {
-				if (liv2 % 3 != 0) { //==에서 !=으로 바꿈
+				if (liv2 % 9 != 0) { // ==에서 !=으로 바꿈, 3에서 9로 바꿈
 					System.out.print(li2 + "x" + liv2 + "=" + (li2 * liv2)+ " ");
 				} else {
-					System.out.println(" " + li2 + "x" + liv2 + "=" + (li2 * liv2));
+					System.out.println(li2 + "x" + liv2 + "=" + (li2 * liv2));
 				}
 			}
 		}
+		
+		// 두~세 단씩 옆으로 출력 ( 2x1=2 3x1=3 )
+		
+		
 	}
 
 }
