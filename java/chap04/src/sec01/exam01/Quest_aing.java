@@ -15,7 +15,11 @@ public class Quest_aing {
 		// 0단계
 		/*
 		 * 
-		 * + + + + +
+		 * +
+		 * +
+		 * +
+		 * +
+		 * +
 		 * 
 		 */
 
@@ -51,19 +55,19 @@ public class Quest_aing {
 			}
 			System.out.print("\n");
 		}
-		System.out.println();
+		
 		// 3단계
 		/*
 		 * 
-		 * + + + + +
+		 * +.+.+.+.+
 		 * 
 		 */
 		
 		for (int i3 = 1; i3 <= 5; i3++) {
 			System.out.print("+");
-			for (int i5 = 1; i5 <= 1; i5++) {
-				System.out.print(" ");
-			}
+//			for (int i5 = 1; i5 <= 1; i5++) { // 포문 1번만 쓰는 코딩
+				System.out.print(".");
+//			}
 		}
 		System.out.println();
 		
@@ -77,6 +81,12 @@ public class Quest_aing {
 		 */
 		System.out.println();
 		
+		for(int i = 1; i<=5; i++) {
+			for(int j = 1; j <= i ; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
 		System.out.println();
 		// 4단계
 		/*
@@ -86,7 +96,6 @@ public class Quest_aing {
 		 ++++
 		 +++++
 		 */
-		System.out.println();
 		
 		for (int i3 = 1; i3 <= 5; i3++) { // 불필요한 쿼리 제거 및 2번째 포문에 있는 비교변수 수정, for문 이탈 시 나오는 문구 수정
 			for (int i4 = 1; i4 <= i3; i4++) {
@@ -94,8 +103,17 @@ public class Quest_aing {
 			}
 			System.out.println("");
 		}
-		System.out.println();
 		
+		// 4.5
+		/*
+		 11111
+		 2222
+		 333
+		 44
+		 5
+		 */
+		
+		System.out.println();
 		// 5단계
 		/*
 		 +____
@@ -104,13 +122,15 @@ public class Quest_aing {
 		 ++++_
 		 +++++
 		 */
-		System.out.println();
 		
 		for (int i3 = 1; i3 <= 5; i3++) {
 			for (int i4 = 1; i4 <= i3; i4++) {
 				System.out.print("+");
 			}
-			System.out.println("_");
+			for (int i4 = 1; i4<= (5 - i3); i4++) {
+				System.out.print("_");
+			}
+			System.out.println("");
 		}
 		System.out.println("");
 
@@ -122,6 +142,16 @@ public class Quest_aing {
 		 _++++
 		 +++++
 		 */
+		for (int i3 = 1; i3 <= 5; i3++) {
+			for (int i4 = 1; i4<= (5 - i3); i4++) {
+				System.out.print("_");
+			}
+			for (int i4 = 1; i4 <= i3; i4++) {
+				System.out.print("+");
+			}
+			System.out.println("");
+		}
+		System.out.println("");
 
 		// 7단계
 		/*
