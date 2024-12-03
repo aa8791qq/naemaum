@@ -264,6 +264,11 @@ public class ForExam {
 			}
 			System.out.println();
 		}
+		
+		int x9 = -1;
+		for(x9=1; x9<5; x9++) {
+			
+		}
 	}
 
 }
