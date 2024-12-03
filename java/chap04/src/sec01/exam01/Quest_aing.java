@@ -221,20 +221,20 @@ public class Quest_aing {
 		Scanner scan = new Scanner(System.in);
 		int user20 = scan.nextInt();
 		
-		for (int tree1 = user20; tree1 >= user20; tree1++) {
+		for (int tree1 = 1; tree1 < user20; tree1++) {
 			for(int tree2 = user20; tree2 >= tree1; tree2--) {
 				System.out.print("_");
-		}
-		for (int tree3 = 1; tree3 >= tree1; tree3++) {
+			}
+			for (int tree3 = 1; tree3 <= tree1; tree3++) {
+					System.out.print("+");
+			}
+			for (int tree4 = 2; tree4 <= tree1; tree4++) {
 				System.out.print("+");
-		}
-		for (int tree4 = 2; tree4 >= tree1; tree4++) {
-			System.out.print("+");
-		}
-		for (int tree5 = user20; tree5 >= tree1; tree5--) {
-			System.out.print("_");
-		}
-		System.out.println();
+			}
+			for (int tree5 = user20; tree5 >= tree1; tree5--) {
+				System.out.print("_");
+			}
+			System.out.println();
 	}
 		
 		//주사위 두개로 나올 수 있는 모든조합출력
