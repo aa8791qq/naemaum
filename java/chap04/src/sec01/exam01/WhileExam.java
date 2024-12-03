@@ -37,15 +37,16 @@ public class WhileExam {
 		int menu1 = scan.nextInt();
 		
 		if(menu1 != 0) {
-			if(menu == 1) {
+			if(menu1 == 1) {
 				System.out.println("커피드리죠");
 			} else if(menu1 == 2) {
 				System.out.println("홍차드리죠");
-			} else if(menu1 == 0) {
-				System.out.println("다음에 또 오세요~ 아잉");
 			} else {
 				System.out.println("다시입력해주세요");
 			}
-		} else 
+		} else {
+			System.out.println("다음에 또 오세요~ 아잉");
+		}
+	}
 
 }
