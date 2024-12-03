@@ -29,6 +29,12 @@ public class LottoExam {
 		int lotto3 = temp6 + 1;
 		System.out.println(lotto3);
 		
+		rand = Math.random();
+		double temp7 = rand * 45 + 1;
+		int temp8 = (int)temp7;
+		int lotto4 = temp6 + 1;
+		System.out.println(lotto4);
+		
 	}
 
 }

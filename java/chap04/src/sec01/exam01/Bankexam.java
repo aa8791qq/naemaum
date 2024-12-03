@@ -22,7 +22,7 @@ public class Bankexam {
 				int input = scan.nextInt();
 				if (input > 0) {
 					balance += input;
-					System.out.println("입금액 : "+ in1put);
+					System.out.println("입금액 : " + input);
 				} else {
 					System.out.println("예금액을 확인해줄랭?");
 					System.out.println(balance);
@@ -32,6 +32,8 @@ public class Bankexam {
 				int output = scan.nextInt();
 				if (output < 0) {
 					System.out.println("출금액을 확인해주세요");
+				} else if (balance < output) {
+					System.out.println("마이너스통장을 만드시거나 입금을 해야 할 거 같습니다./n 마이너스 통장 개설시 창구방문을 권장합니다.\n 잔액이 부족해요");
 				} else {
 					System.out.println("출금액 : " + output);
 					balance -= output;
