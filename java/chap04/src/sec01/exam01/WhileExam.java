@@ -48,8 +48,8 @@ public class WhileExam {
 //			System.out.println("다음에 또 오세요~ 아잉");
 //		}
 		
-//		System.out.println("메뉴를 골라보자");
-//		System.out.println("1 : 커피, 2 : 홍차, 0: 종료");		
+		System.out.println("메뉴를 골라보자");
+		System.out.println("1 : 커피, 2 : 홍차, 0: 종료");		
 		Scanner scan =new Scanner(System.in);
 		int menu = scan.nextInt();
 //		
@@ -67,7 +67,7 @@ public class WhileExam {
 //			menu = scan.nextInt();
 //		}
 //		System.out.println("또 와~ 아잉");
-//		
+		
 		do	{
 			System.out.println("메뉴를 골라봐");
 			System.out.println("1 : 커피, 2 : 홍차, 0: 종료");		
@@ -80,6 +80,20 @@ public class WhileExam {
 				} 
 		} while ( menu != 0);
 		System.out.println("다음에 와죠!"); 
+		
+//		String m = "";
+//		do	{
+//			System.out.println("메뉴를 골라봐");
+//			System.out.println("1 : 커피, 2 : 홍차, 0: 종료");		
+//			m = scan.nextLine();
+//			
+//				if(m.equals("1")) {
+//					System.out.println("커피드리죠");
+//				} else if(m.equals("2")) {
+//					System.out.println("홍차드리죠");
+//				} 
+//		} while ( !m.equals("0"));
+//		System.out.println("다음에 와죠!"); 
 		
 		// 보통 몇번 반복할지 모를때 쓰는 함수!
 	}
