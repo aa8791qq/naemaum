@@ -63,7 +63,7 @@ public class BreakExam {
 		// 넹22!! 옹.... 브레이크는 결국엔 2번째 포문만 끝내고
 		// 첫번째 포문을 재생시키면서 2번째는 2이상 출력이 안되겠끔 하는거네요?
 
-		/// 문제
+		/// 문제 -----> 
 		boolean isStop = false;
 		for (int i3 = 0; i3 < 5; i3++) {
 			System.out.println(i3);
@@ -77,12 +77,9 @@ public class BreakExam {
 			if (isStop) {
 				break;
 			}
+			System.out.println();
 		}
-//			break;
-//				System.out.println();
-//			}
-//
-//			System.out.println();
+
 ////---------------------------->??
 //			for (int i = 1; i <= 10; i++) {
 //				if (i % 2 == 0) {
