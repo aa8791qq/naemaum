@@ -218,6 +218,7 @@ public class Quest_aing {
 		}
 		System.out.println();
 		// 예시
+		System.out.println("상고의 숫자를 넣어보자");
 		Scanner scan = new Scanner(System.in);
 		int user20 = scan.nextInt();
 		
