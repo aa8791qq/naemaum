@@ -49,32 +49,36 @@ public class BreakExam {
 //
 //		System.out.println("-----------");
 //------------------------->????
-		for (int i2 = 0; i2 < 5; i2++) {
-			System.out.println(i2);
+//		for (int i2 = 0; i2 < 5; i2++) {
+//			System.out.println(i2);
+//			for (int j = 0; j < 3; j++) {
+//				if (j >= 2) {
+//					break;
+//				}
+//				System.out.println(j);
+//				}System.out.println();
+//			}
+		// 그니깐 지금 혜성님이 얘기하니깐 조금씩 이해하고 있습니다.
+		// if때문에 i2 숫자만 올라고 j는 2를 건너뛴다는 애기 맞죠?
+		// 넹22!! 옹.... 브레이크는 결국엔 2번째 포문만 끝내고
+		// 첫번째 포문을 재생시키면서 2번째는 2이상 출력이 안되겠끔 하는거네요?
+
+		/// 문제
+		boolean isStop = false;
+		for (int i3 = 0; i3 < 5; i3++) {
+			System.out.println(i3);
 			for (int j = 0; j < 3; j++) {
 				if (j >= 2) {
+					isStop = true;
 					break;
 				}
 				System.out.println(j);
-				}
 			}
-			System.out.println();
-
-//			/// 문제
-//			boolean isStop = false;
-//			for (int i3 = 0; i3 < 5; i3++) {
-//				System.out.println(i3);
-//				for (int j = 0; j < 3; j++) {
-//					if (j >= 2) {
-//						isStop = true;
-//						break;
-//					}
-//					System.out.println(j);
-//				}
-//				if (isStop) {
-//					break;
-//				}
-////			break;
+			if (isStop) {
+				break;
+			}
+		}
+//			break;
 //				System.out.println();
 //			}
 //
@@ -119,5 +123,5 @@ public class BreakExam {
 ////			
 ////		}
 ////		System.out.println("프로그램 종료");
-		}
+	}
 }
