@@ -42,6 +42,20 @@ public class Refexam {
 		f = null; // f= ""와 다르다(번지 새로부여)
 		System.out.println("f == null :" + (f == null));
 		System.out.println("f != null :" + (f != null));
+		
+		System.out.println("f + \"abc\" : " + (f + "abc"));
+		
+		//초기화나 값이 할당되지 않은 경우 사용을 못한다.-->다시설명이 필요함(이해부족)
+//		String g;
+		String g = null;
+		System.out.println("g == null" + (g == null));
+		
+		if( g != null) { // 방어코딩
+		System.out.println("g.equals : " + g.equals(c));
+		}
+		
+		
+		
 	}
 
 }
