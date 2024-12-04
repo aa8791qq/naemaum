@@ -99,7 +99,7 @@ public class ArrayExam {
 		System.out.println();
 
 		System.out.println((double) sum / nums.length);
-		
+
 		System.out.println();
 		// 간단퀴즈
 		// 1~10까지 순서대로 저장된 배열을
@@ -110,27 +110,61 @@ public class ArrayExam {
 		System.out.println();
 		// 다른방법
 		for (int i = 0; i < nums.length; i++) {
-			System.out.println(nums[nums.length-1 - i]);
+			System.out.println(nums[nums.length - 1 - i]);
 		}
 		System.out.println();
 		// [3,4,7,5,1,4,6]
-		//문제1. 홀수의 개수 구하기
-		int[] nums2 = {3, 4, 7, 5, 1, 4, 6};
-		
-		//4개 홀수
+		// 문제1. 홀수의 개수 구하기
+		int[] nums2 = { 3, 4, 7, 5, 1, 4, 6 };
+
+		// 4개 홀수
 		// 배열에 있는 숫자 모두출력(처음(0)부터 끝(length-1)까지)
 		// 나머지가 0이 아닌것만 출력
 		// 갯수를 센다(?) 홀수를 구하면서 카운트
-		
-		for(int i = 0; i > nums2.length; i++) {
-			
+		int c = 0;
+		for (int i = 0; i < nums2.length; i++) {
+			if (nums2[i] % 2 != 0) {
+				c += 1;
+//				System.out.println(nums2[i]);
+			}
 		}
-		System.out.println(nums2);
+		System.out.println("\n"+ c);
+
+		// 문제2. 4보다 큰 수의 개수 구하기
 		
-		//문제2. 4보다 큰 수의 개수 구하기
-		//문제3. 최대값 구하기
+		// 4보다 클때만 갯수를 센다
 		
-		//조금 어려운 문제4. 두번째 큰 수 구하기
+		
+		
+		// 문제3. 최대값 구하기
+		
+		// 숫자를 비교해가며 큰 숫자를 찾고(4,7,4,6) 난뒤 저장해서 다시 비교하기(7,6)
+		// 마지막 최종 반복(7)
+		// 갯수세기
+		
+		
+		
+		
+
+		// 배열복사
+		int [] a = {1,2,3,4};
+		int [] b = new int[a.length];
+		b[0] = a[0];
+		
+		// 조금 어려운 문제4. 두번째 큰 수 구하기
+		// 문제5 :  배열을 하나씩 뒤로 밀기
+			//5-1 : 0으로 채우기
+			//5-2 : 첫자리에 마지막 것 넣기
+		// 문제6 : 임시비밀번호 8자리 만들기
+			//6-1 : 숫자로만
+			//6-2 : 소문자로만
+			//6-3 : 숫자2개이상, 대소문자 조합
+		// 문제7 : 예약
+			//자리가 1~10
+			//예약이 가능하면 "n번짜리 예약했습니다"
+			//이미 예약했다면 "이미예약 되었습니다"
+			//메뉴 : 1.예약, 2. 모든예약현황보기, 3. 잔여좌석, 4. 종료
+		// 문제8. 로또 6개 배열에 저장(중복없이)
 	}
 
 }
