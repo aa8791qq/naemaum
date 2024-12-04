@@ -45,7 +45,60 @@ public class ArrayExam {
 //		intArray3 = {90, (int)Math.random(), 70};
 
 		System.out.println(intArray3.length);
+//		intArray2_1 = 5;
+		
 		System.out.println(intArray3);
+		
+		String[] sArr = new String[14];
+		
+		sArr[0] = "이름1";
+		sArr[1] = "이름2";
+		sArr[2] = "이름3";
+		
+//		for ( int k = 1; k <= 14; k++) {
+//			System.out.println(k);
+		
+		int k = 1;
+		
+		k++;
+		sArr[k] = "이름"+ (k+1);
+		
+		for(int i=0; i<sArr.length; i++) {
+			sArr[i] = "이름" + (i+1);
+		}
+		
+		//sArr의 모든 내용을 출력
+		for(int i=0; i<sArr.length; i++) {
+			System.out.println(sArr[i]);
+		}
+		
+		System.out.println();
+		// 깜짝퀴즈
+		// 1~10까지 배열에 넣고
+//		int[] number2 = new int[10];
+//		for( int x = 1; x <= 10; x++) {
+//			System.out.println(x);
+//		}
+		
+		// 정답
+		int[] nums = new int[10];
+		for(int x = 0; x < nums.length; x++) {
+			nums[x] = x + 1;
+		}
+		System.out.println();
+		
+		// 배열의 총합 출력/평균출력
+		//합계
+		int sum = 0;
+		for(int i = 0; i < nums.length; i++) {
+			sum = sum + nums[i];
+		}
+		System.out.println(sum);
+		
+		System.out.println();
+		
+		System.out.println((double) sum / nums.length);
+			
 	}
 
 }
