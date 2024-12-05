@@ -13,7 +13,7 @@ public class VoteExam {
 		
 		int rerandom = irandom + start;
 		
-		//한줄로 <<<<<<< 배열에 중복된 번호???뽑기 파트 못들음
+		//한줄로 <<<<<<< 배열에 중복된 번호??? 뽑기 파트 못들음
 		int random = ((int)(Math.random() * (end - start + 1))) + start;
 		
 		System.out.println(random);
