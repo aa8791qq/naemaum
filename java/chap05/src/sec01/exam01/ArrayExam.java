@@ -149,7 +149,7 @@ public class ArrayExam {
 		// 7하고 6은 큰지 작은지를 비교한다.
 		// 그리고나서 4가 같은지 하고 6,7 비교한 값이 맞는지 추출하고
 		// 마지막으로 4와 7를 비교한다.
-		System.out.println("---"); 
+		System.out.println("---");
 		// 실패 현황 : 범위밖으로 출력되면서 오류가 뜨거나 오류가 없어도 값이 다르게 나옴, 암호화로 된게 나옴(큰값을 출력하는것)
 		for (int i = 0; i < nums2.length; i++) { // int 0을 기준으로 길이만큼 늘어나게 만들고 i를 하나씩 더해요!
 			if (nums2[i + 1] < nums2[i]) { // 1번째랑 2번째랑 비교해야 하니 i에다가 1를 더한값을 했어요.
@@ -196,38 +196,63 @@ public class ArrayExam {
 		// 이미 예약했다면 "이미예약 되었습니다"
 		// 메뉴 : 1.예약, 2. 모든예약현황보기, 3. 잔여좌석, 4. 종료
 		// 문제8. 로또 6개 배열에 저장(중복없이)
-		
-		
-		//다차원 배열
-		int[] class1 = new int [20];
-		int[] class2 = new int [20];
-		int[] class3 = new int [20];
-		int[] class4 = new int [20];
-		
-		//천안배열로 관리 ( 한번에 20짜리를 4개씩 )
-		int [][] 천안 = new int [4][20];
+
+		// 다차원 배열
+		int[] class1 = new int[20];
+		int[] class2 = new int[20];
+		int[] class3 = new int[20];
+		int[] class4 = new int[20];
+
+		// 천안배열로 관리 ( 한번에 20짜리를 4개씩 )
+		int[][] 천안 = new int[4][20];
 		System.out.println();
-		System.out.println(천안); //메모리주소
+		System.out.println(천안); // 메모리주소
 		System.out.println(천안[0]); // 0배열의 메모리주소
 		System.out.println(천안[0][0]); // 0배열의 진짜값
-		
+
 		// 서로 다른크기를 가지는 2차원배열
-		int [][] test = {
-							{1,2,3},
-							{1,2,3,4},
-							{78}
-						}; // 생략이유 : 중괄호를 생략가능(선언할때 가능)
+		int[][] test = { { 1, 2, 3 }, { 1, 2, 3, 4 }, { 78 } }; // 생략이유 : 중괄호를 생략가능(선언할때 가능)
 		// 두번째 배열의 4를 출력
 		System.out.println("1 " + test[1][3]);
 		System.out.println("2 " + test.length);
 		System.out.println("3 " + test[1].length);
 		System.out.println(test[2]);
-		
-		int [][] 수원 = new int [4][20];
-		int [][] 서울 = new int [4][20];
-		
-		int [][] [] 휴먼 = new int [3][4][20]; //3차원배열
-		
+
+		int[][] 수원 = new int[4][20];
+		int[][] 서울 = new int[4][20];
+
+		int[][][] 휴먼 = new int[3][4][20]; // 3차원배열(내 - int [][][] = [천안][수원][서울]
+
+		// 문제
+		// 가상의 달력(12개월, 30일 형식)
+		// 모든 날짜 채워 넣기
+		// 따로 모든 (또는 특정달) 출력하기
+		System.out.println("-------------");
+		int[] month = new int[30];
+		for (int daliy = 0; daliy < month.length; daliy++) { //////// 숫자를 직접넣었음(길이값을 넣어야됬었음)
+			month[daliy] = daliy + 1;
+			System.out.print(month[daliy] + ","); /////////// 애먹음
 		}
-		
+
+		// 먼저 큰 틀로 1달로 만든다.
+		// 숫자를 1부터 30일 넣는다.(반복시켜서 넣는다.)
+		// 30이 될때까지 반복을 시킨다
+		// 12가 될때까지 반복을 시킨다(전부만들려면)
+
+		int[][] month2 = new int[12][30];
+		for (int j = 0; j < month2.length; j++) {
+			for (int i = 0; i < month2[j].length; i++) {
+				month2[j][i] = i + 1; // 이게 빠져서 원하는 값으로 출력안됬음
+				System.out.println(j + "+" + i + "+" + month2[j][i]);
+			}
+		}
+
+//		for (int j = 0; j < month2.length; j++) {
+//			for (int i1 = 0; i1 < month2[j].length; i1++) {
+//				System.out.println(j + i1);
+//			}
+//		}
+
+	}
+
 }
