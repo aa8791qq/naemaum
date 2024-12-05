@@ -149,14 +149,29 @@ public class ArrayExam {
 		// 7하고 6은 큰지 작은지를 비교한다.
 		// 그리고나서 4가 같은지 하고 6,7 비교한 값이 맞는지 추출하고
 		// 마지막으로 4와 7를 비교한다.
-		System.out.println();
-		for (int i = 1; i < nums2.length; i++) {
+		System.out.println("---"); // 범위밖으로 출력되면서 값이 다르게 나옴, 암호화로 된게 나옴(큰값을 출력하는것)
+		for (int i = 0; i < nums2.length; i++) {
 			if (nums2[i + 1] < nums2[i]) {
 				System.out.println(nums2[i]);
-//			} else if (i == 7) {
-//				break;
+				if (i + 1 < nums2.length) { // 괄호를 반대로함 (썜 풀이 참고)
+					break;
+				}
 			}
 		}
+
+		// 정답
+		// 앞에서 하나씩 보다가 0번째의 기준으로(앞을 기준으로) 다음것과 비교해서 큰것을 저장한다.
+		// 저장한 내용으로 그 다음것과 비교하는걸 반복한다.
+
+		System.out.println("-----");
+//		int max = Integer.MIN_VALUE;
+		int max = nums2[0];
+		for (int i = 0; i < nums2.length; i++) {
+			if (max < nums2[i]) {
+				max = nums2[i];
+			}
+		}
+		System.out.println(max);
 
 		// 배열복사
 		int[] a = { 1, 2, 3, 4 };
@@ -179,5 +194,4 @@ public class ArrayExam {
 		// 메뉴 : 1.예약, 2. 모든예약현황보기, 3. 잔여좌석, 4. 종료
 		// 문제8. 로또 6개 배열에 저장(중복없이)
 	}
-
 }
