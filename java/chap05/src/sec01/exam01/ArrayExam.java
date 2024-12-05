@@ -239,6 +239,7 @@ public class ArrayExam {
 		// 30이 될때까지 반복을 시킨다
 		// 12가 될때까지 반복을 시킨다(전부만들려면)
 
+		//// 이 파트 때매 당첨자를 다양한 방법으로 뽑기방법 못들음
 		int[][] month2 = new int[12][30];
 		for (int j = 0; j < month2.length; j++) {
 			for (int i = 0; i < month2[j].length; i++) {
@@ -247,6 +248,17 @@ public class ArrayExam {
 			}
 		}
 
+		//4개짜리 배열복사(깊은)
+		String[] name1 = {"김", "이", "박", "최"};
+		// name1와 정확히 동일한 name2를 만드세요
+		
+		String[] name2 = new String[name1.length];
+//		name2[0] = name1[0]; //for문 구동 기초 작업
+		
+		for(int i=0; i<name1.length; i++) {
+			name2[i] = name1[i];
+		}
+		
 //		for (int j = 0; j < month2.length; j++) {
 //			for (int i1 = 0; i1 < month2[j].length; i1++) {
 //				System.out.println(j + i1);
