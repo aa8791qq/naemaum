@@ -80,7 +80,7 @@ public class ArrayCopyExam {
 		for (String menu : menu3) {
 			System.out.println(menu);
 		}
-
+		
 	}
 
 }
