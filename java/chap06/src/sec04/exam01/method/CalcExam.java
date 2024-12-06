@@ -13,6 +13,23 @@ public class CalcExam {
 		
 		calc.powerOff();
 		System.out.println(calc.isOn);
+		
+		// 자기자신을 실행(선언)시킬 수 있다.
+		
+		
+		int a = calc.plus(7, 10);
+		
+		System.out.println(a);
+		
+		System.out.println("----------------");
+		
+		int d = 10;
+		double e = 4;
+		double c = 	(calc.nanuki(d, (double)e));
+		
+		System.out.println(c);
+		
+		
 
 	}
 
