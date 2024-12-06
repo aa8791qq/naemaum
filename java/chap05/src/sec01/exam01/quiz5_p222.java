@@ -63,7 +63,7 @@ public class quiz5_p222 {
 		
 		System.out.println("----------------");
 		
-		// 출력된 값을 다시 배열로 쭉 풀어서 최대값을 구한다. (96)
+		// 출력된 값을 다시 배열로 쭉 풀어서 최대값을 구한다. (96) ??(86, 88 왜 나옴??)
 		int max = -1;
 		int sum2 = 0;
 		for(int i = 0; i<array.length; i++) {
@@ -72,7 +72,7 @@ public class quiz5_p222 {
 				count++;
 				
 				if(max < array[i][j]);
-				max = array[i][j];
+					max = array[i][j];
 			}
 			System.out.println(max);
 		}
