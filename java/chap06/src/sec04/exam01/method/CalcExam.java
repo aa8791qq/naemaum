@@ -36,7 +36,7 @@ public class CalcExam {
 
 		Calc[] h = { new Calc(), new Calc() };
 
-		boolean f0 = f[0].isOn; // 괄호 왜 없는지..
+		boolean f0 = f[0].isOn; // 괄호 왜 없는지.. //변수이기 떄문이다.
 
 		System.out.println("----------------");
 

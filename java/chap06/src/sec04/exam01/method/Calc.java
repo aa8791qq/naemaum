@@ -3,7 +3,7 @@ package sec04.exam01.method;
 public class Calc {
 
 	// 전원, false:꺼짐, true:켜짐
-	boolean isOn = false; // 공유목적 사용할려면 맨 앞에...
+	boolean isOn = false; // 공유목적으로 사용할려면 맨 앞에...
 
 	// 전원을 켜는 isOn를 true로 바꿔주는 메소드 선언
 	void powerOn() {
@@ -68,7 +68,7 @@ public class Calc {
 		return sum;
 	}
 
-	// ... rkqusdlswk
+	// ... 가변인자
 	// 다른데서 호출할때 : sum2( , , , ,)
 	// 내부에서 사용할때 value는 배열로 취급)
 	int sum2(int ... values) { //string s int ... values 형식만 가능
