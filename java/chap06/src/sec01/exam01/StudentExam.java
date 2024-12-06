@@ -17,7 +17,7 @@ public class StudentExam {
 		
 		s2 = null;
 		
-		///필드 복습(못들음)
+		///필드, 클래스 복습(못들음)
 	}
 
 }
