@@ -19,6 +19,9 @@ public class CarExam {
 		System.out.println("------------------");
 		System.out.println(myCar.speed);
 		
+		System.out.println("------------------");
+		System.out.println(myCar);
+		
 	}
 
 }
