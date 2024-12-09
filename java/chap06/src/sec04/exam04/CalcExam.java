@@ -12,7 +12,7 @@ public class CalcExam {
 		myCalc.plus(1, 2); //다음줄이 되면 결과값은 사라진다.
 		myCalc.plus(10.5, 20.3);
 		
-		int a = 10;
+		int a = 20;
 		double b = 20.3;
 		myCalc.plus(a, b);
 		
