@@ -167,7 +167,7 @@ public class ArrayExam {
 		// 저장한 내용으로 그 다음것과 비교하는걸 반복한다.
 
 		System.out.println("-----");
-//		int max = Integer.MIN_VALUE;
+//		int max = Integer.MIN_VALUE; //?
 		int max = nums2[0];
 		for (int i = 0; i < nums2.length; i++) {
 			if (max < nums2[i]) {

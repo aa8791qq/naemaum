@@ -13,5 +13,7 @@ public class Car {
 	int speed;
 	// 값을 선언하지 않은 경우 null, 0, false로 초기화 됩니다.
 	
-	
+	void setSpeed(int s) {
+		speed = s;
+	}
 }
