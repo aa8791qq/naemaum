@@ -18,6 +18,13 @@ public class CarExam {
 		car.setSpeed(300);
 		System.out.println(car.speed);
 
+		boolean gasState = car.isLeftgas(); // 결과물로 바뀜
+		if(gasState) {
+//		if(car.isLeftGas()){
+			System.out.println("출발합니다~~~~");
+			car.run();
+		}
+		
 		
 	}
 

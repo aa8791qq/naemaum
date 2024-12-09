@@ -15,6 +15,7 @@ public class Car {
 
 	void setSpeed(int s) {
 		speed = s;
+		System.out.println("속도를 " + speed +"로 바꿉니다.");
 	}
 
 	// 메소드는 무조건 return을 해야만 한다.(void인 경우 생략 가능)
@@ -65,10 +66,11 @@ public class Car {
 		while (true) {
 			if (gas > 0) {
 				System.out.println("주행중.. 잔량 : " + gas);
+				setSpeed(gas);
 				gas--;
 			} else {
 				System.out.println("주행종료... 잔량 : " + gas);
-				return;
+				return; // break 대신 사용됨.
 			}
 		}
 //		System.out.println("정차 알고리즘 실행");
