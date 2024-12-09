@@ -91,7 +91,7 @@ public class quiznuzuc {
 //		 전략2 : 숫자/대/소문자를 random으로 정하기, 숫자를 몇개 뽑았는지 세어 놓았다가 마지막에서 두번째에서 숫자의 필수자리수
 //		 소문자로
 //		 char에 소문자와 숫자의 관계(아스키 코드)
-		//숫자
+		// 숫자
 //		for (int k = 0; k < arr2.length; k++) {
 //			int start = 97;
 //			int end = 122;
@@ -116,18 +116,18 @@ public class quiznuzuc {
 		// 출력
 //			System.out.println(arr2[i]);	
 //	}
-	// 예약
-	// 자리가 10개 있는 소극장 예약 시스템
+		// 예약
+		// 자리가 10개 있는 소극장 예약 시스템
 
-	// 자리 번호는 1~10번까지 번호의 자리
+		// 자리 번호는 1~10번까지 번호의 자리
 
-	// 만약1 : 예약이 가능하면 "n번자리 예약 되었습니다.
+		// 만약1 : 예약이 가능하면 "n번자리 예약 되었습니다.
 
-	// 만역2 : 예약이 불가능하다면 "이미 예약 되었습니다.
+		// 만역2 : 예약이 불가능하다면 "이미 예약 되었습니다.
 
-	// 양식 : 1. 예약 2. 모든좌석 현황 3.
+		// 양식 : 1. 예약 2. 모든좌석 현황 3.
 
-	// 로또(중복없이 로또 6개 배열에 저장)
+		// 로또(중복없이 로또 6개 배열에 저장)
 //	int[] lotto = new int[6];
 
 //	lotto1 = (int)(Math.random()*45)+1;
@@ -140,7 +140,7 @@ public class quiznuzuc {
 //		lotto[1] = (int)(Math.random()*45)+1;
 //	} while(lotto[0] != lotto[1] && lotto[1] != lotto[2]);
 
-	// 2번 index 진행중
+		// 2번 index 진행중
 //	int index =2;
 //	boolean flag =false;
 //	for(int i=0; i<index; i++) {
@@ -149,32 +149,31 @@ public class quiznuzuc {
 //		}
 //		}
 
-	// 완성
+		// 완성
+		int[] lotto = new int[6];
+		boolean flag = false;
+		for (int j = 0; j < lotto.length; j++) {
+			do {
+				lotto[j] = (int) (Math.random() * (45)) + 1;
+				flag = false;
+				for (int i = 0; i < j; i++) {
+					if (lotto[i] == lotto[j]) {
+						flag = true;
+						System.out.println("중복발생");
+						break;
+					}
+				}
+			} while (flag);
+		} ///????????????????????
+		System.out.println("로또번호 남기원");
 
-	int[] lotto = new int[6];
-	boolean flag = false;
-	for(int j = 0;j<lotto.length;j++){
-		do {
-			lotto[j] = (int)(Math.random()*(45))+1;
-			flag = false;
-			for(int i = 0; i<j; i++) {
-				if(lotto[i] == lotto[j]) {
-				flag = true;
-				System.out.println("중복발생");
-				break;
+		for (int i = 0; i < lotto.length; i++) {
+			if (i != 0) {
+				System.out.print("," + lotto[i]);
+			} else {
+				System.out.print("," + lotto[i]);
 			}
-		}
-	} while(flag);
-	}
-	System.out.println("로또번호 남기원");
-	
-	for(int i = 0; i < lotto.length; i++){
-		if (i != 0) {
-			System.out.print("," + lotto[i]);
-		} else {
-			System.out.print("," + lotto[i]);
-		}
 
-	}
+		}
 	}
 }

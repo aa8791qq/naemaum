@@ -18,6 +18,7 @@ public class CarExam {
 		car.setSpeed(300);
 		System.out.println(car.speed);
 
+		
 	}
 
 }
