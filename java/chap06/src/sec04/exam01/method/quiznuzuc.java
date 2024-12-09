@@ -61,7 +61,7 @@ public class quiznuzuc {
 				if (i == 0) {
 					arr1[i] = 0;
 				} else {
-					arr1[i] = arr1[i-1];
+					arr1[i] = arr1[i - 1];
 				}
 			}
 			// 출력
@@ -75,29 +75,33 @@ public class quiznuzuc {
 		// 전략
 		// 처음 값에 0대신 넣게 되면?
 
-		// 임시 비밀번호 8자리 만들기
+//		 임시 비밀번호 8자리 만들기!!!!!
 		String[] arr2 = new String[8];
 		// 숫자로
 		for (int l = 0; l < arr2.length; l++) {
 			arr2[l] = "" + (int) (Math.random() * 10);
 			// 출력
-			System.out.println(arr2[l]);
+			System.out.print(arr2[l]);
 		}
+		System.out.println();
 		System.out.println("----------------");
-		// 소문자로
-		// char에 소문자와 숫자의 관계(아스키 코드)
-		for (int k = 0; k < arr2.length; k++) {
-			int start = 97;
-			int end = 122;
-			int random = ((int) (Math.random() * (end - start + 1))) + 1;
-			char temp = (char) random;
-			// 출력
-			System.out.print(arr2[k]);
-		}
 
-		// 숫자2개이상, 대/소문자 조합
-		// 전략1 : 일단 숫자2개 먼저 뽀ㅗㅂ고나서 정해진 개수의 대/소문자
-		// 전략2 : 숫자/대/소문자를 random으로 정하기, 숫자를 몇개 뽑았는지 세어 놓았다가 마지막에서 두번째에서 숫자의 필수자리수
+//		 숫자2개이상, 대/소문자 조합
+//		 전략1 : 일단 숫자2개 먼저 뽑고나서 정해진 개수의 대/소문자
+//		 전략2 : 숫자/대/소문자를 random으로 정하기, 숫자를 몇개 뽑았는지 세어 놓았다가 마지막에서 두번째에서 숫자의 필수자리수
+//		 소문자로
+//		 char에 소문자와 숫자의 관계(아스키 코드)
+		//숫자
+//		for (int k = 0; k < arr2.length; k++) {
+//			int start = 97;
+//			int end = 122;
+//			int random = ((int) (Math.random() * (end - start + 1))) + 1;
+//			char temp = (char) random;
+//			// 출력
+//			System.out.print(arr2[k]);
+//		}
+//		System.out.println();
+//		System.out.println("----------------");
 
 		// 숫자
 
@@ -111,7 +115,7 @@ public class quiznuzuc {
 
 		// 출력
 //			System.out.println(arr2[i]);	
-	}
+//	}
 	// 예약
 	// 자리가 10개 있는 소극장 예약 시스템
 
@@ -124,7 +128,53 @@ public class quiznuzuc {
 	// 양식 : 1. 예약 2. 모든좌석 현황 3.
 
 	// 로또(중복없이 로또 6개 배열에 저장)
+//	int[] lotto = new int[6];
 
+//	lotto1 = (int)(Math.random()*45)+1;
+//	lotto2 = (int)(Math.random()*45)+1;
+
+//	do {
+//		lotto[1] = (int)(Math.random()*45)+1;
+//	} while(lotto[0] != lotto[1]);
+//	do {
+//		lotto[1] = (int)(Math.random()*45)+1;
+//	} while(lotto[0] != lotto[1] && lotto[1] != lotto[2]);
+
+	// 2번 index 진행중
+//	int index =2;
+//	boolean flag =false;
+//	for(int i=0; i<index; i++) {
+//		if(int i=0; i<index; i++) {
+//			if(lotto[i] == lotto[index])
 //		}
-//	}
+//		}
+
+	// 완성
+
+	int[] lotto = new int[6];
+	boolean flag = false;
+	for(int j = 0;j<lotto.length;j++){
+		do {
+			lotto[j] = (int)(Math.random()*(45))+1;
+			flag = false;
+			for(int i = 0; i<j; i++) {
+				if(lotto[i] == lotto[j]) {
+				flag = true;
+				System.out.println("중복발생");
+				break;
+			}
+		}
+	} while(flag);
+	}
+	System.out.println("로또번호 남기원");
+	
+	for(int i = 0; i < lotto.length; i++){
+		if (i != 0) {
+			System.out.print("," + lotto[i]);
+		} else {
+			System.out.print("," + lotto[i]);
+		}
+
+	}
+	}
 }
