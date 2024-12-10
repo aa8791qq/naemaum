@@ -32,7 +32,7 @@ public class Kimbab {
 //		System.out.println(this.menu.get(0)); 순서대로 관리
 		this.price.add(3500);
 		
-		this.price.add("라면");
+		this.menu.add("라면");
 		this.price.add(4000);
 	}
 	
