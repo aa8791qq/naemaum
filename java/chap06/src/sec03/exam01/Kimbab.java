@@ -90,10 +90,21 @@ public class Kimbab {
 	 * @param String 메뉴명, int 가격
 	 * @return void
 	 */
+	void addMenu(String menuName, int menuPrice) {
+		this.menu.add(menuName);
+		this.price.add(menuPrice);
+		
+		System.out.println("메뉴 " + menuName + "(" + menuPrice +")(을)를 추가하였씁니다.");
+	}
 	
 	/**
 	 * 전체메뉴와 가격확인
 	 * @param
 	 * @return void
 	 */
+	void printMenu() {
+		for(int i=0; i<this.menu.size(); i++) {
+			System.out.println(this.menu.get(i) + " : " + this.price.get(i));
+		}
+	}
 }
