@@ -26,9 +26,13 @@ public class SongExam {
 
 		// song3은 setTitle()을 이용하기
 		Song song3 = new Song();
-		song3.setTitle("Whiplash");
+		song3.setTitle("Whiplash"); // 담을 수 없음
 		System.out.println(song3.title);
 //		System.out.println(song3.singer);
-	}
 
+		song3.plus(3.5, 7.5);
+//		double a = song3.plus(1,5);
+//		double b = song3.plus(a,7);
+		System.out.println();
+	}
 }
