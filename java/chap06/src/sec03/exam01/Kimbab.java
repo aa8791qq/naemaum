@@ -79,7 +79,6 @@ public class Kimbab {
 	
 	void order(int index) {
 		String menuName = (String)this.menu.get(index);
-		
 		String result = makeRoll(menuName);
 		System.out.println("주문하신 " + result + " 나왔습니다");
 	}
