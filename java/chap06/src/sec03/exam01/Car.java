@@ -32,14 +32,14 @@ public class Car {
 	
 	Car(){
 		this("아빈떼", "흰색", 1300);
-		System.out.println("아무것도 없지롱~");
+		System.out.println("차 스펙 기본사항");
 		}
 	
 	Car(String b, String c, int cc2){
 //		다른 생성자 호출하는 방법
-//		Car() 호출
+//		Car() 호출, ****this()****
 //		무조건 첫번째 줄에서 호출해야 한다.
-//		this();
+//		this(); 재귀호출
 		
 		brand = b;
 		color = c ;
@@ -50,9 +50,27 @@ public class Car {
 //		this();
 	}
 	
+	Car(String brand, int cc){
+		
+		
+		int a = 10;
+		
+		String color = "파랑";
+		System.out.println(color);
+		System.out.println(this.color); //필드 값 출력
+		
+		this.brand = brand;
+		this.cc = cc;
+	}
+	
+	void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
 	void test() {
 		System.out.println("test() 실행");
 //		Car(); 메소드
 	}
 	
+	//// 복습
 }
