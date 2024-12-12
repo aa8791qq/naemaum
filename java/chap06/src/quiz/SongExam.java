@@ -33,6 +33,6 @@ public class SongExam {
 		song3.plus(3.5, 7.5);
 //		double a = song3.plus(1,5);
 //		double b = song3.plus(a,7);
-		System.out.println();
 	}
+	System.out.println();
 }
