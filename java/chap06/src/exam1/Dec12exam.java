@@ -86,10 +86,6 @@ public class Dec12exam {
 				}// 반복 종료
 				break;
 				
-			case 3: // 키오스크 종료
-				System.out.println("종료! 다음에 이용 부탁드립니다.");
-				return; // 완전히 프로그램을 종료시켜버린다.
-
 			default: // 범위에 없으면 다시 입력 시키기
 				System.out.println("다시 입력쿠해주세요!");
 				break;
