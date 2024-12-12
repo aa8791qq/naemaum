@@ -110,7 +110,7 @@ public class Dec12exam {
 				break;
 			}
 			
-			for(i; i > 0; i++) {
+			for(; i > 0; i++) {
 				i += 1;				
 			}
 			System.out.println("현재 " + i +"개 주문 중입니다.");
