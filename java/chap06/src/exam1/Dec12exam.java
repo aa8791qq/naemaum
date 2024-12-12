@@ -12,8 +12,9 @@ public class Dec12exam {
 		while (a) { // 무한루프(손님 대기를 위해 계속돌린다.)
 			System.out.println("주문을 몇개 하시겠습니까?");
 			int os = working.nextInt(); // 주문건수
+			int i = os;
 			
-			if (os >= 1) { /// 1개이상이면 입력을 받는다.
+			if (i >= 1) { /// 1개이상이면 입력을 받는다.
 			} else { //아니면 종료
 				System.out.println("다시 이용해주세요");
 			}
@@ -108,10 +109,11 @@ public class Dec12exam {
 				System.out.println("다시 입력쿠해주세요!");
 				break;
 			}
-			for(os = working.nextInt(); os > 0; os++) {
-				os += 1;				
+			
+			for(i; i > 0; i++) {
+				i += 1;				
 			}
-			System.out.println("현재 " + os +"개 주문 중입니다.");
+			System.out.println("현재 " + i +"개 주문 중입니다.");
 			
 			// 영수증(만약에 선택을 1번으로 했더라면....)
 			if (menuS == 1) {
@@ -136,6 +138,7 @@ public class Dec12exam {
 				System.out.println("----------------------");
 				System.out.println("주문 하신 메뉴는");
 			}
+			
 			// 만약에 세부선택을 1번으로 했더라면....
 			if (sec2 == 1) {
 				System.out.println(menuS + " = 주스," + sec2 + " = 오렌지주스" + "로 주문했습니다.");
