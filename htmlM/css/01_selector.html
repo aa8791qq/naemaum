@@ -4,17 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <style><!--css 원래 위치-->
         /* css 주석 */
+
+        /* tag 선택자 */
+        h3 {
+            background : skyblue;
+        }
+        li {
+            color : blue;
+        }
+
+        /* id 선택자 */
+        #s1 {
+            color : red;
+            background: blue;
+            font-size: 20px;
+        }
+
+        /* class 선택자 */
+        .c1 {
+            color : green;
+            background: yellow;
+            font-size: 30px;
+        }
+</style>
+
 </head>
 <body>
     <h3>h3자리</h3>
     <ul>
-        <li>li1</li>
-        <li>li2</li>
+        <li class="c1">li1</li>
+        <li id="s1">li2</li>
         <li>li3</li>
         <li>li4</li>
-        <li>li5</li>
+        <li><ul>
+            <li id="s1">li1</li>
+            <li>li2</li>
+            <li>li3</li>
+            <li>li4</li>
+            <li>li5</li>
+        </ul></li>
     </ul>
 </body>
 </html>
