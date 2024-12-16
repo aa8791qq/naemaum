@@ -17,33 +17,30 @@
      method : get, post(대소문자 구분없음)
      action : 요청할 서버주소 -->
     
-     <form method="get" action="주소"><!-- post -->
+     <form method="get" action="주소">
         text(기본값) : <input type="text"><br>
         text(vaule) : <input type="text" value="애교"><br>
         text(placeholder) : <input type="text" value="애교" placeholder="id"><br>
         text(readonly) : <input type="text" value="애교" placeholder="id" readonly="readonly"><br>
-        text(disabled) : <input type="text" disabled="disabled"><br>
+        text(readonly) : <input type="text" disabled="disabled"><br>
 
         password : <input type="password"><br>
         password : <input type="password" value="olo" placeholder="password"><br>
 
         radio
-        성별 <input type="radio" name="gender" value="m" checked="checked">남자
+        <input type="radio" name="gender" value="m" checked="checked">남자
         <input type="radio" name="gender" value="f">여자
         <br>
 
         checkbox
-        체크박스 <input type="checkbox" value="sport" checked="checked" disabled="disabled">sport
+        <input type="checkbox" value="sport" checked="checked" disabled="disabled">sport
         <input type="checkbox" value="music">music
         <br>
 
-        파일 <input type="file">
-        리셋 <input type="reset" value="reset">
+        <input type="file">
+        <input type="reset" value="reset">
         <br>
-        검색 <input type="text" name="search">
-        전송 <input type="submit" value="전송">
-        <br>
-        hidden : <input type="hidden" name="secret" value="1234">
+        <input type="submit" value="전송">
     </form>
 
     <!-- <form> 2개이상 써도 가능하나 왠만하면 1개만 쓰자
@@ -59,23 +56,6 @@
         datetime-local : <input type="datetime-local"><br>
         color : <input type="color"><br>
     </form> -->
-
-    <form method="get" action="https://search.naver.com/search.naver?">
-        네이버검색 : <input type="text" name="query" placeholder="검색어">
-        <input type="submit" value="검색">
-    </form>    
-
-    <form method="get" action="https://search.google.com/search?">
-        구글검색 : <input type="text" name="q" placeholder="검색어">
-        <input type="submit" value="검색">
-    </form>
-
-    <!-- 중요도 낮음-->
-     날짜 <input type = "date" value="2022-01-01"><br>
-     색깔 <input type = "color"><br>
-     숫자 <input type = "number" value="15">
-    <br>
-    <input type = "button" value="버튼">
 
 </body>
 
