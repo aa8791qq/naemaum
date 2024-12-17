@@ -180,8 +180,14 @@
             background-color: greenyellow;
         }
 
-        input[type=radio]{
-            
+        input[type=radio]:checked{
+            width: 50px;
+            height: 50px;
+        }
+
+        /* + : 바로 다음 형제 선택자 */
+        input[type=radio]:checked + span{
+           color : blue;
         }
     </style>
 
@@ -273,9 +279,8 @@
         <a href="https://google.com">google</a>
        
         <br>
-        
-        <input type="radio" name="name"> 한식 <br>
-        <input type="radio" name="name"> 중식 <br>
+        <input type="radio" name="name"> <span>한식</span> <br>
+        <input type="radio" name="name"> <span>중식</span> <br>
 
         <p style="height:1000px"> </p>
 </body>
