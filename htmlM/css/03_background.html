@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #bi{
+            height : 700px;
+            border : 1px solid red;
+            background-image: /* url("https://images.vexels.com/media/users/3/293989/isolated/lists/644eb361222af7ffb0e70c3bfc21e8f8-cute-self-esteem-duck-character.png"),*/ url("https://images-ext-1.discordapp.net/external/4i_37HA53MksW8Rb7aOoBQF8NpCSzrnZg56wncFT9V0/https/i.pinimg.com/736x/f9/8c/ca/f98ccac1f177805e42aa5d43a5215e0f.jpg?format=webp&width=551&height=640");
+            /* background-repeat: repeat-x; */
+            background-repeat: /*no-repeat,*/ no-repeat;
+            /* background-size: 100px 200px, 100px 200px; */
+            background-size: /*100% 100%,*/ 100% 100%;
+            /* background-size: cover; */
+            background-size: contain;
+            background-position: center;
+            background-color: red;
+        }
+
+        #div{
+            height : 100vh;
+            background-image : url("https://images-ext-1.discordapp.net/external/4i_37HA53MksW8Rb7aOoBQF8NpCSzrnZg56wncFT9V0/https/i.pinimg.com/736x/f9/8c/ca/f98ccac1f177805e42aa5d43a5215e0f.jpg?format=webp&width=551&height=640");
+            background-size: cover;
+            overflow: auto;
+
+            background-attachment : fixed
+        }
+        #div p{
+            height: 200vh;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
     
+    <p id="bi">
+        백그라운드 이미지<br>
+        백그라운드 이미지<br>
+        백그라운드 이미지<br>
+    </p>
+
+    <div id="div">
+        <p>어떤 글자</p>
+    </div>
 </body>
 </html>
