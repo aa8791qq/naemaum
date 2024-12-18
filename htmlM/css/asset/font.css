@@ -92,3 +92,16 @@ em{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.text{
+    border: 1px solid red;
+    width : 30vw;
+}
+
+.word-wrap{
+    word-wrap: break-word;
+}
+
+.word-break{
+    word-break: break-all;
+}
