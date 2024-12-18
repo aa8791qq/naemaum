@@ -24,3 +24,71 @@ input[type=checkbox]:checked + span{
     /* font-size: 200%; */
     font-size: 2em;
 }
+
+.style{
+    font-style: italic;
+}
+
+em{
+    font-style: normal;
+}
+
+/* 100 ~ 900을 넘어서면 기본 두께 */
+.fw-100{
+    font-weight: 100;
+}
+
+.fw-500{
+    font-weight: 500;
+}
+
+.fw-900{
+    font-weight: 900;
+}
+
+.fw-2000{
+    font-weight: 2000;
+}
+
+.fw-blod{
+    font-weight: bold;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.align-justify{
+    text-align: justify;
+}
+
+.spacing {
+    letter-spacing: -0.1em;
+}
+
+.lh{
+    line-height: 200%;
+}
+
+.middle{
+    border: 1px solid red;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.nowrap{
+    border: 1px solid red;
+    width : 70vw;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
