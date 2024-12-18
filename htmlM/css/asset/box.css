@@ -1,0 +1,109 @@
+body{
+    border: 1px solid red;
+    margin: 0;
+}
+
+.first{
+    /* border: 1px solid green; */
+        /* margin-top: 50px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    margin-left: 20px; */
+
+    /* 네 곳을 각각 한 번에 지정하는 방법 */
+    margin : 50px 40px 30px 20px;
+    
+    /* 3개일때 : top right+left bottom */
+    margin: 50px 20px 30px;
+
+    /* 2개일때 : top+bottom right+left */
+    margin: 50px 20px;
+
+    /* 1개일때 : top+right+bottom+left */
+    margin: 50px;
+
+    border-top-width : 3px;
+    border-top-style : solid;
+    border-top-color : red;
+
+    border-right : 2px dotted green;
+    border-bottom : 5px dashed blue;
+    border-left : 10px solid black;
+
+    /* 인용구 표현방식?? 검색*/
+
+    /* 네 방향 지정할때 */
+    border : 5px solid red;
+
+    padding-top : 20px;
+    padding-right : 15px;
+    padding-bottom : 10px;
+    padding-left : 15px;
+
+    padding: 50px;
+
+    /* width, height는 기본적으로 컨텐츠의 너비와 높이 */
+    width : 50%;
+    height : 200px;
+
+    background-color: yellow;
+}
+
+/* ??? */
+.second{
+    /* border: 1px solid green; */
+        /* margin-top: 50px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    margin-left: 20px; */
+
+    /* 네 곳을 각각 한 번에 지정하는 방법 */
+    margin : 50px 40px 30px 20px;
+    
+    /* 3개일때 : top right+left bottom */
+    margin: 50px 20px 30px;
+
+    /* 2개일때 : top+bottom right+left */
+    margin: 50px 20px;
+
+    /* 1개일때 : top+right+bottom+left */
+    margin: 50px;
+
+    border-top-width : 3px;
+    border-top-style : solid;
+    border-top-color : red;
+
+    border-right : 2px dotted green;
+    border-bottom : 5px dashed blue;
+    border-left : 10px solid black;
+
+    /* 인용구 표현방식?? 검색*/
+
+    /* 네 방향 지정할때 */
+    border : 5px solid red;
+
+    padding-top : 20px;
+    padding-right : 15px;
+    padding-bottom : 10px;
+    padding-left : 15px;
+
+    padding: 50px;
+
+    /* width, height는 기본적으로 컨텐츠의 너비와 높이 */
+    width : 50%;
+    height : 200px;
+
+    background-color: yellow;
+
+    box-sizing : border-box;
+}
+
+.profile img{ 
+    border : 1px solid black;
+    width: 200px;
+    height: 200px;
+
+    border-radius : 20px;
+}
+
+/* 이 css를 어디서도 쓸수 있는 방법이 뭔지??? */
