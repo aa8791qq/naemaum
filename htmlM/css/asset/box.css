@@ -104,6 +104,30 @@ body{
     height: 200px;
 
     border-radius : 20px;
+
+    padding-top: 50px;
+    box-sizing: border-box;
 }
 
-/* 이 css를 어디서도 쓸수 있는 방법이 뭔지??? */
+/* 이 css를 어디서도 쓸수 있는 방법이 뭔지?!? */
+
+.chat{
+    border: 1px solid black;
+    background-color: yellow;
+    width: 60px;
+    text-align : center;
+    border-radius: 10px 0px 10px 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.third{
+    border: 1px solid red;
+    width: 70%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+#img{
+    border:1px solid red;
+}
