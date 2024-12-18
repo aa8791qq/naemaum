@@ -1,0 +1,19 @@
+.block{
+    border: 1px solid red;
+    width : 100px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.inline{
+    border: 1px solid red;
+
+    width : 100px;
+    height: 50px;
+
+    /* 좌우만 되고 위 아래 안됨 */
+    margin : 0 50px;
+
+    /* 좌우만 되고 위 아래 안됨 단, border는 밀어짐*/
+    padding: 30px;
+}
