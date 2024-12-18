@@ -1,0 +1,26 @@
+/* 폰트패밀리에 적힌 값을 사용가능 */
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#p1{
+    color: red;
+    /* text-decoration: underline; */
+    text-decoration: line-through;
+    font-family: 'Ownglyph_ParkDaHyun';
+    font-size : 30px;
+}
+input[type=checkbox]:checked + span{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.size{
+    /* font-size: larger; */
+    /* font-size: 30px; */
+    /* font-size: 200%; */
+    font-size: 2em;
+}
