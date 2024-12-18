@@ -17,3 +17,25 @@
     /* 좌우만 되고 위 아래 안됨 단, border는 밀어짐*/
     padding: 30px;
 }
+
+.bg_blue{
+    background-color: blue;
+    color: white;
+}
+
+.parent{
+    border : 1px dotted rgb(255, 0, 255);
+    /* width : 400px; */
+    width : 100%;
+}
+
+.parent > div { /* 바로직계만 됨 */
+    border : 1px dashed blue;
+    height : 75px;
+    width : 200px;
+    box-sizing: border-box;
+
+    display: inline-block;
+
+    vertical-align: top /* bottom, middle(inline, inline-block만 적용됨) */;
+}
