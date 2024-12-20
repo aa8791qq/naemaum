@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="asset/position.css">
 </head>
 
-<body>
+<body id="top">
     <div class="parent">
         <div>
             <div>
@@ -24,6 +24,13 @@
         </div>
     </div>
 
+    <!-- 추후실습한 코드 -->
+
+    <div class="sticky">
+        스티키 : 메뉴1 메뉴2
+    </div>
+
+    <!-- top 이어서 -->
     <div class="parent">
         <div>
             <div>
@@ -54,6 +61,54 @@
         아래
     </div>
 </div>
+
+<div class="parent relative">
+    <div>
+        <div>
+            위로
+        </div>
+        <div class="child absolute">
+            자식<br>
+            다음줄
+        </div>
+    </div>
+    <div>
+        아래
+    </div>
+</div>
+
+<div class="parent">
+    <div>
+        <div>
+            위로
+        </div>
+        <div class="child absolute-bottom">
+            자식<br>
+            다음줄
+        </div>
+    </div>
+    <div>
+        아래
+    </div>
+</div>
+
+<div class = fixed>
+    <a href="#top">맨위로</a>
+</div>
+
+<div class="parent">
+    <div class="relative z1">z1</div>
+    <div class="relative z2">z2</div>
+    <div class="relative z3">z3</div>
+</div>
+
+<div class="p1">
+    부모박스
+    <div class="p2">
+        자식박스
+    </div>
+</div>
+
 </body>
 
 </html>
