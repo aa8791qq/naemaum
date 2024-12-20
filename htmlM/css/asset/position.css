@@ -1,0 +1,31 @@
+div {
+    border: 1px solid red;
+}
+
+.parent {
+    width: 100px;
+    margin: 20px;
+    background-color: green;
+    color: white;
+}
+
+.child {
+    background-color: rgba(0, 0, 255, 0.5);
+    width: 50px;
+}
+
+.relative {
+    position: relative;
+    top: 10px;
+    left: -20px;
+}
+
+.absolute{
+    position: absolute;
+    /* top : 0;
+    left : 0; */
+    /* top : 50%;
+    left : 50%; */
+    top : 250px;
+    left : 150px;
+}
