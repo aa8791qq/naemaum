@@ -18,31 +18,34 @@
             text-align: center;
         }
 
-        span{
-            display:none;
+        span {
+            display: none;
         }
 
         ul li {
-                width: 100%;
+            width: 100%;
+            display: block;
+        }
+
+
+        @media screen and (max-width : 600px) {
+            span {
+                display: inline;
+            }
+
+            span:hover+ul {
                 display: block;
             }
 
-
-            @media screen and (max-width : 600px) {
-                span{
-                    display : inline;
-                }
-                span:hover + ul{
-                    display : block;
-                }
-                ul {
-                    display: none;
-                }
-                ul li {
-                    width: 100%;
-                    display: block;
-                }
+            ul {
+                display: none;
             }
+
+            ul li {
+                width: 100%;
+                display: block;
+            }
+        }
     </style>
 </head>
 
