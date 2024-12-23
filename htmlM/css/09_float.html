@@ -5,20 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .article{
+            border : 1px solid red;
+        }
+
         .box{
             border : 1px solid red;
             width : 100px;
             height : 100px;
             margin : 10px;
         }
+
+        .box.left {
+            float : left;
+            border : 1px solid blue;
+        }
+
+        .box.right{
+            float : right;
+        }
+
+        .clearfix:after{
+            content : "";
+            display : block;
+            clear : both;
+        }
+
+        .homepage{
+            border: 1px solid red;
+            margin : 10px;
+            text-align: center;
+        }
+
+        .homepage .menu{
+            border : 1px solid blue;
+            width: 100px;
+            float : left;
+        }
+
+        .homepage .mypage{
+            border : 1px solid blue;
+            width: 200px;
+            float : right;
+        }
+
+        .homepage .logo{
+            border : 1px solid black;
+            display : inline-block;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
+
+    <!-- <div class = "article">
+        <img class ="box left" src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus pariatur ipsam, fuga iusto corporis quo harum unde facere, aspernatur illo et magni quod expedita, in ad ab quaerat qui molestias?
+    </div> -->
+    
+    <div class = "clearfix">
+        <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio deleniti voluptas earum iusto fugiat, facilis tempora doloremque sit, ad eveniet tempore maxime optio assumenda dolores excepturi? Laudantium natus labore voluptate. -->
+        <div class="box left">1</div>
+        <div class="box left">2</div>
+        <div class="box right">3</div>
+        <div class="box right">4</div>
     </div>
+
+
+    <div> 글씨 몇개 </div>
+
+    <div>
+        <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio deleniti voluptas earum iusto fugiat, facilis tempora doloremque sit, ad eveniet tempore maxime optio assumenda dolores excepturi? Laudantium natus labore voluptate. -->
+        <div class="box left">1</div>
+        <div class="box left">2</div>
+        <div class="box right">3</div>
+        <div class="box right">4</div>
+        <div style = "clear : both" ></div>
+    </div>
+
+    <div> 글씨 몇개 </div>
+
+    <div class = "homepage">
+        <div class = "menu"> 왼쪽 메뉴 </div>
+        <div class = "logo"> 가운데로고 </div>
+        <div class = mypage> 오른쪽 마이페이지</div>
+    </div>
+
 </body>
 </html>
