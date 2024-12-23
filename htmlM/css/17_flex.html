@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border : 1px solid green;
+            height : 300px;
+            width : 500px;
+
+            display : flex;
+            /* display : inline-flex; */
+
+            /* main측 기본값 : 왼쪽에서 오른쪽으로 */
+            /* flex-direction: row; */
+
+            /* 오른쪽에서 왼쪽으로 */
+            /* flex-direction: row-reverse; */
+
+            /* 메인축과 크로스축을 변경해서 위에서 아래로 */
+            /* flex-direction: column; */
+            /* 아래에서 위로 */
+            /* flex-direction: column-reverse; */
+
+            /* 한줄에 모든 아이템을 표시할려고 함.(기본 : nowrap) */
+            flex-wrap : nowrap;
+            /* inline-block처럼 넘치는 경우 다음줄 */
+            flex-wrap : wrap;
+
+            flex-wrap : wrap-reverse;
+
+        }
+
+        .container .item{
+            border : 1px solid red;
+            background-color: brown;
+            color : white;
+
+            width : 100px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
