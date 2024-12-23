@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+
+        .wrap .left,
+        .wrap .right> {
+            display: inline-block;
+            width: 45%;
+            margin: 0 2%;
+        }
+
+        .wrap .img_right{
+            width : 50%;
+        }
+        
+        .wrap .img_left{
+            width : 100%
+        }
+
+        .wrap #band {
+            width : 200px;
+            height : 100%;
+            background-color: blue;
+
+            position: absolute;
+            margin : 0 auto; /* absolute 하면 inline block으로 바뀜 */
+            
+            z-index: -1;
+            left : calc(50% - 100px); /*너버를 알아야 쓸 수 있음) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+    
+        <div class="img_left">
+        왼쪽
+    </div>
+    <div>
+        오른쪽
+    </div>
+</div>
+
+    <div id = band></div>
+    <div>
+        <div class="img_right">
+            왼쪽
+        </div>
+        <div>
+            오른쪽
+        </div>
+    </div>
+</body>
+
+</html>
