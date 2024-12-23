@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p{
+            margin : 5px;
+            height : 100px;
+            width: 100px;
+            border : 1px solid red;
+        }
+
+        .p.hidden{
+            overflow: hidden;
+        }
+        
+        .p.scroll{
+            overflow: scroll;
+        }
+
+        .p.auto{
+            overflow: auto;
+        }
+
+        .nowrap {
+            border : 1px solid red;
+            width : 300px;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+
+        .nowrap div{
+            border: 1px solid red;
+            width: 100px;
+            display: inline-block;
+            margin:5px;
+        }
+        </style>
+</head>
+<body>
+    <div class ="p hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos aut quisquam excepturi quidem, consequatur similique perspiciatis qui sunt fugit. Beatae reiciendis eveniet delectus, voluptatum illo facilis nihil perferendis repellat.
+    </div>
+    <div class ="p scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos aut quisquam excepturi quidem, consequatur similique perspiciatis qui sunt fugit. Beatae reiciendis eveniet delectus, voluptatum illo facilis nihil perferendis repellat.
+    </div>
+    <div class ="p auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos aut quisquam excepturi quidem, consequatur similique perspiciatis qui sunt fugit. Beatae reiciendis eveniet delectus, voluptatum illo facilis nihil perferendis repellat.
+    </div>
+
+    <div class = "nowrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
