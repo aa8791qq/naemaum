@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-spacing: 1px;
+            border-collapse: collapse;
+            /* 테이블마다 흰색이 나오는게 이상해서 각 테두리를 없앴다.(쌤 도움 받음) */
+        }
+
+        #sphere {
+            font-size: 15px;
+            text-align: left;
+            padding-left: 18px;
+        }
+
+        #about, #contact {
+            text-align: right;
+            width: 80px;
+            /* 너비조절를 위함. 값을 늘릴때마다 동시에 늘어남... 영석이 형 도움*/
+        }
+
+        #contact {
+            padding-right: 30px;
+        }
+
+        #en {
+            text-align: right;
+            padding-right: 30px;
+        }
+
+        #news {
+            width: 100px;
+            text-align: left;
+            padding-left: 10px
+        }
+
+        td {
+            font-size: 12px;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        #tr1, #tr2 {
+            border-bottom: 1px solid white;
+        }
+
+        #search {
+            border: 1px solid white;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 테이블로 만들기 -->
+    <!-- 가로 8개, 세로 3개 테이블로 만들어서 페이지를 크게 짠다. !보더를 준다. C -->
+    <!-- 1번째 줄을 1개를 합쳐 3개로 만들고 합친 1개를 너비를 크게 만든다. C -->
+    <!-- 2번째 줄에 있는 news를 합쳐 너비를 크게 만든다. C -->
+    <!-- 3번째줄은 사진을 넣고 높이와 너비를 전체 페이지 크기에 맞춘다. HC? -->
+    <!-- 첫번째 줄과 두번째 줄은 각각 마진과 패딩을 적절히 준다. 가운데 정렬인듯 보인다. C -->
+    <!-- 백글라운드 칼러를 검은색으로, 글씨색은 하얀색으로 조절한다. -->
+    <!-- 모든 글씨크기는 적절히 줄인다.(SPHERE 제외)  C-->
+    <!-- 첫번째 주과 두번째 줄 사이에 선을 만들고 SEARCH과 EN 왼쪽에 선을 준다.(나머지는 제외) C // 쌤 도움 받음-->
+    <!-- about, contact는 너비를 조절한다./.(sphere의 너비를 넓게 만든다. about과 contact의 너비를 좁게만든다.)// 영석의 형 도움받음 -->
+    <!-- SPHERE에는 글씨 폰트와 크기를 조절한다. C -->
+
+    <!-- 테이블 없이 -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <table>
+        <tr id="tr1">
+            <td id="sphere" colspan="6"><strong>SPHERE</strong></td>
+            <td id="about">ABOUT</td>
+            <td id="contact">CONTACT</td>
+        </tr>
+        <tr id="tr2">
+            <td>BOOK</td>
+            <td>FLIGHT</td>
+            <td>SHIPS</td>
+            <td>TRANING</td>
+            <td id=news colspan="2">NEWS</td>
+            <td id=search>SEARCH</td>
+            <td id=en>EN</td>
+        </tr>
+        <tr>
+            <td colspan="8"><img
+                    src="https://img.freepik.com/free-vector/sky-background-with-moon-rocket_23-2147615695.jpg?t=st=1735001247~exp=1735004847~hmac=1951deecee44daad5a74aa8ff672afed97ce982aaebdeae85f457bb43c83f489&w=740">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
