@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        /* body {
             background-color: gray;
+        } */
+
+        .table1,
+        .table2,
+        .table3 {
+            width: 600px;
         }
 
         .table1 {
@@ -22,11 +28,14 @@
         }
 
         #img1,
-        #img2 {
+        #img2{
             /* 쌤 도움을 받음 */
             height: 300px;
-            width: 810px;
+            width: 600px;
         }
+
+        /* #img3, */
+        /* #img4  */
 
         #tr1,
         #tr2 {
@@ -85,13 +94,22 @@
             font-size: 11px;
             text-align: center;
             color: white;
-            background-color: black
+            background-color: black;
         }
 
         .tr3_1 {
             border: 1px solid white;
             padding: 10px;
             font-family: sans-serif Arial;
+            width: 100px;
+        }
+
+        .table3 {
+            border: 1px solid black;
+        }
+
+        .table3_1 {
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -156,6 +174,78 @@
             </tr>
         </td>
     </table>
+
+    <table CLASS=table3 border="1">
+        <tr>
+            <td colspan="3">SPACESHIPS</td>
+            <td>GO TO SHIPS</td>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>DRAGON</td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td colspan="4"><img
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxOTA0MDhfMTQy/MDAxNTU0Njg0OTk4NzM0.0uUgO-ElZmwHxURoLhlc3W6Fx9YwkzaHBGL31x69Yysg.sRIkXyyBkCr0UrpZyCeUcVRFSm3-_s3gFwP1ASMyEN8g.JPEG.prkac/yaytg647680.jpg?type=w800">
+            </td>
+        </tr>
+        <td colspan="2">
+            <TABLE class="table3_1">
+                <TD>
+                    <tr>
+                        <td>HEIGHT</td>
+                        <td>8.1M</td>
+                    </tr>
+                    <tr>
+                        <td>DIAMETER</td>
+                        <td>4M</td>
+                    </tr>
+                    <tr>
+                        <td>CAPSULE VOLUME</td>
+                        <td>9.3M3</td>
+                    <tr>
+                        <td>tRUNK VOLUME</td>
+                        <td>37M3</td>
+                    <tr>
+                        <td>LAUNCH PAYLOAD MASS</td>
+                        <td>6,000KG</td>
+                    <tr>
+                        <td>RETURN PAYLOAD MASS</td>
+                        <td>3,000KG</td>
+                    </tr>
+                </TD>
+            </TABLE>
+        </td>
+        <td><img id=img3
+                src="data:image/jpeg;base64,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">
+        </td>
+        <td><img id=img4
+                src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3A6T3PvvncszxniUQ5v4dVZ-v_GE3s5CIeg&s></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>F</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- 2번째 사이트 -->
     <!-- 백그라운드를 포함해서 4줄로 다시 만든다. 영석이형이 도와줌-->
