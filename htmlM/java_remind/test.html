@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<table border = 1 text-align=center>");
+        document.write("<tr><td> n </td><td> n 제곱</td><td> n 세제곱</td>");
+        for(n=1; n<=5; n++){
+            document.write("<tr>")
+            result = n;
+            document.write("<Td>" + result + "</td>")
+            for(k=2; k<4; k++){
+                result = result * n;
+                document.write("<td>" + result + "</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

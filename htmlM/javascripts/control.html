@@ -7,7 +7,8 @@
 </head>
 <body>
     <script> /// 아직부족합니다!
-        const tem = prompt("지금 몇도?");
+        // const tem = prompt("지금 몇도?");
+        const tem = -7
         console.log(typeof tem)
         if(tem > 0){
             console.log(`지금 온도는 ${tem}도 영상 입니다`) ;
@@ -15,8 +16,20 @@
             console.log(`지금 온도는 ${tem}도 영하 입니다.`);
         }
 
-        /*js에서의 참은 거짓을 아닌것을 뜻한다.(거짓 : False, 0 , Null, Undefined / 참: !거짓)*/
+        /*js에서의 참은 거짓을 아닌것을 뜻한다.(거짓 : False, 0, Null, Undefined, NaN / 참: !거짓)*/
 
+
+        if( temp> -3 && temp < 15){
+            
+        }
+        if(!( temp > -3 && temp < 15)){
+
+        }
+        if( temp <= -3 && temp >= 15){
+
+        }
+
+        let a = (temp > 0) ? "영상" : "영하"; // 삼항 연상자
     </script>
 </body>
 </html>
