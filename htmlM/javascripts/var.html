@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 한줄 주석
+        /* 범위주석 */
+
+        console.log("hello world")
+
+        var a = 10;
+        console.log("a의 값은 " + a);
+
+        b = 11;
+        console.log("b의 값은 ", b) // 문자값 + 숫자값
+
+        let c = 12;
+        console.log(c)
+
+        const d = 13;
+        console.error(d);
+
+        let e;
+        console.log(e); //상태값 출력
+        console.log(""+ e); //글씨 출력
+
+        // console.log(f); // error 발생 시 js 중단
+        // console.log("hello");
+
+        // 재선언이 가능하다.
+        var a = 20;
+        b = 21;
+        console.log(a, b, a+b)
+
+        // 재선언을 막아준다.
+        // let c = 22;
+        // const d = 23;
+        c = 22;
+        console.log(c)
+        
+        // d = 23; // 변수가 아니고 상수(RO)
+        
+        c = "문자";
+        c = "문\"자";
+        c = '문자';
+        c = '<a href="naver.conm">';
+        c = '엔\n터';
+        c = '엔\t터';
+
+        console.log(c);
+
+        // let g:number = "문"; 타입스크립트
+
+        console.log(typeof c);
+        console.log(typeof d, d);
+
+        c = "13"
+        console.log(c == d); // 값이 같은가?(타입일치불문)
+        console.log(c != d); // 값이 다른가?(타입일치불문)
+        console.log(c === d); // 타입과 값이 같은가?
+        console.log(c !== d); // 타입과 값이 다른가?
+
+        c += 1;
+        console.log(c);
+
+        let a1, a2, a3;
+
+        if(a1 == undefined){
+            console.log("a1의 값을 넣으세요", typeof a1);
+        }
+
+        if(typeof a1 === "undefined"){
+            console.log("a1의 값을 넣으세요");
+        }
+
+        const g = "12.34";
+        console.log(1, g+5);
+        console.log(2, Number(g)+5);
+        console.log(2, parseInt(g)+5);
+
+        const h = "문자";
+        console.log(h*5); // NaN : Not a Number
+        //NaN 판별법
+        console.log (isNaN(h)); // NaN인가?
+
+        console.log(5/0);
+        console.log(isFinite(5/0));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
