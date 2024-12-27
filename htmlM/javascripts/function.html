@@ -68,6 +68,100 @@
     console.log(plus3(1 ,2))
     console.log(plus3())
 
+    console.log("---------------------")
+    // spread 연산자
+    // 가변적인 전달인자를 받을 수 있다.
+    function log(...obj){
+        console.log(typeof obj)
+        console.log(obj[0])
+        console.log(obj)
+    }
+    log(1,2,3)
+
+    let d = [100, 200];
+    console.log(d)
+    console.log(...d)
+
+    console.log(plus(d[0], d[1]))
+    console.log(plus(...d))
+
+    let f = "console.log(123)";
+    eval(f) //string을 javascript로 변환해주는 메소드다.
+
+    function plus4(){
+        console.log("plus4 실행")
+    }
+
+    let p = plus4;
+    console.log(typeof p);
+    p();
+
+    function plus5(){
+        console.log("plus4 실행")
+    }
+    console.log(typeof plus5)
+    plus5 = 3
+    console.log(typeof plus5)
+
+    console.log(plus4)
+    function plus5(){
+        console.log("plus5 실행")
+    }
+
+    //익명함수
+    let times = function (a, b){
+        return a * b
+    }
+    console.log(times(3,4))
+    // times = 3;
+
+    //기존의 함수도 함수명을 변수취급하고 있음
+
+    function payment(n, cb){
+        console.log("지불하기")
+        
+        let ra = 2500;
+
+        if(typeof cb == "function"){ //방어코딩
+        let result = cb(ra, n)
+        console.log(result)
+        } else {
+            console.log("일 안해") //????
+        }
+    }
+    payment(10, times) //변수명 정확히!!
+    payment(10, plus)
+
+    //3case
+    // payment(10, times)
+    // payment(10)
+    // payment(10,2)
+
+    //콜백함수 예시 : 
+
+    /*
+        setTimeout : 첫번째 전달인자 : 실행한 함수
+                    두번째 전달인자 : 지연할 시간(1/1000 초)
+    */
+
+    // 예약설정
+    let print5 = function(){
+        console.log("5초뒤");
+    }
+    setTimeout(print5, 5000);
+
+    setTimeout( function(){
+        console.log("6초뒤");
+    }, 6000 )
+    
+    let c = 1
+    let idx = setTimeout( function(a, b){
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }, 6000, c, 20)
+    console.log(idx)
+    clearTimeout(idx)// 예약취소
 </script>
 
 </head>
