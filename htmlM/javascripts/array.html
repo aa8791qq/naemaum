@@ -169,11 +169,35 @@
 
         // 놓침
         console.log("--------------------------")
-        let str2 = "오늘 아이브누나들의 점심은? 그리고 천사인가??";
+        let str2 = "오늘 아이브누나들의 점심은? 그리고 아이브누나들은 천사인가??";
         console.log(str2.length)
         // 같은 값이 여러개인 경우 첫번째 만나는 요소의 index만 return
         // indexOf 같은 값이 없는 경우 -1로 돌려준다.
         console.log(str2.indexOf("아이브"))
+
+        // 시작 index 부터 끝 index 바로 앞까지
+        // 끝 index가 없으면 끝까지
+        console.log(str2.slice(3, 8))
+
+        // 첫번쨰 전달인자를 두번쨰로 바꿔줌 >> 놓?
+        // 처음 만나는 것 하나만 바꿈
+        let str3 = str2.replace("아이브", "오마이걸")
+            console.log(str2)
+            console.log(str3)
+            
+        // 정규표현식 >> 놓?
+        str3 = str2.replace(/아이브/g, "오마이걸")
+        console.log(str3)
+        
+        // 시작 index 부터 끝 index 바로 앞까지 >> 놓?
+        str3 = str2.substring(3,6)
+        console.log(str2)
+        console.log(str3)
+        
+        // 시작 index부터 count 만큼 출력
+        str3 = str2.substr(3,6);
+        console.log(str2)
+        console.log(str3)
 
         </script>
 </head>
