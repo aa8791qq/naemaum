@@ -1,171 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<script>
-    // function 키워드로 선언
-    // function 함수명(전달인자 변수명들)
-    // 전달인자에 타입 적지 않는다.
+    <script>
+        // function 키워드로 선언
+        // function 함수명(전달인자 변수명들)
+        // 전달인자에 타입 적지 않는다.
 
-    // 함수를 쓰는 이유
-    // 정해진 순으로 동작하는 코드의 묶음
-    // 재사용도 편하다.
+        // 함수를 쓰는 이유
+        // 정해진 순으로 동작하는 코드의 묶음
+        // 재사용도 편하다.
 
-    function plus(x, y){
-        console.log(x);
-        console.log(y);
-        let z = x + y; // 지역변수
-        return z;
-    }
-
-    let a = plus(2, 3);
-    console.log(a)
-    
-    console.log("---------------------")
-    // // 함수 선언과 동시에 실행(아직 몰라도됨)
-    // (
-    //     function test(){
-    //         console.log("test")
-    //     }
-    // )
-    // ();
-
-    plus(2,3) //????
-
-    function times2(x){
-        return plus(x,x);
-        // let z= plus(x, x);
-        // return z;
-    }
-
-    console.log("---------------------")
-    // 아래 두줄은 완전히 동일한 결과가 나온다.
-    plus(8,5)
-    plus(times2(4), 5)
-
-    console.log("---------------------")
-    plus()
-    plus(1)
-    plus(1,2,3,5,6)
-
-    // console.log("---------------------") ?????
-    function plus2(x, y){
-        if( x == undefined){
-            x = 0
+        function plus(x, y) {
+            console.log(x);
+            console.log(y);
+            let z = x + y; // 지역변수
+            return z;
         }
-    }
-    plus2();
 
-    console.log("---------------------")
-    // 초기값(기본값) 사용법(전달인자가 없는 경우 초기값 적용)
-    function plus3(x = 5, y = 6){
-        console.log(x)
-        console.log(y)
-        return x + y
-    }
-    console.log(plus3(1 ,2))
-    console.log(plus3())
+        let a = plus(2, 3);
+        console.log(a)
 
-    console.log("---------------------")
-    // spread 연산자
-    // 가변적인 전달인자를 받을 수 있다.
-    function log(...obj){
-        console.log(typeof obj)
-        console.log(obj[0])
-        console.log(obj)
-    }
-    log(1,2,3)
+        console.log("---------------------")
+        // // 함수 선언과 동시에 실행(아직 몰라도됨)
+        // (
+        //     function test(){
+        //         console.log("test")
+        //     }
+        // )
+        // ();
 
-    let d = [100, 200];
-    console.log(d)
-    console.log(...d)
+        plus(2, 3) //????
 
-    console.log(plus(d[0], d[1]))
-    console.log(plus(...d))
+        function times2(x) {
+            return plus(x, x);
+            // let z= plus(x, x);
+            // return z;
+        }
 
-    let f = "console.log(123)";
-    eval(f) //string을 javascript로 변환해주는 메소드다.
+        console.log("---------------------")
+        // 아래 두줄은 완전히 동일한 결과가 나온다.
+        plus(8, 5)
+        plus(times2(4), 5)
 
-    function plus4(){
-        console.log("plus4 실행")
-    }
+        console.log("---------------------")
+        plus()
+        plus(1)
+        plus(1, 2, 3, 5, 6)
 
-    let p = plus4;
-    console.log(typeof p);
-    p();
+        // console.log("---------------------") ?????
+        function plus2(x, y) {
+            if (x == undefined) {
+                x = 0
+            }
+        }
+        plus2();
 
-    function plus5(){
-        console.log("plus4 실행")
-    }
-    console.log(typeof plus5)
-    plus5 = 3
-    console.log(typeof plus5)
+        console.log("---------------------")
+        // 초기값(기본값) 사용법(전달인자가 없는 경우 초기값 적용)
+        function plus3(x = 5, y = 6) {
+            console.log(x)
+            console.log(y)
+            return x + y
+        }
+        console.log(plus3(1, 2))
+        console.log(plus3())
 
-    console.log(plus4)
-    function plus5(){
-        console.log("plus5 실행")
-    }
+        console.log("---------------------")
+        // spread 연산자
+        // 가변적인 전달인자를 받을 수 있다.
+        function log(...obj) {
+            console.log(typeof obj)
+            console.log(obj[0])
+            console.log(obj)
+        }
+        log(1, 2, 3)
 
-    //익명함수
-    let times = function (a, b){
-        return a * b
-    }
-    console.log(times(3,4))
-    // times = 3;
+        let d = [100, 200];
+        console.log(d)
+        console.log(...d)
 
-    //기존의 함수도 함수명을 변수취급하고 있음
+        console.log(plus(d[0], d[1]))
+        console.log(plus(...d))
 
-    function payment(n, cb){
-        console.log("지불하기")
+        let f = "console.log(123)";
+        eval(f) //string을 javascript로 변환해주는 메소드다.
+
+        function plus4() {
+            console.log("plus4 실행")
+        }
+
+        let p = plus4;
+        console.log(typeof p);
+        p();
+
+        function plus5() {
+            console.log("plus4 실행")
+        }
+        console.log(typeof plus5)
+        plus5 = 3
+        console.log(typeof plus5)
+
+        console.log(plus4)
+        function plus5() {
+            console.log("plus5 실행")
+        }
+
+        //익명함수
+        let times = function (a, b) {
+            return a * b
+        }
+        console.log(times(3, 4))
+        // times = 3;
+
+        //기존의 함수도 함수명을 변수취급하고 있음
+
+        function payment(n, cb) {
+            console.log("지불하기")
+
+            let ra = 2500;
+
+            if (typeof cb == "function") { //방어코딩
+                let result = cb(ra, n)
+                console.log(result)
+            } else {
+                console.log("일 안해") //????
+            }
+        }
+        payment(10, times) //변수명 정확히!!
+        payment(10, plus)
+
+        //3case
+        // payment(10, times)
+        // payment(10)
+        // payment(10,2)
+
+        //콜백함수 예시 : 
+
+        /*
+            setTimeout : 첫번째 전달인자 : 실행한 함수
+                        두번째 전달인자 : 지연할 시간(1/1000 초)
+        */
+
+        // 예약설정
+        let print5 = function () {
+            console.log("5초뒤");
+        }
+        setTimeout(print5, 5000);
+
+        setTimeout(function () {
+            console.log("6초뒤");
+        }, 6000)
+
+        let c = 1
+        let idx = setTimeout(function (a, b) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }, 6000, c, 20)
+        console.log(idx)
+        clearTimeout(idx)// 예약취소
+
+        let idx2 = setInterval(function () {
+            console.log("setInterval 실행")
+        }, 1 * 100)
+
+        clearInterval(idx2) // 취소
+
+        // //setTimeout 구현 >>>>놓침
+        // let bf = new Date().getTime();
+        // let dif = -1
+        // while (dif < 5 * 1000) {
+        //     let af = new Date().getTime()
+        //     dif = af - bf
+        //     console.log(dif)
+        // }
+        // console.log("5s after")
+
+        // // >>> 놓침
+        // function customTimeout(cb, delay) {
+        //     let bf = new Date().getTime();
+        //     // let dif = -1
+        //     while (dif < delay) {
+        //         let af = new Date().getTime()
+        //         dif = af - bf
+        //         // console.log(dif)
+        //     }
+        //     cb()
+        // }
+
+        //while이 끝날때까지 다음줄이 실행되지 않는다.(동기방식)
+        //setTimeout은 실행되고 다음줄이 바로 실행된다(비동기방식)
+
+        // 화살표함수 arrow fuction
+        let test0 = function(a, b){
+            console.log(a, b)
+            return a;
+        }
         
-        let ra = 2500;
-
-        if(typeof cb == "function"){ //방어코딩
-        let result = cb(ra, n)
-        console.log(result)
-        } else {
-            console.log("일 안해") //????
+        // 익명함수일 경우 화살표 함수로 변경할 수 있다,
+        let test1= (a, b) => {
+            console.log(a, b)
+            return a;
         }
-    }
-    payment(10, times) //변수명 정확히!!
-    payment(10, plus)
 
-    //3case
-    // payment(10, times)
-    // payment(10)
-    // payment(10,2)
+        //전달인자가 하나인 경우만
+        //괄호를 생략할 수 있다.
+        let test2 = (a) => {
+            console.log(a)
+            return a
+        }
+        let test3 = a => {
+            console.log(a)
+            return a
+        }
+        // 전달인자가 없다면 () 생략 불가능
+        let test4 = () => {
 
-    //콜백함수 예시 : 
+        }
 
-    /*
-        setTimeout : 첫번째 전달인자 : 실행한 함수
-                    두번째 전달인자 : 지연할 시간(1/1000 초)
-    */
+        let test5 = (a, b) => {
+            return a+b;
+        }
+        // 실행문 안의 내용이 return 문만 있는 경우
+        // return 키워드와 {}를 생략 할 수 있따.
+        let test5_1 = (a, b) => a + b
 
-    // 예약설정
-    let print5 = function(){
-        console.log("5초뒤");
-    }
-    setTimeout(print5, 5000);
-
-    setTimeout( function(){
-        console.log("6초뒤");
-    }, 6000 )
-    
-    let c = 1
-    let idx = setTimeout( function(a, b){
-        console.log(a);
-        console.log(b);
-        console.log(c);
-    }, 6000, c, 20)
-    console.log(idx)
-    clearTimeout(idx)// 예약취소
-</script>
+        // 놓침
+        let test6 = a => a*3;
+        test6(6); // 18
+    </script>
 
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

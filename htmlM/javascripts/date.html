@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //브라우저가 설치된 pc의 시간
+        let now = new Date();
+        console.log(now)
+
+        //년도 뽑기
+        let y = now.getFullYear()
+        console.log(y)
+
+        //월(0~11)
+        let M = now.getMonth()
+        console.log(M+1)
+
+        //일
+        let d = now.getDate()
+        console.log(d)
+
+        //요일 (일0~토6)
+        let w = now.getDay()
+        console.log(w)
+
+        //시간(24시간)
+        let h = now.getHours()
+        console.log(h)
+
+        //분
+        let m = now.getMinutes()
+        console.log(m)
+
+        //초
+        let s = now.getSeconds()
+        console.log(s);
+
+        ///설명놓침---->
+        let iso = (now.toISOString())
+        console.log(iso);
+        let arrIso = iso.split("T");
+        console.log(arrIso)
+        console.log(arrIso[1].split(".")[0])
+
+        //1970년 1.1 자정부터 지금까지의 지난 초(1000ms)
+        let timestamp = now.getTime();
+        console.log(timestamp);
+
+        //놓침
+        let bf = new Date(1735524181668);
+        console.log(bf.getHours())
+    </script>
+</head>
+<body>
+
+</body>
+</html>
