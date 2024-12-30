@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script> /// 아직부족합니다!
         // const tem = prompt("지금 몇도?");
         const tem = -7
         console.log(typeof tem)
-        if(tem > 0){
-            console.log(`지금 온도는 ${tem}도 영상 입니다`) ;
-        } else if(tem <=0){ // java랑 약간 틀림~
+        if (tem > 0) {
+            console.log(`지금 온도는 ${tem}도 영상 입니다`);
+        } else if (tem <= 0) { // java랑 약간 틀림~
             console.log(`지금 온도는 ${tem}도 영하 입니다.`);
         }
 
@@ -20,7 +22,7 @@
 
 
         // if( temp> -3 && temp < 15){
-            
+
         // }
 
         // if(!( temp > -3 && temp < 15)){
@@ -33,23 +35,23 @@
 
         // let a = (temp > 0) ? "영상" : "영하"; // 삼항 연상자
 
-        let arr =[10, 20, 30];
+        let arr = [10, 20, 30];
         arr["name"] = "이서";
         // arr[10] = 100;
         console.log(arr)
 
         // in 앞에 변수에 현재의 index를 저장
-        for (let i in arr){
+        for (let i in arr) {
             console.log('i', i);
             console.log('arr[i] : ', arr[i])
         }
-        
+
         // of 앞에 변수에 현재의 값을 저장(arr에 있는 값을 가져옴)
         // name에 해당하는 숫자가 아닌 인덱스값은 출력되지 않는다.
         // 현재 몇번째 반복 중인지 알 수 있다.
         // of는 전통적인 for문으로 0부터 length 이전까지 반복
         let cnt = 0;
-        for (let i of arr){ //향상된 포문
+        for (let i of arr) { //향상된 포문
             // console.log('i', i);
             console.log(i, cnt);
             cnt++
@@ -64,6 +66,62 @@
             ....
             12: 6,6
         */
+
+        let arr3 = [10, 20, 30, 40, 50]
+        // arr3.forEach(function(a,b,c,d){
+        //     console.log("a : ", a)
+        //     console.log("b : ", b)
+        //     console.log("c : ", c)
+        //     console.log("d : ", d)
+        // })
+        arr3.forEach(function (el, ind, arr) {
+            console.log("element : ", el)   // 이번 값
+            console.log("index : ", ind)    // 이번 index
+            console.log("arr : ", arr)      // 원본 배열
+        })
+        console.log("---------------")
+        // 
+        arr3.map(function (el, ind, arr) {
+            console.log("element : ", el)   // 이번 값
+            console.log("index : ", ind)    // 이번 index
+            console.log("arr : ", arr)      // 원본 배열
+        })
+
+        // 놓침
+        console.log("---------------")
+        //filter return 값이 true만 배열로 돌려줌
+        arr3.filter(function (el, ind, arr) {
+            let result = false;
+            if (el >= 30) {
+                result = true;
+            } else {
+                result = false;
+            }
+            return result
+            //return el >= 30
+            console.log(arr30)
+
+            let arr30_1 = arr3.filter(function (el) {
+                return el >= 30;
+            })
+
+            let arr30_2 = arr3.filter(el => el >= 30)
+
+        })
+
+        // 놓침
+        let movies = [
+            '하얼빈',
+            '보고타: 마지막 기회',
+            '시빌 워: 분열의 시대',
+            '무파사: 라이언 킹'
+        ]
+
+        //map return의 내용을 배열로 만들어준다.
+        let len = movies.map(el => el.length)
+        console.log(len)
+
     </script>
 </body>
+
 </html>
