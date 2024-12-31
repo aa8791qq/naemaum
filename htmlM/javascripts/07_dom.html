@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color : red
+        }
+    </style>
 </head>
+
 <body>
-    <h1 id = title> DOM 연습 </h1>
+    <h1 id=title> DOM 연습 </h1>
 
     <div id="view">첫번째 view</div>
     <div id="view">두번째 view</div>
 
     <div class="div2">첫번째 .div</div>
     <div class="div2">두번째 .div</div>
-    
+
+    <div id = "parent">
+        <div class = "child div2"> 안쪽 </div>
+        <div class = "child"> 안쪽</div>
+    </div>
+
     <!-- <div if = parent>
         <doc class = "child div2"></doc>
     </div>  -->
-
-
 
     <script>
         //docyment는 html 문서 전체를 뜻함.
         //getlementByid : 속성 id의 값을 이용해 dom을 가져온다.
         let title = document.getElementById("title")
         console.log(title)
-        console.log("" +  title)
+        console.log("" + title)
         // alert(title)
 
         //요소가 없는 경우 null
         let test = document.getElementById("test")
         console.log(test)
-        
+
         // id가 여러개인 경우 첫번째 DOM 하나만 가져온다.
         let view = document.getElementById("view")
         console.log(view)
@@ -43,23 +53,87 @@
         //하나만 있어도 한개짜리 배열이 나온다.
         let h1 = document.getElementsByTagName("h1")
         console.log(h1)
-        
+
         //없어도 null이 아닌 비어있는 배열(length == 0)
         let human = document.getElementsByTagName("human")
         console.log(human)
 
-        let div= document.getElementsByClassName("div2")
+        let div2 = document.getElementsByClassName("div2")
         console.log(div2)
 
+        //놓침
         let parent = document.getElementById("parent")
-        console.log(prarent)
+        console.log(parent)
         let child_div2 = parent.getElementsByClassName("div2")
-        let child_div2 = document.getElementById("parent")
+        // let child_div2 = document.getElementById("parent")
         console.log(child_div2[0])
 
-        document.querySelector("#parent .div2")
+        //놓침
+        // querySelector : css선택자를 사용할 수 있음
+        let qs1 = document.querySelector("#parent .div2")
         console.log(qs1)
-        
-        </script>
+
+        // getElementById처럼 맨 처음 나오는 하나의 Dom만 돌려줌
+        console.log("---------------------")
+        let qs2 = document.querySelector(".div2")
+        console.log(qs2)
+
+        let qs3 = document.querySelector("#human")
+        console.log(qs3)
+
+        let qsa1 = document.querySelectorAll(".div2")
+        console.log(qsa1)
+
+        let qsa2 = document.querySelectorAll(".div2333")
+        console.log(qsa2)
+
+        let qsa3 = document.querySelectorAll("#view")
+        console.log(qsa3)
+
+        // 놓침
+        let child1 = document.querySelector("#parent .div2");
+        console.log(child1)
+        // parentNode : 부모 dom으로 이동
+        let parent1 = child1.parentNode
+        console.log(parent1)
+
+        // classList : class를 배열형식으로 돌려줌
+        console.log(child1.classList)
+
+        //classList.add(): class 추가 (클래스는 중복추가 되지 않는다.-->혹시 모를 비활성화 상황에서는 2번써도 됨)
+        child1.classList.add("red")
+
+        //해당클래스 삭제
+        child1.classList.remove("red")
+        child1.classList.remove("red2") // 에러가 안남
+
+        // toggle : 있으면 없애주고, 없으면 있게해준다.
+        child1.classList.toggle("red")
+        child1.classList.toggle("red")
+        // child1.classList.toggle("red")
+
+        let isRed = child1.classList.contains("red")
+        console.log(isRed)
+
+        // 토글 구현하기(toggle 금지)
+        // red class가 있으면 red 삭제
+        // red class가 없으면 red 추가
+
+        let ifred = child1.classList.contains("red")
+
+        // 조건문 실수(오타가능성 100)
+        if(ifred){
+            child1.classList.add("red")
+        } else{
+            child1.classList.remove("red")
+        }
+
+        //className : 모든 class를 문자로 돌려줌
+        console.log(child1.className)
+
+        // 값을 지정하는 경우 class의 값을 덮어쓴다.
+        child1.className = "blue"
+    </script>
 </body>
+
 </html>
