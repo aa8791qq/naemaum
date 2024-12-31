@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id=msg>
+    <div id='msg'>
         <span>원래 </span> 있던 글씨
     </div>
 
@@ -32,6 +32,17 @@
         msg.innerHTML = msg.innerHTML + "<h2> 제목2 <h2>"
 
         /* msg.innerHTML = "<scrip>alert(1) */
+
+        // <div id = menu style='color : red';>
+            //  메뉴
+        // </div>
+        let div = document.createElement("div") // 가상영역에 생긴것 <div></div>
+        div.setAttribute("id", "menu");
+        div.setAttribute("style", "color:red" )
+        div.classList.add("primary")
+        div.textContent = '메뉴';
+
+        msg.appendChild(div)
     </script>
 </body>
 
