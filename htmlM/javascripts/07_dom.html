@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .red{
-            color : red
+        .red {
+            color: red
         }
     </style>
 </head>
@@ -21,14 +21,12 @@
     <div class="div2">첫번째 .div</div>
     <div class="div2">두번째 .div</div>
 
-    <div id = "parent">
-        <div class = "child div2"> 안쪽 </div>
-        <div class = "child"> 안쪽</div>
+    <div id="parent"> <!-- 반놓침 12.31 -->
+        <div class="child div2"> 안쪽 </div>
+        <div class="child"> 안쪽</div>
     </div>
 
-    <!-- <div if = parent>
-        <doc class = "child div2"></doc>
-    </div>  -->
+    <img src="https://poiemaweb.com/img/nodeValue.png", width="100" , height="50">
 
     <script>
         //docyment는 html 문서 전체를 뜻함.
@@ -122,9 +120,9 @@
         let ifred = child1.classList.contains("red")
 
         // 조건문 실수(오타가능성 100)
-        if(ifred){
+        if (ifred) {
             child1.classList.add("red")
-        } else{
+        } else {
             child1.classList.remove("red")
         }
 
@@ -133,6 +131,52 @@
 
         // 값을 지정하는 경우 class의 값을 덮어쓴다.
         child1.className = "blue"
+
+        //css 선택자 중에 속성으로 선택하는걸로 querySelector 사용해보기
+        document.querySelector("[id=title]");
+        document.querySelector("#title");
+
+        document.querySelector("[class='div2 red']")
+        // document.querySelector("[class ~= red']")
+        document.querySelector(".red")
+
+        //contains 구현해보기 (놓침/ /타자실수)
+        function contains(el, name) {
+            for (let i = 0; i < el.classList.length; i++) {
+                if (el.classList[i] == name) {
+                    return true
+                }
+            }
+            return false
+        }
+        console.log('contains 결과', contains(child1, 'blue'))
+
+        //놓침
+        let img = document.getElementsByTagName("img");
+        console.log(img);
+        console.log(img.classList); // 배열이여서 안됨
+        console.log(img[0].classList);
+
+        //속성명이 있는지 검사
+        let isSrc = img[0].hasAttribute("src")
+        console.log(isSrc)
+        isSrc = img[0].hasAttribute("readonly")
+        console.log(isSrc)
+
+        //놓침
+        // 속성값 가져오기
+        let src = img[0].getAttribute("src")
+        console.log(src)
+        src = img[0].getAttribute("readonly") // 없으면 null
+        console.log(src)
+
+        //setAttribute(속성명, 속성값) : 속성이 없으면 속성을 만들고 속성이 있으면 덮어쓴다.
+        //data-써주기 (공식 문법 외)
+        img[0].setAttribute("data-human", "1강의실")
+        img[0].setAttribute("data-human", "12강의실")
+        // 이미지 추가도 가능
+
+        img[0].removeAttribute("data-human")
     </script>
 </body>
 
