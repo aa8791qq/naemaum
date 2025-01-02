@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function fn1() {
+            console.log("f1실행")
+            fn2()
+        }
+
+        function fn2() {
+            // console.log("f2실행")
+            setTimeout(function(){
+                console.log("f2실행")
+            }, 0)
+            
+            fn3()
+            fn3()
+            // console.log("중간") // 놓침
+            setTimeout(function(){
+                // for
+                let start = new Date().getTime();
+                for(let i = 0; i<10000000; i++){
+                }
+                let end = new Date().getTime();
+                console.log(end-start);
+                
+                // while
+                start = new Date().getTime();
+                let i = 0
+                while(i<10000000){
+                    i++
+                }
+                end = new Date().getTime();
+                console.log(end-start);
+
+                console.log("중간")
+            }, 0)
+
+            fn3()
+            fn3()
+        }
+
+        function fn3() {
+            console.log("f3실행")
+        }
+
+        fn1() // 시동버튼
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

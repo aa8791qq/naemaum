@@ -26,7 +26,7 @@
     date <input type="date" id="date"><br>
     radio :
     <input type="radio" name="ai" value="1">GPT
-    <input type="radio" name="ai" value="2">Gemini
+    <input type="radio" name="ai" value="2" checked="checked">Gemini
     <input type="radio" name="ai" value="3">bing<br>
 
     <select id="select">
@@ -146,10 +146,11 @@
                 const textarea = document.querySelector('#textarea')
                 console.log(textarea.value)
 
-                let test = textarea.value.replace(/123/g,"일이삼") //?
-                console.log(test)
+                // let test = textarea.value.replace(/123/g,"일이삼") //?
+                // console.log(test)
             }
-            , 4000)
+
+            , 4000) // 4 * 1000
     </script>
 </body>
 
