@@ -5,9 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+        body{
+            height : 2000px
+        }
+        #console{
+            position: sticky;
+            top : 0
+        }
+    </style>
+    
     <script> //놓?
 
-        // 
         window.addEventListener("load", init) // 여러 개 실행가능
 
         // 신중히 사용할것(하나만 실행됨)
@@ -16,21 +26,97 @@
         // }
 
         function init() {
-            const btn1 = document.querySelector("#btn1")
-            console.log(btn1)
+            const btn2 = document.querySelector("#btn2")
+            console.log(btn2)
 
+            btn2.onclick = function () {
+                console.log("버튼2")
+                document.querySelector("#console").innerHTML += "<br>클릭햇다고2"
+            }
+            // onclick : 변수이므로 마지막 값만 저장된다.(임의로 변수를 바꾸면 인식을 못하고 변수만 저장된다.)
+            btn2_1.onclick = function () {
+                console.log("버튼2-1")
+                document.querySelector("#console").innerHTML += "<br>클릭햇다고2-1"
+            }
 
+            // 함수를 추가하는 것이므로 두개 이상 bind할 수 있다.
+            const btn3 = document.querySelector("#btn3")
+            btn3.addEventListener("click", function () {
+                document.querySelector("#console").innerHTML += "<br>클릭햇다고3"
+            })
+            btn3.addEventListener("click", function () {
+                document.querySelector("#console").innerHTML += "<br>클릭햇다고3-1"
+                document.documentElement.scrollTop = 1000
+            })
+
+            // 놓핌?
+            const btn4 = document.querySelector("#btn4")
+            btn4.addEventListener("click", btn1click)
+            btn4.addEventListener("click", btn4click)
+            // removeEventListener : 해당이벤트 콜백 제거
+            // 단, 익명함수는 불가능
+            // 마치 함수마다 고유한 id같은게 있는데
+            // 익명함수는 선언될때마다 vm이라는 공간에
+            // 신규 id를 발급받기 때문에 지울때 사용하지 못함.
+            btn4.removeEventListener("click", btn4click)
+
+            window.addEventListener("scroll", function(){
+                const scrollTop = document.documentElement.scrollTop;
+                document.querySelector("#console").innerHTML = scrollTop
+            })
         }
 
-        function btn1click(){
+        function btn1click() {
             console.log("버튼1")
+            document.querySelector("#console").innerHTML += "<br>클릭햇다고1"
         }
+
+        function btn4click() {
+            console.log("버튼4")
+            document.querySelector("#console").innerHTML += "<br>클릭햇다고4"
+        }
+
+        // 로그인 버튼 클릭시 #console에 아이디, 비밀번호 출력하기
+        // 아이디 입력 받기(id), 비밀번호 입력 받기(pw)
+        // 로그인 버튼을 클릭한 순간 각 input값(id, pw)을 읽어서
+        // 한번에 콘솔로 표시하기
+
+        document.querySelector("#login").addEventListener("click", function(){
+            const id = document.querySelector("#id").value
+            const pw = document.querySelector("#pw").value
+
+            document.querySelector("#console").innerHTML = id + ","+ pw
+        })
+        
+        // const login1 = document.querySelector("#id")
+        // const login2 = document.querySelector("#pw")
+
+        // // login.onclick = function(){
+        //     login1.addEventListener("click", login1)
+        //     login2.addEventListener("click", login2)
+        //     console.log(id)
+        //     document.querySelector("#id").innerHTML += "id"
+        // // }
+        
     </script>
 </head>
 <!-- <body onload="javascrupt : init()"> -->
 
 <body>
-    <button type="button" id="btn1" onclick="btn1click()">오잉?</button>
+    <div id="console"></div>
+    <button type="button" id="btn1" onclick="btn1click();btn1click();alert('아이브사랑해')">오잉?</button>
+    <button type="button" id="btn2">오잉2?</button>
+    <button type="button" id="btn2_1">오잉2-1?</button>
+    <button type="button" id="btn3">오잉3?</button>
+    <button type="button" id="btn4">오잉4?</button>
+
+    <div> 
+        <!-- 놓침 -->
+        아이디 : <input type = "text" id="id"><br>
+        비밀번호 : <input type = "password" id = "pw"><br>
+        <br>
+        <input type = "button" id = "login" value="로그린">
+    </div>
 
 </body>
 

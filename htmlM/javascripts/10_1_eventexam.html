@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+
+            // 조건문
+            // 선택한 것에 따라 다르게 #view출력
+            // const job = document.querySelector(#view)
+
+            //확인버튼을 누르면
+            const btn1 = document.querySelector("#btn1")
+            btn1.addEventListener("click", function () {
+                //select값을 구해오기(가져와서)---select의 선택된 option의 value을 읽어서
+                let job = document.querySelector("#job")
+                console.log(job.value)
+                let job_value = job.value
+
+                //값에따라
+                //다르게 출력한다(#view)
+                const view = document.querySelector("#view")
+                if (job_value == "eat") {
+                    console.log("1번선택")
+                    view.innerHTML = "1번선택"
+                } else if (job_value == "sn") {
+                    console.log("2번선택")
+                    view.innerHTML = "2번선택"
+                } else if (job_value == "sr") {
+                    console.log = "3번선택"
+                    view.innerHTML("3번선택")
+                } else if (job_value == "sip") {
+                    console.log("4번선택")
+                    view.innerHTML = "4번선택"
+                } else if (job_value == "rest") {
+                    console.log("5번선택")
+                    view.innerHTML = "5번선택"
+                }
+            }
+            )
+
+            const job = document.querySelector('#view')
+            console.log(job.value)
+
+            // 조건문2
+            // 로그인 버튼을 눌렀을때 (클릭이벤트)
+
+
+            // 아이디 또는 비밀번호에 쓴 글이 없다면 (빈값일때 만족한다.)
+
+
+            // 비번밑에 빈값을 입력해달라고 입력하기(만족한것에 대한 함수호출)
+
+            
+        })
+    </script>
+</head>
+
+<body>
+    <div id="view"></div>
+
+    <!-- 조건문
+    select로 오늘 저녁에 뭐할지 두개 이상 표시
+    -->
+
+    <from>
+        오늘 하고 싶은거 있어???<br>
+        업무 : <select id="job">
+            <option value="eat"> 저녁먹기 </option>
+            <option value="sn"> 네트워크관리사2급 </option>
+            <option value="sr"> 복습 </option>
+            <option value="sip"> 정보처리산업기사 </option>
+            <option value="rest"> 쉬기 </option>
+        </select>
+    </from>
+
+    <button type="button" id="btn1"> 확인</button>
+
+    <div>
+        아이디 : <input type="text" id="id"><br>
+        비밀번호 : <input type="password" id="pw"><br>
+        <br>
+        <input type="button" id="login" value="로그린">
+    </div>
+
+    <hr>
+</body>
+
+</html>
