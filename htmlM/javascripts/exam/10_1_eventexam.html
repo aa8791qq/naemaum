@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/exam.js"></script>
     <script>
         window.addEventListener("load", function () {
 
@@ -41,21 +42,25 @@
                 }
             }
             )
-
             const job = document.querySelector('#view')
-            console.log(job.value)
+            // console.log(job.value)
 
             // 조건문2
             // 로그인 버튼을 눌렀을때 (클릭이벤트)
+            // const login = document.querySelector("login")
+            // btn1.addEventListener("click", function () {
 
+            //     // 아이디 또는 비밀번호에 쓴 글이 없다면 (빈값일때 만족한다.)
+            //     let id = document.querySelector("#id")
+            //     let pw = document.querySelector("#pw")
+            //     console.log(id)
+            //     console.log(pw)
 
-            // 아이디 또는 비밀번호에 쓴 글이 없다면 (빈값일때 만족한다.)
+                // 비번밑에 빈값을 입력해달라고 입력하기(만족한것에 대한 함수호출)
 
-
-            // 비번밑에 빈값을 입력해달라고 입력하기(만족한것에 대한 함수호출)
-
-            
-        })
+            }
+            )
+        // })
     </script>
 </head>
 
@@ -82,8 +87,13 @@
     <div>
         아이디 : <input type="text" id="id"><br>
         비밀번호 : <input type="password" id="pw"><br>
+        <div id="login_msg"></div>
         <br>
         <input type="button" id="login" value="로그린">
+    </div>
+<br>
+    <div id = time>
+        
     </div>
 
     <hr>
