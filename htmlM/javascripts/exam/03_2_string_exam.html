@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //원본
+        const m1 = "admin@naver.com"
+        
+        //split
+        const arr_m1 = m1.split("@")
+        let id1 = arr_m1[0]
+        console.log(id1)
+        
+        //idxAt
+        const idxAt = m1.indexOf("@")
+        console.log(idxAt)
+        let id2 = m1.substring(0, idxAt)
+        console.log(id2)
+        let id3 = m1.substr(0, idxAt)
+        console.log(id3)
+
+        //자르는법(앞글자만 따는법)
+        const left2 = id1.substring(0,2)
+        const star_len = id1.length - 2
+        let star = ""
+
+        //별표채우기
+        for(let i=0; i<star_len; i++){
+            star += "*"
+        }
+        console.log(left2+star+"@"+arr_m1[1])
+
+        //도메인 자르기
+        //원본
+        const domain = "cafe.naver.com"
+        
+        //.으로 찾기
+        let idx = domain.indexOf(".")
+        console.log(idx)
+        const domain2 = domain.substr(idx+1)
+        console.log(domain2)
+        idx = domain2.indexOf(".")
+        const domain3 = domain2.substr(0, idx)
+        console.log(domain3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
