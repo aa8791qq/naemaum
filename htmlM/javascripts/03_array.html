@@ -67,6 +67,8 @@
             }
         }
 
+
+        console.log("---------------------")
         // 배열 초기화
         arr = [];
         arr = [1,3,4,4,2,6];
@@ -92,6 +94,16 @@
         arr.reverse();
         console.log(arr);
         
+        // 문자로 변경해서 정렬하므로 숫자정렬할 경우 등 콜백할수를 넣어서 사용
+
+        arr.sort(function(x,y){
+            //return 값이
+            //x-y 오름차순
+            //y-x 내림차순
+            //0: 그대로
+
+            return x-y
+        })
         // 오름차순 정렬
         arr.sort();
         console.log(arr);
@@ -132,7 +144,7 @@
         console.log(s)
 
         arr2 = [1,2,3]
-        arr = [ 1, 2, 2, ...arr2]
+        arr = [1, 2, 2, ...arr2]
 
         // join
         // 배열을 모두 글씨로 바꾸는데
@@ -167,37 +179,83 @@
         console.log(idx)
         // 같은 값이 여러개인 경우 첫번째 만나는 요소의 index만 return
 
-        // 놓침
-        console.log("--------------------------")
-        let str2 = "오늘 아이브누나들의 점심은? 그리고 아이브누나들은 천사인가??";
-        console.log(str2.length)
-        // 같은 값이 여러개인 경우 첫번째 만나는 요소의 index만 return
-        // indexOf 같은 값이 없는 경우 -1로 돌려준다.
-        console.log(str2.indexOf("아이브"))
+        console.log ("실습!!!!!!!!!!!!!!!!!!!!!!!!!")
+        let lotto = parseInt(Math.random() * 45) + 1
+        console.log(lotto)
 
-        // 시작 index 부터 끝 index 바로 앞까지
-        // 끝 index가 없으면 끝까지
-        console.log(str2.slice(3, 8))
+        console.log ("-------------")
 
-        // 첫번쨰 전달인자를 두번쨰로 바꿔줌 >> 놓?
-        // 처음 만나는 것 하나만 바꿈
-        let str3 = str2.replace("아이브", "오마이걸")
-            console.log(str2)
-            console.log(str3)
+        // 풀이방법
+        // 로또 6개를 출력한다.
+            // 출력자체가 반복이므로 반복을 시킨다.
+        // 로또 6개를 배열에 넣는다.(각각)
+            // 배열 삽입 자체가 반복이므로 반복을 시킨다.
+        let lotto_array = []
+        // push를 해서 간략하게 만들어야 함.
+        // lotto_array.push(55)
+        // lotto_array.push(60)
+
+        console.log ("-------------")
+
+        // for(let i = 0; i<6; i++){
+        //     lotto_array.push(parseInt(Math.random() * 45) + 1)
+        //     console.log(lotto_array[i])
+        //     lotto_array.sort(function(x,y){
+        //         return x-y
+        //     }
+        // )}
+
+        // 중복뜨게해서 추출은 성공
+        for(let i = 0; i<6; i++){
+            lotto_array.push(parseInt(Math.random() * 45) + 1)
+        }
+        lotto_array.sort(function(x,y){
+            return x-y
+        })
+        console.log(lotto_array)
+    
+        console.log ("-------------")
+        
+        console.log(lotto_array.length)
+
+        console.log ("-------------")
+
+        // if(lotto_array[i] == lotto_array[i+1]){
+        //     for(i=0);
+        // }
+
+        
+        // // 놓침
+        // console.log("--------------------------")
+        // let str2 = "오늘 아이브누나들의 점심은? 그리고 아이브누나들은 천사인가??";
+        // console.log(str2.length)
+        // // 같은 값이 여러개인 경우 첫번째 만나는 요소의 index만 return
+        // // indexOf 같은 값이 없는 경우 -1로 돌려준다.
+        // console.log(str2.indexOf("아이브"))
+
+        // // 시작 index 부터 끝 index 바로 앞까지
+        // // 끝 index가 없으면 끝까지
+        // console.log(str2.slice(3, 8))
+
+        // // 첫번쨰 전달인자를 두번쨰로 바꿔줌 >> 놓?
+        // // 처음 만나는 것 하나만 바꿈
+        // let str3 = str2.replace("아이브", "오마이걸")
+        //     console.log(str2)
+        //     console.log(str3)
             
-        // 정규표현식 >> 놓?
-        str3 = str2.replace(/아이브/g, "오마이걸")
-        console.log(str3)
+        // // 정규표현식 >> 놓?
+        // str3 = str2.replace(/아이브/g, "오마이걸")
+        // console.log(str3)
         
-        // 시작 index 부터 끝 index 바로 앞까지 >> 놓?
-        str3 = str2.substring(3,6)
-        console.log(str2)
-        console.log(str3)
+        // // 시작 index 부터 끝 index 바로 앞까지 >> 놓?
+        // str3 = str2.substring(3,6)
+        // console.log(str2)
+        // console.log(str3)
         
-        // 시작 index부터 count 만큼 출력
-        str3 = str2.substr(3,6);
-        console.log(str2)
-        console.log(str3)
+        // // 시작 index부터 count 만큼 출력
+        // str3 = str2.substr(3,6);
+        // console.log(str2)
+        // console.log(str3)
 
         </script>
 </head>

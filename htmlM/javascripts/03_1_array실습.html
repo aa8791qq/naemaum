@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let lotto = []
+        // // lotto = [ parsent(Math.random()* 45) + 1]
+        // for(let i = 0; i < 6; i++){
+        //     lotto.push(parseInt(Math.random()* 45 ) + 1)
+        // }
+        // console.log(lotto)
+
+        // lotto 임의추출
+            // let lotto = []
+            // lotto.push(7)
+            // lotto.push(3)
+            // lotto.push(5)
+            // lotto.push(8)
+            // let value = 5
+            // console.log(lotto)
+
+        //변수지정잘못함.(생각못함)
+
+        // 성공(조건마다 출력)
+        // for (let i = 0; i < lotto.length; i++) {
+        //     if (lotto[i] == value) {
+        //         console.log("이미 있다.")
+        //     } else {
+        //         console.log("없다")
+        //     }
+        // }
+
+        // 응용(결과가 나오게 하고 마지막에만 검증하기)
+        // let = lotto[i] == value
+        // for (i = 0; i < lotto.length; i++) {
+        //     if (lotto[i] == value){
+        //         "있다"
+        //         += t_f
+        //     } else if(lotto[i] == value) {
+        //         "없다"
+        //         += t_f
+        //     }
+        // }
+        // console.log()
+
+        // 정답(최종 로또 중복없이 뽑기)
+        let lotto1 = []
+
+        while (lotto1.length < 6) {
+            // console.log(lotto1.length)
+            let value = parseInt(Math.random() * 45) + 1
+
+            let dup = false
+            for (let i = 0; i < lotto1.length; i++) {
+                if (lotto1[i] == value) {
+                    dup = true
+                    break;
+                }
+            }
+            
+            if (!dup) {
+                lotto1.push(value)
+            }
+
+        }
+        lotto1.sort(function (x, y) {
+            return x - y
+        })
+        console.log(lotto1)
+
+        // for문 안쓰고 하기
+        // let t_f = lotto[0] == value || lotto[1] == value || lotto[2] == value || lotto[3] == value
+        // console.log(t_f)
+
+        // value 가 이미 lotto 있었는지 확인해서 있다, 없다를 출력
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

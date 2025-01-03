@@ -35,9 +35,13 @@ window.addEventListener("load", function () {
     console.log(iso)
     let arrIso = iso.split('T') // 괄호실수(원인불명)
     console.log(arrIso)
-    console.log(arrIso[1].split("Z")[0]) // 괄호 실수
+    let tarr = console.log(arrIso[1].split("Z")[0]) // 괄호 실수
 
+    window.addEventListener("load", function(){
+        document.querySelector("#time") = tarr
+    })
+    
 
+    
 
-    this.document.querySelector
 })
