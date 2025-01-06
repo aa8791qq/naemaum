@@ -15,7 +15,7 @@
 
 <body>
     <div id='msg'>
-        <span>원래 </span> 있던 글씨
+        <span>원래 </span>              있던 글씨
     </div>
 
     <div id='test'></div>
@@ -72,7 +72,7 @@
         //appendChild : 마지막 자식요소 dom만 넣을 수 있다.
         // msg.appendChild(div)
 
-        //append : dom도 넣을 수 있고 text도 넣을 수 있따.
+        //append : dom도 넣을 수 있고 text도 넣을 수 있따. // 놀침
         msg.append(div)
         msg.append("그냥글씨")
         msg.append("<strong>그냥글씨</strong>") // 글씨로 들어간다.
@@ -142,6 +142,9 @@
                 
                 const select = document.querySelector('#select')
                 console.log(select.value)
+
+                const op = select.querySelector("option:checked")
+                console.log(op, op.innerText) //?
                 
                 const textarea = document.querySelector('#textarea')
                 console.log(textarea.value)

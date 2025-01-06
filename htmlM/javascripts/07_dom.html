@@ -28,7 +28,7 @@
 
     <img src="https://poiemaweb.com/img/nodeValue.png", width="100" , height="50">
 
-    <script>
+    <script> // 놓침
         //docyment는 html 문서 전체를 뜻함.
         //getlementByid : 속성 id의 값을 이용해 dom을 가져온다.
         let title = document.getElementById("title")
@@ -140,7 +140,7 @@
         // document.querySelector("[class ~= red']")
         document.querySelector(".red")
 
-        //contains 구현해보기 (놓침/ /타자실수)
+        //contains 구현해보기 (놓침 //타자실수)
         function contains(el, name) {
             for (let i = 0; i < el.classList.length; i++) {
                 if (el.classList[i] == name) {
@@ -170,7 +170,7 @@
         src = img[0].getAttribute("readonly") // 없으면 null
         console.log(src)
 
-        // 속성갑 생성
+        // 속성갑 생성 // 놓침
         //setAttribute(속성명, 속성값) : 속성이 없으면 속성을 만들고 속성이 있으면 덮어쓴다.
         //data-써주기 (공식 문법 외)
         img[0].setAttribute("data-human", "1강의실")
