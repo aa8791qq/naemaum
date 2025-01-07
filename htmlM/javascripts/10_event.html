@@ -296,8 +296,8 @@
 <hr>
 
     <!-- 문제 -->
-    <!-- <div>
-        <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
+    <div id = 'stp'>
+        <input type = "radio" id = "pp" name="sort" value = "1"> 인기상품
         <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
         <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
         <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
@@ -305,18 +305,34 @@
     </div>
 
     <script>
-    const st = document.querySelectorAll('[name=sort]:checked')
+    const st = document.querySelectorAll('[name="sort"]') // 출처 : 챗gpt //qSA을 사용하여 배열값을 콘솔에 띄워봄(배열을 불러오기 위해 사용함)
+    console.log(st)
     for(let i=0; i<st.length; i++){
             console.log(st[i].checked)
             if(st[i].checked){
                 console.log(st[i].value)
             }
         }
-    const chki = document.querySelectorall([name="st"]).addEventListener("click", function(event){
-        console.log(chki)
-    }) // 이벤트타켓으로 헤사 스타일 주는 css요소 문법으로 잡아서 코드를 짠다.
-    </script> -->
-
+    // const chki = document.querySelectorAll([name="st"]).addEventListener("click", function(event){
+    const chki = document.querySelectorAll('[type="radio"]') //출처 : 챗gpt 부모요소를 불러와서 일치한 타입만 작동하게 만듬
+    chki.forEach(function(radio){ //출처 : 챗gpt // foreach를 통해서 라디오 타입에 각각 이벤트를 주고 누를때마다 이벤트발생을 시킬려고 함.
+        radio.addEventListener("click", function (event) { // 클릭시 이벤트요소 생성 및 발생(라디오타입만)
+        // 춢처 : 챗gpt //event 위임을 통해 해결하라는 예시를 보아서 적용시킴 
+        console.log(chki[0]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[1]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[2]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[3]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[4]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        if (event.target.type === "radio" && event.target.name === "st") { // (=== 안배운 지식이 들어가 있습니다)
+            chki.parentElement.styleList.add("bold")
+            console.log("클릭된 요소:", event.target);  // 클릭된 요소 정보 출력
+            console.log("선택된 값:", event.target.value);  // 값 출력
+            //출처 : chatgpt // 클릭시 css요소 적용
+    }})
+});
+    // 이벤트타켓으로 해서 스타일 주는 css요소 문법으로 잡아서 코드를 짠다.(유림누나 도움)
+    </script>
+<hr>
     <div id = "li1"> 첫번째 </div>
     <div id = "li2"> 두번째 </div>
     <script>
