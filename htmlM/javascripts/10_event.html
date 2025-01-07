@@ -65,7 +65,158 @@
                 const scrollTop = document.documentElement.scrollTop;
                 document.querySelector("#console").innerHTML = scrollTop
             })
+
+            // 로드이벤트 이후에 읽지 못하는데 읽을 수 있도록 해주어야 함.
+            document.querySelector("#form").addEventListener('submit', function(event){
+            event.preventDefault() // 원래 html의 기본(고유)기능을 막아줌(자바스크립트 자체를 막는건 아님) << 여기서만
+            console.log('서밋이벤트')
+
+            // 검색어가 1글자 이하면 alert 출력
+            // 2글자 이상이면 console로 검색 출력
+            document.querySelector('#search').value //search.value값을 가져올수 있게 해야 되니깐 쿼리로 불러와야됨
+            // 선언이 안된상태를 막아줌
+            // (= let keyword = documnet.querySelector("#search"))
+            console.log(search.value)
+            // 값이 정상적으로 출력되었다면 오류는 없다는것
+            // 값 출력에 오류가 있다면 선언되어있지 않은 상태
+            if(search.value.length <= 1){
+                alert("2글자 입력")
+            } else {
+                console.log("검색")
+                document.querySelector('#from').submit() // 강제로 써밋상황을 만듬
+            }
+        })
+        // 기능 막기
+        // addEventListener('mousedown', function(event){
+        // event.preventDefalut()
+        // })
+        // addEventListener('mousedown', function(select){
+        // event.preventDefalut()
+        // })
+        
+        // 클래스가 chk인 모든요소를 가져와서 모든 value, 체크 여부를 console로 출력하시오
+        // 체크된 것은 value에 !!! 붙여서 출력
+
+        // 내가 한거
+        // document.querySelectorAll('.chk').values // 벨류값을 변수에 집어넣어야함
+        // console.log('.chk'.values) // 변수값을 출력해야 콘솔에 값이 나옴
+        
+        // 정답
+        const chks = document.querySelectorAll('.chk')
+        console.log(chks) // value를 삽입하면 안됨(value에 값이 없음)
+        for(let i=0; i < chks.length; i++){
+            console.log(chks[i].value, chks[i].checked)
+
+            if(chks[i].checked){
+                console.log("!!! ", chks[i].value)
+            }
         }
+        chks[0].checked = true;
+        chks[3].checked = false;
+
+        //---------
+        // 내가한거
+        // // 모두선택 시 모두선택되게
+        // // 전체선택관련 돔 확보
+        // const allsec1 = document.querySelector("#als").checked //체크박스 여부는 checked로 판단.
+        // console.log(allsec1)
+        // // 전체선택 클릭시
+        // // 체크되어 있으면
+        // if(allsec1 == true){
+        //     console.log('a')
+            
+        // } else if( allsec1 == false){
+        //     console.log('b')
+        // }
+        // // 모든 박스에 체크되게
+        //     // 체크 풀려 있으면
+        //     //모든 박스에 체크가 해제되게
+        //-------
+
+
+        // 정답 //놓침22222222
+        // 모두선택 시 모두선택되게
+        // 전체선택관련 돔 확보
+        document.querySelector("#als").addEventListener("click", function(){
+
+            let all = document.querySelectorAll('#als')
+            for(let i=0; i<als.length; i++){
+                if(all.checked){
+                    // 전체선택 클릭시
+                    // 체크되어 있으면
+                    // 모든 박스에 체크되게
+                    als[i].checked = true
+                } else { 
+                    // 체크 풀려 있으면
+                    //모든 박스에 체크가 해제되게
+                    als[i].checked = false
+            }
+            als[i].checked = all.checked
+            }
+
+            // 놓침
+            //보완( 밑에 있는 체크박스가 모두체크시 전체선택 체크, 하나라도 체크가 안되어 있으면 전체선택 체크해제)
+            for (let chk of als){
+                // 각각 클릭이벤트
+                chk.addEventListener('click', function(){
+                    let flag = true
+                    //하나라도 해제된게 있으면
+                    // for (let i in chks){ // 엔트리 출력(i로 들어가는 경우도 있다)
+                    for (let i of als){
+                        if(!chks[i].checked){
+                            flag = false;
+                            break
+                        }
+                    }
+
+                    if(!flag){
+                        document.querySelector("#als").checked = false
+                    } else {
+                        document.querySelector("#als").checked = true
+                    }
+                })
+            }
+        })
+        // this : window 객체를 가짐
+        console.log(this)
+
+        // 놓침
+        // 콜벡을 arrow 함수로 하면 this는 window로 유지됨
+        document.querySelector('#parent').addEventListener('click', function(){ //event를 넣었을 때 변화
+        console.log('a', this)})
+
+        document.querySelector('#parent').addEventListener('click', function(event){ //event를 넣었을 때 변화
+            //event.target : 이벤트가 발생된 dom
+            console.log(event.target)
+            
+            // event.currentTarget : 이벤트가 적용된 dom
+            console.log(event.currentTarget)
+
+            console.log(this)
+            // this는 더이상 window가 아님 // 왜 그런지
+            // 이헐게 내용이 바뀔수 있기 때문에
+            // js에서 this는 알고 있는 것만 사용힌다.
+            
+            console.log(this === event.currentTarget)
+        }, /* true */)
+
+        document.querySelector('#child1').addEventListener('click', function(event){
+            
+            // 전파방지
+            // 부모로 전달되는 이벤트를 중지
+            event.stopPropagation()
+
+            console.log('자식1클릭')
+        })
+    }
+        
+        // 포인터 선택을 하면 영역표시
+        // id.addEventListener('focus', function(){
+        //     id.style.background = 'yellow'
+        // })
+        // id.addEventListener('blur', function(){
+        //     id.style.background = ''
+        // })
 
         function btn1click() {
             console.log("버튼1")
@@ -82,12 +233,12 @@
         // 로그인 버튼을 클릭한 순간 각 input값(id, pw)을 읽어서
         // 한번에 콘솔로 표시하기
 
-        document.querySelector("#login").addEventListener("click", function(){
-            const id = document.querySelector("#id").value
-            const pw = document.querySelector("#pw").value
+        // document.querySelector("#login").addEventListener("click", function(){
+        //     const id = document.querySelector("#id").value
+        //     const pw = document.querySelector("#pw").value
 
-            document.querySelector("#console").innerHTML = id + ","+ pw
-        })
+        //     document.querySelector("#console").innerHTML = id + ","+ pw
+        // })
         
         // const login1 = document.querySelector("#id")
         // const login2 = document.querySelector("#pw")
@@ -99,6 +250,9 @@
         //     document.querySelector("#id").innerHTML += "id"
         // // }
         
+        //------------------------
+        
+        //------------------------
     </script>
 </head>
 <!-- <body onload="javascrupt : init()"> -->
@@ -116,7 +270,28 @@
         아이디 : <input type = "text" id="id"><br>
         비밀번호 : <input type = "password" id = "pw"><br>
         <br>
-        <input type = "button" id = "login" value="로그린">
+        <input type = "button" id = "login" value="로그인">
+    </div>
+
+    <form id='form' method = 'get' action = "https://search.naver.com/search.naver">
+        네이버 검색 : <input type = "text" id = "search" name = "query">
+        <input type = "submit" value="검색">
+    </form>
+
+    떡볶이 토핑 : <input type = "checkbox" id = als> 모두선택 <br>
+    <input type = "checkbox" class = "chk" value="bmj"> 분모자
+    <input type = "checkbox" class = "chk" value="ben"> 비엔나
+    <input type = "checkbox" class = "chk" value="wsg"> 우삼겹
+    <input type = "checkbox" class = "chk" value="chz"> 치즈
+    <input type = "checkbox" class = "chk" value="ram" checked="checked"> 라면
+
+    <br>
+    <hr>
+    <!-- 놓침 -->
+    <div id = 'parent'>
+        부모
+        <div id = 'child1'> 자식1</div>
+        <div id = 'child2'> 자식2</div>
     </div>
 
 </body>
