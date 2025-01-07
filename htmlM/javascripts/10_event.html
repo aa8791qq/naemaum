@@ -318,8 +318,8 @@
     chki.forEach(function(radio){ //출처 : 챗gpt // foreach를 통해서 라디오 타입에 각각 이벤트를 주고 누를때마다 이벤트발생을 시킬려고 함.
         radio.addEventListener("click", function (event) { // 클릭시 이벤트요소 생성 및 발생(라디오타입만)
         // 춢처 : 챗gpt //event 위임을 통해 해결하라는 예시를 보아서 적용시킴 
-        console.log(chki[0]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        console.log(chki[1]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
+        console.log(chki[1].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
         console.log(chki[2]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
         console.log(chki[3]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
         console.log(chki[4]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
