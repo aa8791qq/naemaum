@@ -113,7 +113,7 @@
             const kind = document.querySelector('#kind')
             const size = document.querySelector('[name = "size"]:checked')
             const topping = document.querySelectorAll('[type=checkbox]:checked')
-            const request = documnet.querySelector('#request')
+            const request = document.querySelector('#request')
             const view = document.querySelector('#view')
 
             view.innerHTML = "주문하신 내역은<br>"
@@ -127,7 +127,7 @@
             view.innerHTML += kind.querySelector('option:checked').textContent + "피자"
 
             // option의 속성 ㅣ용하기
-            view.innerHtml += kind.querySelector('option:checked').getAttribute("data-name") + 피자
+            view.innerHTML += kind.querySelector('option:checked').getAttribute("data-name") + 피자
             view.innerHTML += "<br>"
 
             view.innerHtml += "사이즈 : "

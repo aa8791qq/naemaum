@@ -290,10 +290,54 @@
     <!-- 놓침 -->
     <div id = 'parent'>
         부모
-        <div id = 'child1'> 자식1</div>
-        <div id = 'child2'> 자식2</div>
+        <div id = 'child1'> 자식1 </div>
+        <div id = 'child2'> 자식2 </div>
+    </div>
+<hr>
+
+    <!-- 문제 -->
+    <!-- <div>
+        <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
+        <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
+        <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
+        <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
+        <input type = "radio" id = "rh" name="sort" value = "5"> 상품평 많은순
     </div>
 
+    <script>
+    const st = document.querySelectorAll('[name=sort]:checked')
+    for(let i=0; i<st.length; i++){
+            console.log(st[i].checked)
+            if(st[i].checked){
+                console.log(st[i].value)
+            }
+        }
+    const chki = document.querySelectorall([name="st"]).addEventListener("click", function(event){
+        console.log(chki)
+    }) // 이벤트타켓으로 헤사 스타일 주는 css요소 문법으로 잡아서 코드를 짠다.
+    </script> -->
+
+    <div id = "li1"> 첫번째 </div>
+    <div id = "li2"> 두번째 </div>
+    <script>
+        const li1 = document.querySelector('#li1') 
+            console.log('li1', li1)
+            li1.addEventListener('click', function(event){
+                console.log(1)
+                console.log(li1)
+                console.log(event.target) // 실제가 이벤트가 발생한 것
+                console.log(li1 === event.target) 
+                console.log(event.currentTarget) // click에 묻어있는 값
+                console.log(li1 === event.currentTarget)
+            })
+        const li2 = document.querySelector('#li2')
+            console.log(li2)
+            li2.addEventListener('click', function(){
+                console.log(2)
+            })
+    </script>
+
+    
 </body>
 
 </html>
