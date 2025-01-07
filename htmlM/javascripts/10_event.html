@@ -338,8 +338,8 @@
     </script>
 
     <ol id = "ol">
-        <li id = "ol_li_1">li첫번째</li>
-        <li id = "ol_li_2">li두번쩨</li>
+        <li id = "ol_li_1" class="">li첫번째</li>
+        <li id = "ol_li_2" class="">li두번쩨</li>
     </ol>
 
     <script>
@@ -351,8 +351,18 @@
             console.log(event.currentTarget)
             console.log(event.target === event.currentTarget)
             // 패딩부분은 부모꺼임
-            event.target.style.color = "red"
+            // event.target.style.color = "red"
+            
+            // document.querySelector("#ol_li_1").classList.remove("bold")
+            // document.querySelector("#ol_li_2").classList.remove("bold")
+            
+            const lis = document.querySelectorAll("#ol li")
+            for(let i=0; i<lis.length; i++){
+                lis[i].classList.remove("bold")
+            }
+            
             event.target.classList.add("bold")
+            console.log(1)
         })
     </script>
 
