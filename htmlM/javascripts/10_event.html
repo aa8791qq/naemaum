@@ -337,7 +337,30 @@
             })
     </script>
 
-    
+    <ol id = "ol">
+        <li id = "ol_li_1">li첫번째</li>
+        <li id = "ol_li_2">li두번쩨</li>
+    </ol>
+
+    <script>
+        // #ol을 클릭하면
+        // event.target, event.currentTarget 출력
+        const li3 = document.querySelector("#ol")
+        li3.addEventListener('click', function(event){
+            console.log(event.target)
+            console.log(event.currentTarget)
+            console.log(event.target === event.currentTarget)
+            // 패딩부분은 부모꺼임
+            event.target.style.color = "red"
+            event.target.classList.add("bold")
+        })
+    </script>
+
+    <style>
+        .bold{
+            font-weight:900;
+        }
+    </style>
 </body>
 
 </html>
