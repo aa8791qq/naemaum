@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 문제 -->
+        <div id = 'stp'> <!-- 클래스를 빠뜨려서 그런거 같음-->
+            <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
+            <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
+            <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
+            <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
+            <input type = "radio" id = "rh" name="sort" value = "5"> 상품평 많은순
+        </div>
+    
+        <script>
+        const st = document.querySelectorAll('[name="sort"]') // 출처 : 챗gpt //qSA을 사용하여 배열값을 콘솔에 띄워봄(배열을 불러오기 위해 사용함)
+        console.log(st)
+        for(let i=0; i<st.length; i++){
+                console.log(st[i].checked)
+                if(st[i].checked){
+                    console.log(st[i].value)
+                }
+            }
+        // const chki = document.querySelectorAll([name="st"]).addEventListener("click", function(event){
+        const chki = document.querySelectorAll('[type="radio"]') //출처 : 챗gpt 부모요소를 불러와서 일치한 타입만 작동하게 만듬
+        chki.forEach(function(radio){ //출처 : 챗gpt // foreach를 통해서 라디오 타입에 각각 이벤트를 주고 누를때마다 이벤트발생을 시킬려고 함.
+            radio.addEventListener("click", function (event) { // 클릭시 이벤트요소 생성 및 발생(라디오타입만)
+            // 춢처 : 챗gpt //event 위임을 통해 해결하라는 예시를 보아서 적용시킴 
+            // 문제 : 모든값이 한번에 출력됨(체크한건만 값이 나오게 하고 싶음)
+            console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+            console.log(chki[1].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+            console.log(chki[2].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+            console.log(chki[3].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+            console.log(chki[4].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+            if (event.target.type === "radio" && event.target.name === "sort") { // (=== 안배운 지식이 들어가 있습니다)
+                chki.parentElement.classList.add("bold") //--->문제
+                console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+                console.log("클릭된 요소:", event.target);  // 클릭된 요소 정보 출력
+                console.log("선택된 값:", event.target.value);  // 값 출력
+                //출처 : chatgpt // 클릭시 css요소 적용
+        }})
+    });
+        // 이벤트타켓으로 해서 스타일 주는 css요소 문법으로 잡아서 코드를 짠다.(유림누나 도움)
+        </script>
+    
+    <hr>
+        <div id = "li1"> 첫번째 </div>
+        <div id = "li2"> 두번째 </div>
+    
+        <script>
+            const li1 = document.querySelector('#li1') 
+                console.log('li1', li1)
+                li1.addEventListener('click', function(event){
+                    console.log(1)
+                    console.log(li1)
+                    // console.log(event.target) // 실제가 이벤트가 발생한 것
+                    // console.log(li1 === event.target) 
+                    // console.log(event.currentTarget) // click에 묻어있는 값
+                    // console.log(li1 === event.currentTarget)
+                })
+            const li2 = document.querySelector('#li2')
+                console.log(li2)
+                li2.addEventListener('click', function(){
+                    console.log(2)
+                })
+        </script>
+    
+        <ol id="ol">
+            <li id="ol_li_1" class="">li첫번째</li> <!-- 1번을 클릭하면 1번이 적용된더.-->
+            <li id="ol_li_2" class="">li두번쩨</li> <!-- 2번을 클릭하면 1번이 지워지고 2번이 적용된다.-->
+            <!-- 둘다 지워서(for문으로) 각각 누를때마다 스타일 적용한다.-->
+            <!-- 부모한테 이번트를 주고 클릭시 각각 적용한다. -->
+        </ol>
+    
+        <script>
+            // #ol을 클릭하면 event.target, event.currentTarget 출력
+            const li3 = document.querySelector("#ol") // li3에다가 id ol에 있는 것을 가져온다.(이때 어떤 요소까지 가져오는지)
+            li3.addEventListener('click', function(event){ // li3의 요소에 클릭이벤트가 발생할때
+                // 이것을 출력하고
+                console.log(event.target) // 실제가지고 있는 이벤트
+                console.log(event.currentTarget) // 이벤트가 묻어있는 요소
+                console.log(event.target === event.currentTarget)
+                // 패딩부분은 부모꺼임
+                // event.target.style.color = "red"
+                
+                // document.querySelector("#ol_li_1").classList.remove("bold")
+                // document.querySelector("#ol_li_2").classList.remove("bold")
+                
+                //lis에다가 ol이라는 아이디를 가진 li 태그 모두를 가져와서 담고
+                const lis = document.querySelectorAll("#ol li") // ol 자손들을 모두 가져와서 lis에 담는다.
+                // 가져오는 것은 li값 ------------------------------------------------
+                // ????? lis을 반복해서 태그 배열로 추출한다음에 lis 길이보다 작으면 bold 스타일을 지운다.(dom classlist를 이해)
+                for(let i=0; i<lis.length; i++){
+                    lis[i].classList.remove("bold")
+                }
+                
+                event.target.classList.add("bold") // 클릭할때마다 볼드라는 이벤트를 추가한다.
+                console.log(1)
+            })
+        </script>
+    
+        <style>
+            .bold{
+                font-weight:900;
+                color : red
+            }
+        </style>
+    
+    <hr>
+        <!-- <div id = 'stp'>
+            <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
+            <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
+            <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
+            <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
+            <input type = "radio" id = "rh" name="sort" value = "5"> 상품평 많은순
+        </div>
+    
+        <script>
+            const st1 = document.querySelectorAll('[name="sort"]') // 출처 : 챗gpt //qSA을 사용하여 배열값을 콘솔에 띄워봄(배열을 불러오기 위해 사용함)
+            console.log(st1)
+            for(let i=0; i<st1.length; i++){
+                    console.log(st1[i].checked)
+                    if(st1[i].checked){
+                        console.log(st1[i].value)
+                    }
+                }
+        </script> -->
+    
+        <hr>
+        <!-- 문제 -->
+        <div>
+            <div id = 'a1' class = 'title'> Accordion Item #1</div>
+            <div class = 'detail hide'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+                </div>
+        </div>
+    
+        <div>
+            <div id = 'a2' class = 'title'> Accordion Item #2</div>
+            <div class = 'detail hide'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+                </div>
+        </div>
+        
+        <div>
+            <div id = 'a3' class = 'title'> Accordion Item #3</div>
+            <div class = 'detail hide'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+                </div>
+        </div>
+        
+        <div>
+            <div id = 'a4' class = 'title'> Accordion Item #4</div>
+            <div class = 'detail hide'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+                </div>
+        </div>
+    
+        <style>
+            .title {
+                color : red;
+            }
+    
+            .hide{
+                display: none;
+            }
+        </style>
+    
+        <script>
+            // a1
+            // #a1을 클릭하면 부모로 올라가서 자식중에 .detail 확보 및 조작
+            // document.querySelector("#a1").addEventListener("click", function(event){ //살짝 놀침(따로 잡혀있는데 어떻게 .detail만 잡냐)
+            //     //먼저 모든 .detail에 hide 추가
+            //     let details = document.querySelectorAll('.detail')
+            //     for(let i=0; i<details.length; i++){
+            //         details[i].classList.add('hide')
+            //     }
+            //     const p = event.target.parentNode /* 부모요소로 올라가는거 */
+            //     const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+            //     // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+            //     d.classList.remove('hide') // 안됨..
+            // })
+    
+            // #a1, #a2 등을 배열로 넣을꺼라서 주석처리
+            // a2
+            // document.querySelector("#a2").addEventListener("click", function(event){ //살짝 놀침(따로 잡혀있는데 어떻게 .detail만 잡냐)
+            //     //먼저 모든 .detail에 hide 추가
+            //     let details = document.querySelectorAll('.detail')
+            //     for(let i=0; i<details.length; i++){
+            //         details[i].classList.add('hide')
+            //     }
+            //     // 내꺼만 hide를 제거한다.
+            //     const p = event.target.parentNode /* 부모요소로 올라가는거 */
+            //     const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+            //     // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+            //     d.classList.remove('hide')
+            // }) // 오타가 있었음
+    
+            // 최종
+            const titles = document.querySelectorAll('.title')
+            console.log(titles)
+            for(let i=0; i<titles.length; i++){
+                titles[i].addEventListener('click', function(event){ // 오타
+                // 내꺼만 hide를 제거한다.
+                    const p = event.target.parentNode /* 부모요소로 올라가는거 */
+                    const isHide = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail.hide")
+    
+            // 먼저 모든 .detail에 hide 추가
+            let details = document.querySelectorAll('.detail')
+            for(let j=0; j<details.length; j++){
+                details[j].classList.add('hide')
+            }
+            
+            if(isHide != null){ // 조건문 수정
+                // 무조건 .detail 요소를 가져오기
+                const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+                d.classList.remove('hide') // 실행문 수정
+            } else {
+                d.classList.add('hide') // 실행문 수정
+                //만약에 detail이 없다면 만든다.
+            }
+                
+                // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+        })
+    }
+    </script>
+    <hr>
+    
+
+    <!-- 박스 만드는법 -->
+    <style>
+        #menu{
+            display:flex;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        
+        #menu div {
+            flex-grow : 1;
+            border : 1px solid red;
+            /* height: ; */
+        }
+    </style>
+
+    <!-- <div>
+        <div>
+            <div id = 'content'>
+                <div>About<br> Costom SoftWare Developmnet Company </div>
+                <div>Products<br> Billing~ </div>
+                <div>Technology<br> ~~~~ </div>
+                <div>Downloads<br> ~~~~~ </div>
+            </div>
+            <div id = 'menu'>
+                <div>about</div>
+                <div>products</div>
+                <div>technology</div>
+                <div>downloads</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 내가 한거
+    <script>
+        const menus = document.querySelector('#menu')
+        console.log('menus', menus)
+        for(i = 0; i>=menus.length; i++){
+            menus[i].addEventListener('click', function(event){
+                const a = event.target.parentNode
+                console.log('a', a)
+                const ah = a.querySelector('#menu')
+                console.log('ah', ah)
+                ah[0].classList.add('menu')
+            })
+        }
+    </script> -->
+
+    <!-- 정답 -->
+    <div> <!-- 다 놓침 -->
+        <div>
+            <div id = 'content'> <!-- 놓침-->
+                <div id = 'content1' class='hide'>About<br> Costom SoftWare Developmnet Company </div>
+                <div id = 'content2' class='hide'>Products<br> Billing~ </div>
+                <div id = 'content3' class=''>Technology<br> ~~~~ </div>
+                <div id = 'content4' class='hide'>Downloads<br> ~~~~~ </div>
+            </div>
+            <div id = 'menu'>
+                <div topping ='생크림' view = 'content1'>about</div>
+                <div view="content2">products</div>
+                <div view="content3">technology</div>
+                <div view="content4">downloads</div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #content {
+            border : 1px solid red;
+        }
+        #content div {
+            border : 1px solid red;
+            height: 100px;
+        }
+    </style>
+
+    <script> // 다 놓침(이해필요)
+        document.querySelector('#menu')
+            .addEventListener('click', function(evt){ // 놓칠뻔...
+            console.log(evt/*변수명*/.target.textContent)
+            console.log(evt.target.getAttribute('topping')) // 차이점....
+            console.log(evt.target.getAttribute('view')) // 차이점....
+
+            let id = evt.target.getAttribute('view')
+            console.log(document.querySelector("#"+id)) // 이해못함
+
+            const contents = document.querySelectorAll('[id^=content]:not(#content)')
+            
+            for(let i =0; i<contents.length; i++){
+                contents[i].classList.add('hide')
+            }
+
+            document.querySelector("#"+id).classList.remove('hide')
+        })
+    </script>
+
+    <!--
+    항목별 구성방법
+        테이블 : 2*3으로 나누고 세로를 하나로 합친다.(칸 사이의 공간을 만들엊눈다.)
+        div블럭 : 블럭간의 사이에 공백을 만들어준다(마진)
+        이미지 : 썸네일(ex>50)과 확대뷰(ex>150)를 1:3 비율로 정한다.
+            div 블럭일경우 : 사진이 양옆에 나란히 나올 수 있게 비율을 조절한다(약 n배)
+            테이블일 경우 : 칸에 들어갈 수 있게 크기를 조절한다.
+
+    <테이블, div 공통>
+        마우스가 테이블 안으로 들어올때마다, 안에서 나갈때마다 마우스관련 이벤트를 발생시킨다.
+        (mouseover, mouseenter, mouseleave, mouseout)
+        이벤트 발생시키는 조건를 세로를 기준으로
+            첫째칸에 해당하는 콘텐츠([*ㅁ* ㅁ ㅁ / *ㅁ* ㅁ ㅁ])를 표시하고
+            나머지칸에 해당하는 컨텐츠(ㅁ *ㅁ*ㅁ* / ㅁ *ㅁ*ㅁ*)는 숨김처리를 시킨다.
+            마우스가 해당하는 콘텐츠에 갈경우 표시하고 벗어나면 숨김처리를 시킨다.
+            
+    -->
+
+
+    <hr>
+
+    <style>
+        #char{
+            border: 1px solid black;
+            width : 200px;
+
+            position: relative;
+            top:0;
+            left:0;
+        }
+    </style>
+    <img id="char" src="https://thumbnail8.coupangcdn.com/thumbnails/remote/48x48ex/image/vendor_inventory/c2e9/d62a7e7640e74b8ac61a8b12f6dd6aa49a46bb2d02ae4a86e0ea3376585e.jpg">
+
+    <script>
+        let left2 = 0;
+        document.querySelector('#char').style.left = left2+'px'
+        addEventListener('keydown', function(event){
+            console.log(event.keyCode)
+            // 오른쪽 방향키
+            if(event.keyCode == 39){
+                console.log(document.querySelector('#char').style.left)
+
+                left2 += 10
+                document.querySelector('#char').style.left = left2+'px'
+            }
+        })
+    </script>
+</body>
+</html>
