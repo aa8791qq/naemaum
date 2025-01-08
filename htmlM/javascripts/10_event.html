@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0054)file:///C:/meworkspace/htmlM/javascripts/10_event.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
@@ -259,7 +258,7 @@
 
 <body>
     <div id="console"></div>
-    <button type="button" id="btn1" onclick="btn1click();btn1click();alert('아이브사랑해')">오잉?</button>
+    <button type="button" id="btn1" onclick="btn1click();btn1click();alert(&#39;아이브사랑해&#39;)">오잉?</button>
     <button type="button" id="btn2">오잉2?</button>
     <button type="button" id="btn2_1">오잉2-1?</button>
     <button type="button" id="btn3">오잉3?</button>
@@ -267,41 +266,41 @@
 
     <div> 
         <!-- 놓침 -->
-        아이디 : <input type = "text" id="id"><br>
-        비밀번호 : <input type = "password" id = "pw"><br>
+        아이디 : <input type="text" id="id"><br>
+        비밀번호 : <input type="password" id="pw"><br>
         <br>
-        <input type = "button" id = "login" value="로그인">
+        <input type="button" id="login" value="로그인">
     </div>
 
-    <form id='form' method = 'get' action = "https://search.naver.com/search.naver">
-        네이버 검색 : <input type = "text" id = "search" name = "query">
-        <input type = "submit" value="검색">
+    <form id="form" method="get" action="https://search.naver.com/search.naver">
+        네이버 검색 : <input type="text" id="search" name="query">
+        <input type="submit" value="검색">
     </form>
 
-    떡볶이 토핑 : <input type = "checkbox" id = als> 모두선택 <br>
-    <input type = "checkbox" class = "chk" value="bmj"> 분모자
-    <input type = "checkbox" class = "chk" value="ben"> 비엔나
-    <input type = "checkbox" class = "chk" value="wsg"> 우삼겹
-    <input type = "checkbox" class = "chk" value="chz"> 치즈
-    <input type = "checkbox" class = "chk" value="ram" checked="checked"> 라면
+    떡볶이 토핑 : <input type="checkbox" id="als"> 모두선택 <br>
+    <input type="checkbox" class="chk" value="bmj"> 분모자
+    <input type="checkbox" class="chk" value="ben"> 비엔나
+    <input type="checkbox" class="chk" value="wsg"> 우삼겹
+    <input type="checkbox" class="chk" value="chz"> 치즈
+    <input type="checkbox" class="chk" value="ram" checked="checked"> 라면
 
     <br>
     <hr>
     <!-- 놓침 -->
-    <div id = 'parent'>
+    <div id="parent">
         부모
-        <div id = 'child1'> 자식1 </div>
-        <div id = 'child2'> 자식2 </div>
+        <div id="child1"> 자식1 </div>
+        <div id="child2"> 자식2 </div>
     </div>
 <hr>
 
     <!-- 문제 -->
-    <div id = "sort">
-        <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
-        <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
-        <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
-        <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
-        <input type = "radio" id = "rh" name="sort" value = "5"> 상품평 많은순
+    <div id="sort">
+        <input type="radio" id="pp" name="sort" value="1" checked=""> 인기상품
+        <input type="radio" id="lp" name="sort" value="2"> 낮은 가격순
+        <input type="radio" id="hp" name="sort" value="3"> 높은 가격순
+        <input type="radio" id="np" name="sort" value="4"> 신상품순
+        <input type="radio" id="rh" name="sort" value="5"> 상품평 많은순
     </div>
 
     <script>
@@ -319,8 +318,8 @@
     }) // 이벤트타켓으로 해서 스타일 주는 css요소 문법으로 잡아서 코드를 짠다.
     </script>
 <hr>
-    <div id = "li1"> 첫번째 </div>
-    <div id = "li2"> 두번째 </div>
+    <div id="li1"> 첫번째 </div>
+    <div id="li2"> 두번째 </div>
     <script>
         const li1 = document.querySelector('#li1') 
             console.log('li1', li1)
@@ -339,9 +338,9 @@
             })
     </script>
 
-    <ol id = "ol">
-        <li id = "ol_li_1" class="">li첫번째</li>
-        <li id = "ol_li_2" class="">li두번쩨</li>
+    <ol id="ol">
+        <li id="ol_li_1" class="">li첫번째</li>
+        <li id="ol_li_2" class="">li두번쩨</li>
     </ol>
 
     <script>
@@ -373,6 +372,6 @@
             font-weight:900;
         }
     </style>
-</body>
 
-</html>
+
+</body></html>
