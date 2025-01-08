@@ -417,30 +417,37 @@
     </script>
 
     <!-- 문제 -->
+    <!-- 
+    전략들!
+    1.
+    2.
+    3.
+    -->
+    <hr>
     <div>
         <div id = 'a1' class = 'title'> Accordion Item #1</div>
-        <div class = 'detail'>
+        <div class = 'detail hide'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
             </div>
     </div>
 
     <div>
         <div id = 'a2' class = 'title'> Accordion Item #2</div>
-        <div class = 'detail'>
+        <div class = 'detail hide'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
             </div>
     </div>
     
     <div>
         <div id = 'a3' class = 'title'> Accordion Item #3</div>
-        <div class = 'detail'>
+        <div class = 'detail hide'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
             </div>
     </div>
     
     <div>
         <div id = 'a4' class = 'title'> Accordion Item #4</div>
-        <div class = 'detail'>
+        <div class = 'detail hide'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
             </div>
     </div>
@@ -449,14 +456,68 @@
         .title {
             color : red;
         }
-        
-        .detail{
+
+        .hide{
             display: none;
         }
     </style>
 
     <script>
+        // a1
+        // #a1을 클릭하면 부모로 올라가서 자식중에 .detail 확보 및 조작
+        // document.querySelector("#a1").addEventListener("click", function(event){ //살짝 놀침(따로 잡혀있는데 어떻게 .detail만 잡냐)
+        //     //먼저 모든 .detail에 hide 추가
+        //     let details = document.querySelectorAll('.detail')
+        //     for(let i=0; i<details.length; i++){
+        //         details[i].classList.add('hide')
+        //     }
+        //     const p = event.target.parentNode /* 부모요소로 올라가는거 */
+        //     const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+        //     // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+        //     d.classList.remove('hide') // 안됨..
+        // })
 
+        // #a1, #a2 등을 배열로 넣을꺼라서 주석처리
+        // a2
+        // document.querySelector("#a2").addEventListener("click", function(event){ //살짝 놀침(따로 잡혀있는데 어떻게 .detail만 잡냐)
+        //     //먼저 모든 .detail에 hide 추가
+        //     let details = document.querySelectorAll('.detail')
+        //     for(let i=0; i<details.length; i++){
+        //         details[i].classList.add('hide')
+        //     }
+        //     // 내꺼만 hide를 제거한다.
+        //     const p = event.target.parentNode /* 부모요소로 올라가는거 */
+        //     const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+        //     // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+        //     d.classList.remove('hide')
+        // }) // 오타가 있었음
+
+        // 최종
+        const titles = document.querySelectorAll('.title')
+        for(let i=0; i<titles.length; i++){
+            titles[i].addEventListener('click', function(event){ // 오타
+            // 내꺼만 hide를 제거한다.
+                const p = event.target.parentNode /* 부모요소로 올라가는거 */
+                const isHide = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail.hide")
+
+            // 먼저 모든 .detail에 hide 추가
+            let details = document.querySelectorAll('.detail')
+            for(let j=0; j<details.length; j++){
+                details[j].classList.add('hide')
+            }
+            
+            if(isHide != null){ // 조건문 수정
+                // 무조건 .detail 요소를 가져오기
+                const d = p.querySelector/* p의 자식을 찾는거(detail를 잡는다) */(".detail")
+                d.classList.remove('hide') // 실행문 수정
+            } else {
+                d.classList.add('hide') // 실행문 수정
+                //만약에 detail이 없다면 만든다.
+            }
+            
+            // d.style.display= "block" // 이렇게 하면 어떻게 되서 바꾼건지 이해
+        })
+    }
     </script>
 
 </body>
