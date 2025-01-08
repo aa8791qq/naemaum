@@ -296,7 +296,7 @@
 
     <!-- 문제 -->
     <div id = 'stp'>
-        <input type = "radio" id = "pp" name="sort" value = "1"> 인기상품
+        <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
         <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
         <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
         <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
@@ -317,13 +317,15 @@
     chki.forEach(function(radio){ //출처 : 챗gpt // foreach를 통해서 라디오 타입에 각각 이벤트를 주고 누를때마다 이벤트발생을 시킬려고 함.
         radio.addEventListener("click", function (event) { // 클릭시 이벤트요소 생성 및 발생(라디오타입만)
         // 춢처 : 챗gpt //event 위임을 통해 해결하라는 예시를 보아서 적용시킴 
-        console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        console.log(chki[1].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        console.log(chki[2]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        console.log(chki[3]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        console.log(chki[4]) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤
-        if (event.target.type === "radio" && event.target.name === "st") { // (=== 안배운 지식이 들어가 있습니다)
-            chki.parentElement.styleList.add("bold")
+        // 문제 : 모든값이 한번에 출력됨(체크한건만 값이 나오게 하고 싶음)
+        console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+        console.log(chki[1].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+        console.log(chki[2].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+        console.log(chki[3].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+        console.log(chki[4].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
+        if (event.target.type === "radio" && event.target.name === "sort") { // (=== 안배운 지식이 들어가 있습니다)
+            chki.parentElement.classList.add("bold") //--->문제
+            console.log(chki[0].value) // 값출력서비스(현재배열로 출력됨...)-----> 멈춤 // 선생님도움으로 값까지는 출력함
             console.log("클릭된 요소:", event.target);  // 클릭된 요소 정보 출력
             console.log("선택된 값:", event.target.value);  // 값 출력
             //출처 : chatgpt // 클릭시 css요소 적용
@@ -334,17 +336,17 @@
 <hr>
     <div id = "li1"> 첫번째 </div>
     <div id = "li2"> 두번째 </div>
-    
+
     <script>
         const li1 = document.querySelector('#li1') 
             console.log('li1', li1)
             li1.addEventListener('click', function(event){
                 console.log(1)
                 console.log(li1)
-                console.log(event.target) // 실제가 이벤트가 발생한 것
-                console.log(li1 === event.target) 
-                console.log(event.currentTarget) // click에 묻어있는 값
-                console.log(li1 === event.currentTarget)
+                // console.log(event.target) // 실제가 이벤트가 발생한 것
+                // console.log(li1 === event.target) 
+                // console.log(event.currentTarget) // click에 묻어있는 값
+                // console.log(li1 === event.currentTarget)
             })
         const li2 = document.querySelector('#li2')
             console.log(li2)
@@ -361,8 +363,9 @@
     <script>
         // #ol을 클릭하면
         // event.target, event.currentTarget 출력
-        const li3 = document.querySelector("#ol")
-        li3.addEventListener('click', function(event){
+        const li3 = document.querySelector("#ol") // li3에다가 id ol에 있는 것을 가져온다.(이때 어떤 요소까지 가져오는지)
+        li3.addEventListener('click', function(event){ // li3의 요소에 클릭이벤트가 발생할때
+            // 이것을 출력하고
             console.log(event.target)
             console.log(event.currentTarget)
             console.log(event.target === event.currentTarget)
@@ -372,19 +375,46 @@
             // document.querySelector("#ol_li_1").classList.remove("bold")
             // document.querySelector("#ol_li_2").classList.remove("bold")
             
+            //lis에다가 ol이라는 아이디를 가진 li 태그 모두를 가져와서 담고
             const lis = document.querySelectorAll("#ol li")
+            // lis을 반복해서 (??) 배열로 추출한다음에 lis 길이보다 작으면 bold 스타일을 지운다.(dom classlist를 이해)
             for(let i=0; i<lis.length; i++){
                 lis[i].classList.remove("bold")
             }
             
-            event.target.classList.add("bold")
+            event.target.classList.add("bold") // 클릭할때마다 볼드라는 이벤트를 추가한다.
             console.log(1)
         })
     </script>
+<hr>
+    <div id = 'stp'>
+        <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
+        <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
+        <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
+        <input type = "radio" id = "np" name="sort" value = "4"> 신상품순
+        <input type = "radio" id = "rh" name="sort" value = "5"> 상품평 많은순
+    </div>
+
+    <script>
+        const st1 = document.querySelectorAll('[name="sort"]') // 출처 : 챗gpt //qSA을 사용하여 배열값을 콘솔에 띄워봄(배열을 불러오기 위해 사용함)
+        console.log(st1)
+        for(let i=0; i<st1.length; i++){
+                console.log(st1[i].checked)
+                if(st1[i].checked){
+                    console.log(st1[i].value)
+                }
+            }
+    </script>
+
+    <!-- 문제 -->
+    
+    
+
 
     <style>
         .bold{
             font-weight:900;
+            color : red
         }
     </style>
 
