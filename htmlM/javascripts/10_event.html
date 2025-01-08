@@ -295,7 +295,7 @@
 <hr>
 
     <!-- 문제 -->
-    <div id = 'stp'>
+    <div id = 'stp'> <!-- 클래스를 빠뜨려서 그런거 같음-->
         <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
         <input type = "radio" id = "lp" name="sort" value = "2"> 낮은 가격순
         <input type = "radio" id = "hp" name="sort" value = "3"> 높은 가격순
@@ -356,18 +356,19 @@
     </script>
 
     <ol id="ol">
-        <li id="ol_li_1" class="">li첫번째</li>
-        <li id="ol_li_2" class="">li두번쩨</li>
+        <li id="ol_li_1" class="">li첫번째</li> <!-- 1번을 클릭하면 1번이 적용된더.-->
+        <li id="ol_li_2" class="">li두번쩨</li> <!-- 2번을 클릭하면 1번이 지워지고 2번이 적용된다.-->
+        <!-- 둘다 지워서(for문으로) 각각 누를때마다 스타일 적용한다.-->
+        <!-- 부모한테 이번트를 주고 클릭시 각각 적용한다. -->
     </ol>
 
     <script>
-        // #ol을 클릭하면
-        // event.target, event.currentTarget 출력
+        // #ol을 클릭하면 event.target, event.currentTarget 출력
         const li3 = document.querySelector("#ol") // li3에다가 id ol에 있는 것을 가져온다.(이때 어떤 요소까지 가져오는지)
         li3.addEventListener('click', function(event){ // li3의 요소에 클릭이벤트가 발생할때
             // 이것을 출력하고
-            console.log(event.target)
-            console.log(event.currentTarget)
+            console.log(event.target) // 실제가지고 있는 이벤트
+            console.log(event.currentTarget) // 이벤트가 묻어있는 요소
             console.log(event.target === event.currentTarget)
             // 패딩부분은 부모꺼임
             // event.target.style.color = "red"
@@ -376,8 +377,9 @@
             // document.querySelector("#ol_li_2").classList.remove("bold")
             
             //lis에다가 ol이라는 아이디를 가진 li 태그 모두를 가져와서 담고
-            const lis = document.querySelectorAll("#ol li")
-            // lis을 반복해서 (??) 배열로 추출한다음에 lis 길이보다 작으면 bold 스타일을 지운다.(dom classlist를 이해)
+            const lis = document.querySelectorAll("#ol li") // ol 자손들을 모두 가져와서 lis에 담는다.
+            // 가져오는 것은 li값 ------------------------------------------------
+            // ????? lis을 반복해서 태그 배열로 추출한다음에 lis 길이보다 작으면 bold 스타일을 지운다.(dom classlist를 이해)
             for(let i=0; i<lis.length; i++){
                 lis[i].classList.remove("bold")
             }
@@ -386,6 +388,14 @@
             console.log(1)
         })
     </script>
+
+    <style>
+        .bold{
+            font-weight:900;
+            color : red
+        }
+    </style>
+
 <hr>
     <div id = 'stp'>
         <input type = "radio" id = "pp" name="sort" value = "1" checked> 인기상품
@@ -407,16 +417,47 @@
     </script>
 
     <!-- 문제 -->
-    
-    
+    <div>
+        <div id = 'a1' class = 'title'> Accordion Item #1</div>
+        <div class = 'detail'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+            </div>
+    </div>
 
+    <div>
+        <div id = 'a2' class = 'title'> Accordion Item #2</div>
+        <div class = 'detail'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+            </div>
+    </div>
+    
+    <div>
+        <div id = 'a3' class = 'title'> Accordion Item #3</div>
+        <div class = 'detail'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+            </div>
+    </div>
+    
+    <div>
+        <div id = 'a4' class = 'title'> Accordion Item #4</div>
+        <div class = 'detail'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae animi fugiat soluta voluptatum quam aspernatur at possimus adipisci ad. Quo obcaecati tempora quae magni eum esse exercitationem voluptatem odio.
+            </div>
+    </div>
 
     <style>
-        .bold{
-            font-weight:900;
-            color : red
+        .title {
+            color : red;
+        }
+        
+        .detail{
+            display: none;
         }
     </style>
 
+    <script>
 
-</body></html>
+    </script>
+
+</body>
+</html>
