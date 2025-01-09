@@ -179,6 +179,21 @@
 
         img[0].removeAttribute("data-human")
     </script>
+
+<!-- 속성지우기 -->
+    <div id='del'>지워짐 </div>
+<br>
+    <label for = "radio1">
+        <input type="radio" id="radio1">
+        라디오
+    </label>
+
+    <script>
+        let b = document.querySelector('#del')
+        let a = document.querySelector('#del').remove()
+        console.log(a) // 돌려주는 것 없임(undefined)
+        console.log(b) // 출력됨
+    </script>
 </body>
 
 </html>
