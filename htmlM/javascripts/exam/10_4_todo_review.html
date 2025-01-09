@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () { // 로딩함수(없으면 읽을 수 없다.)
+            // 추가버튼 클릭시
+            // 추가버튼을 확보(querySelector)
+            // 그 버튼에 클릭이벤트를 준다.
+            // 콘솔로 클릭되었는지 확인하기
+            // 텍스트에 적은 내용 확보 - 콘솔로 확인
+            // html에 출력(값만)
+            // html에 특정 dom 가져와서
+            // innerText
+            // intterHTML[1]
+            // textContent
+            // append[2]
+
+        // 출력과 함께 체크박스랑 텍스트랑 삭제버튼 생성 및 표시[1]
+            document.querySelector('#add').addEventListener('click', function () {
+                const todo = document.querySelector('#todo').value // 텍스트를 가져온다(태그사이 글씨는 innerHTML(text))
+                console.log(todo)
+                const list = document.querySelector('#list')
+                //inner text?
+                // 뒤에서
+                // list.innerHTML += '<br> <input type = "checkbox">' + todo + '<button> 삭제 </button>'
+                // // 두개내용? ok
+                // // span?
+                // 확정된 코드
+                list.innerHTML += '<div> <input type = "checkbox">'+ todo + '<button class= del> 삭제 </div></button>'
+                // 앞에서
+                // list.innerHTML = list.innerHTML + '<br><input type = "checkbox">' + todo + '<button> 삭제 </button>'
+                let arr = document.querySelectorAll(".del")
+                // arr.addEventListener('click', function(){ // push, pop으로 있음(현재 배열로 들어옴)
+                //     console.log('삭제')
+                // })
+
+                // 삭제버튼에 클릭이벤트
+                // 삭제할려고 했더니 선택하기가 어려워서 출력내용을 div로 블럭 하나를 잡았다.
+                // 부모를 잡고 삭제?
+                // 지금 누른 버튼의 부모를 remove'
+                // 해당 내용만 삭제
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i].addEventListener('click', function (event) {
+                        // console.log('삭제')
+                        // console.log(event.target)
+                        event.target.parentNode.remove() //부모에 가서 지움이벤트 잡아서 작동
+                    })
+                }
+            })
+            // 출력과 함께 체크박스랑 텍스트랑 삭제버튼 생성 및 표시[2] //놓침
+            // let div = document.createElement('div');
+            // // div.innerHTML = '<input type = "checkbox"><span>' + todo + '</span><button class= del> 삭제 </button>'
+            
+            // list.append(div)
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>TODO</h1>
+    <div>
+        할일 : <input type='text' id='todo'><button id="add">추가</button>
+        <br>
+        <label for='chk_all'>
+            <input type='checkbox' id=chk_all> 전체선택
+        </label>
+        <button> 선택삭제</button>
+    </div>
+
+    <div id='list'>
+
+    </div>
+</body>
+
+</html>
