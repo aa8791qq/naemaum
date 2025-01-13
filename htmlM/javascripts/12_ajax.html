@@ -47,10 +47,10 @@
                 // 보낼준비
                 // xhr.open('get', 'http://daum.net')
                 xhr.open('get', 'https://polling.finance.naver.com/api/realtime?query=SERVICE_ITEM:048550|SERVICE_RECENT_ITEM:048550,207940&_callback=window.__jindo2_call')
-
+                
                 // 보내기
                 xhr.send()
-
+                
                 //다녀온뒤
                 xhr.onload = function () {
                     console.log('다녀왔습니다')
@@ -59,14 +59,59 @@
                     
                 }
             })
+            
+            document.querySelector('#btn3').addEventListener('click', function () {
+                // ajax 객체 생성
+                const xhr = new XMLHttpRequest();
+                
+                // 전달인자 보내는 방법(get방식)
+                // 서버 ip : port(80 생략가능)/주소/
+                //주소?키=벨류&key2=밸류2
+                let url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst'
+                url += '?'
+                url += 'serviceKey=lK%2BpeTdeyWia9YaaV6f0imO80lbjfLimavktA%2BJjIAzCLFe58rzMAZ2WGn4SnES09KwIFEs%2F5uGluAJOCIDf3w%3D%3D'
+                url += '&'
+                url += 'dataType=' + 'JSON'
+                url += '&'
+                url += 'base_date=' + '20250113'
+                url += '&'
+                url += 'base_time=' + '1600'
+                url += '&'
+                url += 'nx=' + '63'
+                url += '&'
+                url += 'ny=' + '110'
+                url += '&'
+                url += 'numOfRows=' + '100'
+                console.log(url) // =을 빠뜨림
+                
+                xhr.open('get', url)
+                
+                // 보내기
+                xhr.send()
+                
+                //다녀온뒤
+                xhr.onload = function () {
+                    console.log('다녀왔습니다')
+                    console.log(xhr.responseText)
+                    
+                    let data = JSON.parse(xhr.responseText)
+                    console.log(data)
+
+                    // 3시간 분량의 표(시간, 기온(T1H), 강수량(RN1), 습도(REH)) 출력
+                    // form으로 먼저 실습
+                }
+            })
         })
 
+        
+        
     </script>
 </head>
 
 <body>
     <button type='button' id='btn1'>ajax 실행</button>
     <button type='button' id='btn2'>sm 주식 가져오기</button>
+    <button type='button' id='btn3'>날씨</button>
 </body>
 
 </html>
