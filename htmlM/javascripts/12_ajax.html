@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 놓침?? -- 설명
+        window.addEventListener('load', function () {
+            document.querySelector('#btn1').addEventListener('click', function () {
+                // ajax 객체 생성
+                const xhr = new XMLHttpRequest();
+
+                // 보낼준비
+                // xhr.open('get', 'http://daum.net')
+                xhr.open('get', 'https://jsonplaceholder.typicode.com/users')
+
+                // 보내기
+                xhr.send()
+
+                //다녀온뒤
+                xhr.onload = function () {
+                    console.log('다녀왔습니다')
+                    // console.log(xhr.responseText)
+                    
+                    console.log(xhr.responseText)//?
+                    // console.log(xhr.username)
+                    const data = JSON.parse(xhr.responseText)
+                    console.log(data)
+                    
+                    // 첫번째 사람의
+                    console.log(data[0])
+                    
+                    // username 출력
+                    console.log(data[0].username) // 약간 놓침 // 맞게해도 계속오류가 났었음, 배열안됨
+                    
+                    // lat 출력
+                    console.log(data[0].address.geo.lat)
+                }
+            })
+
+            document.querySelector('#btn2').addEventListener('click', function () {
+                // ajax 객체 생성
+                const xhr = new XMLHttpRequest();
+
+                // 보낼준비
+                // xhr.open('get', 'http://daum.net')
+                xhr.open('get', 'https://polling.finance.naver.com/api/realtime?query=SERVICE_ITEM:048550|SERVICE_RECENT_ITEM:048550,207940&_callback=window.__jindo2_call')
+
+                // 보내기
+                xhr.send()
+
+                //다녀온뒤
+                xhr.onload = function () {
+                    console.log('다녀왔습니다')
+                    // console.log(xhr.responseText)
+                    
+                    
+                }
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <button type='button' id='btn1'>ajax 실행</button>
+    <button type='button' id='btn2'>sm 주식 가져오기</button>
+</body>
+
+</html>

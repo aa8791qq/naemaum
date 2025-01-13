@@ -90,8 +90,12 @@
         let json4 ={k4 : 123}
         aJson.push(json3)
         aJson.push(json4)
+
+        //json을 string으로 변경
         let strJson2 = JSON.stringify(aJson)
         console.log(strJson2)
+
+        // string을 json으로 변경
         console.log(JSON.parse(strJson2))
         </script>
 </head>
