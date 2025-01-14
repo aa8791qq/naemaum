@@ -23,18 +23,18 @@
                 xhr.onload = function () {
                     console.log('다녀왔습니다')
                     // console.log(xhr.responseText)
-                    
+
                     console.log(xhr.responseText)//?
                     // console.log(xhr.username)
                     const data = JSON.parse(xhr.responseText)
                     console.log(data)
-                    
+
                     // 첫번째 사람의
                     console.log(data[0])
-                    
+
                     // username 출력
                     console.log(data[0].username) // 약간 놓침 // 맞게해도 계속오류가 났었음, 배열안됨
-                    
+
                     // lat 출력
                     console.log(data[0].address.geo.lat)
                 }
@@ -47,23 +47,23 @@
                 // 보낼준비
                 // xhr.open('get', 'http://daum.net')
                 xhr.open('get', 'https://polling.finance.naver.com/api/realtime?query=SERVICE_ITEM:048550|SERVICE_RECENT_ITEM:048550,207940&_callback=window.__jindo2_call')
-                
+
                 // 보내기
                 xhr.send()
-                
+
                 // 다녀온뒤
                 xhr.onload = function () {
                     console.log('다녀왔습니다')
                     // console.log(xhr.responseText)
-                    
-                    
+
+
                 }
             })
-            
+
             document.querySelector('#btn3').addEventListener('click', function () {
                 // ajax 객체 생성
                 const xhr = new XMLHttpRequest();
-                
+
                 // 전달인자 보내는 방법(get방식)
                 // 서버 ip : port(80 생략가능)/주소/
                 //주소?키=벨류&key2=밸류2
@@ -83,17 +83,17 @@
                 url += '&'
                 url += 'numOfRows=' + '100'
                 console.log(url) // =을 빠뜨림
-                
+
                 xhr.open('get', url)
-                
+
                 // 보내기
                 xhr.send()
-                
+
                 //다녀온뒤
                 xhr.onload = function () {
                     console.log('다녀왔습니다')
                     console.log(xhr.responseText)
-                    
+
                     let data = JSON.parse(xhr.responseText)
                     // console.log(data)
 
@@ -110,7 +110,7 @@
                     let item4 = item[0].fsctDate
                     console.log(data.response.body.items.item[0].fcstValue)
                     let item5 = item[0].fsctDate
-                    
+
                     // 필터(놓침)
                     // let filtered = item.filter(function(obj){
                     //     if(obj.catagory == 'T1H' || obj.catagory == 'RN1' || obj.catagory == 'REH'){
@@ -123,7 +123,7 @@
                     //     return a.fcstTime - b.fcstTime
                     // })
                     // console.log(filtered)
-                    
+
                 }
             })
         })
@@ -149,34 +149,34 @@
         //     console.log(result)
         // }
 
-            window.addEventListener('load', function () {  // 필수요소 // 해결하느냐고 놓핌
-                document.querySelector('#btn4').addEventListener('click', function () {
-                    const url = 'https://jsonplaceholder.typicode.com/users'
-                    // 보내는것
-                    let option = {
-                        method : 'get',
-                        headers : {
-                            'key' : 'value'
-                        },
-                        // body : '{a:123}' //여기에 올 수 없음
-                    }
-                    // 받는 것 // 놓침
-                    console.log(1)
-                    fetch(url, option).then(function(response){ // promise 내장
-                        console.log(2)
-                        // response : fetch가 돌려준 응답객체
-                        return response.json()
-                        // console.log(data)
-                    }).then(function(data){ // 변수 입력 실수 // 성공
-                        console.log(data)
-                    }).catch(function(error){ // 실패
-                        console.log(error)
-                    })
-                    console.log(3)
+        window.addEventListener('load', function () {  // 필수요소 // 해결하느냐고 놓핌
+            document.querySelector('#btn4').addEventListener('click', function () {
+                const url = 'https://jsonplaceholder.typicode.com/users'
+                // 보내는것
+                let option = {
+                    method: 'get',
+                    headers: {
+                        'key': 'value'
+                    },
+                    // body : '{a:123}' //여기에 올 수 없음
+                }
+                // 받는 것 // 놓침
+                console.log(1)
+                fetch(url, option).then(function (response) { // promise 내장
+                    console.log(2)
+                    // response : fetch가 돌려준 응답객체
+                    return response.json()
+                    // console.log(data)
+                }).then(function (data) { // 변수 입력 실수 // 성공
+                    console.log(data)
+                }).catch(function (error) { // 실패
+                    console.log(error)
                 })
-                // promise : 비동기방식이라 발생한 에러문구
-                    // promise, async/await
+                console.log(3)
             })
+            // promise : 비동기방식이라 발생한 에러문구
+            // promise, async/await
+        })
 
         // let j = {}
         // j.tensi = 1
@@ -200,7 +200,7 @@
         // 네트워크~~~
 
         // 다시 //
-        function ajax(url){
+        function ajax(url) {
 
         }
 

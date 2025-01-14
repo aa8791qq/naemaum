@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
-        window.addEventListener('load', function(){
-
+        window.addEventListener('load', function () {
         })
-        $(function(){
+        $(function () {
             // 페이지 로딩 끝나면 실행
             init();
+            bind();
         })
-        function init(){
+        
+        function init() {
             const list_h1 = $('h1')
             console.log(list_h1) // jQuery 배열객체(for.Each??)
             console.log(list_h1[0]) // 글씨가 아니고 객체가 표시된거임 // 순수한 자바스크립트
@@ -25,50 +27,148 @@
             $('h1').text('싹다 변경')
             // innerHTML에 해당
             $('h1').html('<a href = "javaswcript:void(0)">a tag<a>') // 놓침
-            
+
             console.log($("#parent")) //하나짜리 배열
-            
-            // 놓침
+
+            // 놓침 // 자식 중 마지막으로 추가
             $("#paremt").append("<div>지식2</div>")
+            // 자식 중 처음에 추가
             $("#paremt").prepend("<div>지식3</div>")
             $("#paremt").append($('h1')[0])
 
+            // 자식 내용 지우기
             $("#parent")[0].innerHTML = ""
             $("#parent").html("")
             $("#parent").empty()
 
+            // 본인삭제
             $("#parent").remove()
-            
-            // 놓침
+
+            // (놓침)
+            // 클래스 추가
             $("#chk").addClass('cb2')
+            // 클래스 제거
             $("#chk").removeClass('cb2')
+            // 클래스 있으면 제거, 없으면 추가
             $("#chk").toggleClass('cb2')
-            if($('#chk').hasClass('cb2')){
+            // 클래스가 있는 지 확인
+            if ($('#chk').hasClass('cb2')) {
                 console.log('cb클래스 있음')
             }
 
+            // 전달인자 하나면 getAttribute 속성 값 가져오기
             console.log($('#chk').attr('id'))
+            // 전달인자가 두개면 setAttribute 속성과 값 추가
             $('#chk').attr('data-human', '두번째값')
-            
+
+            // 
             $('#chk').attr('data-game', '던전앤파이터')
             console.log($('#chk').data('game'))
             
+            // 위에 있는 코딩과 차이점...
             $('#chk').data('dinner', '소주') // 숨김가능
             console.log($('#chk').data('dinner'))
+            ///-------------------------
+
+            // 속성 제거
+            $('#chk').removeAttr('data-game')
+
+            // 체크여부확인
+            console.log($('#chk').prop('checked')) // 값은 : true / false
+            $('#chk').prop('checked', false) // 체크해제
+            $('#chk').prop('checked', true) // 체크함
+            
+            // value 갑 바꾸기
+            console.log($('#chk').val())
+            console.log($('#input').val())
+            $('#input').val('바꾼값') // value값 바꿀때
+
+            // css 가능
+            // style 변경 또는 일기
+            $('#input').css('border', '1px solid red')
+            console.log($('#input').css('width', '400px'))
+
+            // 놓침(jquery.js 오류 때문)
+            // display : none
+            $('#input').hide()
+            // display : none 제거
+            $('#input').show()
+
+            // 자식 요소 중에 찾기
+            $('#parent2').find('child2')
+
+            // 부모로 올라가기
+            $('#parent2').parent()
+
+            // 부모로 계속올라가기(잘쓰지 않음)
+            $('#parent2').parents('.grand')
+            console.log($('#parent2').parents('.grand')) // length 0 배열
+
+            console.log($('minsu')) // length 0 배열
+        }
+        
+        function bind(){
+            // $('.btn').click(function(){}) // 간편
+
+            $('.btn').on('click', function(event){
+                console.log(this) // 놓침
+                console.log(event.target)
+            })
+            // 2번 넣을때
+            $('.btn').off('click').on('click', function(event){
+                console.log(this) // 놓침
+                console.log(event.target)
+            })
+            // 놓침
+            $('.btn').off('click').on('click', function(event){
+                console.log(this) // 놓침
+                console.log(event.target)
+            })
+
+            // 이벤트명.식별자로 바인드하고 특정 이벤트만 언바인드 한다.
+            $('.btn').on('click.dom', function(event){
+                console.log(this) // 놓침
+                console.log(event.target)
+            })
+            $('.btn').on('click.ajax', function(event){
+                console.log(this) // 놓침
+                console.log(event.target)
+            })
+            $('.btn').off('click.dom')
+
+            // evnet.stopPropagation() 실행
+            $('.child2').on('click', function(){
+                return false
+            })
+
+            $('#btn1').click()
+            // $('#btn1').trigger('click')
         }
     </script>
 </head>
+
 <body>
     <h1>첫번째</h1>
     <h1>두번째</h1>
     <h1>세번째</h1>
-    <div id = 'parent'>
+    <div id='parent'>
         부모
-        <div class = child> 자식 </div>
+        <div class=child> 자식 </div>
+    </div>
+    <div id='parent2'>
+        부모2
+        <div class=child2> 자식2 </div>
     </div>
 
-    <!-- 체크 전달인자 실수 -->
-    <input type='checkbox' id="chk" value="ive" class="cb1" data-human="안유진" data-human="sale" checked='checked'>
+    <!-- 체크부분 코딩 실수...  -->
+    <input type='checkbox' id="chk" value="ive"
+                class="cb1" data-human="안유진" data-human="sale" checked='checked'>
+    <br>
+    <input type ='text' id = 'input' value = '미리완성'>
+    <br>
+    <input type ='button' class = 'btn' id = 'btn1' value="버튼1">
+    <input type ='button' class = 'btn' id = 'btn2' value="버튼2">
 
 </body>
+
 </html>
