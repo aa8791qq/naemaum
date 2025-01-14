@@ -51,7 +51,7 @@
                 // 보내기
                 xhr.send()
                 
-                //다녀온뒤
+                // 다녀온뒤
                 xhr.onload = function () {
                     console.log('다녀왔습니다')
                     // console.log(xhr.responseText)
@@ -73,9 +73,9 @@
                 url += '&'
                 url += 'dataType=' + 'JSON'
                 url += '&'
-                url += 'base_date=' + '20250113'
+                url += 'base_date=' + '20250114'
                 url += '&'
-                url += 'base_time=' + '1600'
+                url += 'base_time=' + '0930'
                 url += '&'
                 url += 'nx=' + '63'
                 url += '&'
@@ -95,16 +95,107 @@
                     console.log(xhr.responseText)
                     
                     let data = JSON.parse(xhr.responseText)
-                    console.log(data)
+                    // console.log(data)
 
-                    // 3시간 분량의 표(시간, 기온(T1H), 강수량(RN1), 습도(REH)) 출력
-                    // form으로 먼저 실습
+                    // 3시간 분량의 표(시간, 기온(T1H), 강수량(RN1), 습도(REH)) 출력(오류 해결 때문에 설명 놓침)---->>>>
+                    console.log(data.response)
+                    console.log(data.response.body)
+                    console.log(data.response.body.items.item)
+                    let item = data.response.body.items.item
+                    console.log(data.response.body.items.item[0].category)
+                    let item2 = item[0].category
+                    console.log(data.response.body.items.item[0].fcstDate)
+                    let item3 = item[0].fsctDate
+                    console.log(data.response.body.items.item[0].fcstTime)
+                    let item4 = item[0].fsctDate
+                    console.log(data.response.body.items.item[0].fcstValue)
+                    let item5 = item[0].fsctDate
+                    
+                    // 필터(놓침)
+                    // let filtered = item.filter(function(obj){
+                    //     if(obj.catagory == 'T1H' || obj.catagory == 'RN1' || obj.catagory == 'REH'){
+                    //         return true
+                    //     }
+                    //     return false
+                    // })
+                    // console.log(filtered)
+                    // filtered.sort(function(a,b){
+                    //     return a.fcstTime - b.fcstTime
+                    // })
+                    // console.log(filtered)
+                    
                 }
             })
         })
+        // 입력때매 놓침(오류해결때문에) // json을 사용해보자!----
+        // let result = {}
+        //     for(let i = 0; i<item.length; i++){
+        //         if(obj.catagory == 'T1H'){
+        //             if(result[item[i].fcstTime] == undefined){
+        //                 result[item[i].fcstTime] = {}
+        //             }
+        //             result[item[i].fcstTime][item[i].category] = item[i].fcstValue
+        //         } else if(obj.catagory == 'RN1'){
+        //             if(result[item[i].fcstTime] == undefined){
+        //                 result[item[i].fcstTime] = {}
+        //             }
+        //             result[item[i].fcstTime][item[i].category] = item[i].fcstValue
+        //         } else if(obj.catagory == 'REH'){
+        //             if(result[item[i].fcstTime] == undefined){
+        //                 result[item[i].fcstTime] = {}
+        //             }
+        //             result[item[i].fcstTime][item[i].category] = item[i].fcstValue
+        //     }
+        //     console.log(result)
+        // }
 
-        
-        
+        let j = {}
+            j.tensi = 1
+            /*
+                {
+                    열시 : 1
+                }
+            */
+            j.tensi = 2
+            /*
+                {
+                    열시 : 2
+                }
+            */
+            // j['1100'] = {
+            //     온도 : value,
+            //     습도 : value
+            // }
+            console.log(j)
+
+            window.addEventListener('load', function () {  // 필수요소 // 해결하느냐고 놓핌
+                document.querySelector('#btn4').addEventListener('click', function () {
+                    const url = 'https://jsonplaceholder.typicode.com/users'
+                    // 보내는것
+                    let option = {
+                        method : 'get',
+                        headers : {
+                            'key' : 'value'
+                        },
+                        // body : '{a:123}' //여기에 올 수 없음
+                    }
+                    // 받는 것 // 놓침
+                    console.log(1)
+                    fetch(url, option).then(function(response){
+                        console.log(2)
+                        // response : fetch가 돌려준 응답객체
+                        return response.json()
+                        // console.log(data)
+                    }).then(function(data){ // 변수 입력 실수
+                        console.log(data)
+                    }).catch(function(error){
+                        console.log(error)
+                    })
+                    console.log(3)
+                })
+                // promise : 비동기방식이라 발생한 에러문구
+                    // promise, async/await
+            })
     </script>
 </head>
 
@@ -112,6 +203,7 @@
     <button type='button' id='btn1'>ajax 실행</button>
     <button type='button' id='btn2'>sm 주식 가져오기</button>
     <button type='button' id='btn3'>날씨</button>
+    <button type='button' id='btn4'>fetch</button>
 </body>
 
 </html>
