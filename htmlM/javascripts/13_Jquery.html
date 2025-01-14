@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        window.addEventListener('load', function(){
+
+        })
+        $(function(){
+            // 페이지 로딩 끝나면 실행
+            init();
+        })
+        function init(){
+            const list_h1 = $('h1')
+            console.log(list_h1) // jQuery 배열객체(for.Each??)
+            console.log(list_h1[0]) // 글씨가 아니고 객체가 표시된거임 // 순수한 자바스크립트
+            list_h1[0].addEventListener
+            // list_h1.addEventListener(이건 안됨)
+
+            // querySeleterAll로 가져온 배열을 반복함
+            // innerText에 해당
+            $('h1').text('싹다 변경')
+            // innerHTML에 해당
+            $('h1').html('<a href = "javaswcript:void(0)">a tag<a>') // 놓침
+            
+            console.log($("#parent")) //하나짜리 배열
+            
+            // 놓침
+            $("#paremt").append("<div>지식2</div>")
+            $("#paremt").prepend("<div>지식3</div>")
+            $("#paremt").append($('h1')[0])
+
+            $("#parent")[0].innerHTML = ""
+            $("#parent").html("")
+            $("#parent").empty()
+
+            $("#parent").remove()
+            
+            // 놓침
+            $("#chk").addClass('cb2')
+            $("#chk").removeClass('cb2')
+            $("#chk").toggleClass('cb2')
+            if($('#chk').hasClass('cb2')){
+                console.log('cb클래스 있음')
+            }
+
+            console.log($('#chk').attr('id'))
+            $('#chk').attr('data-human', '두번째값')
+            
+            $('#chk').attr('data-game', '던전앤파이터')
+            console.log($('#chk').data('game'))
+            
+            $('#chk').data('dinner', '소주') // 숨김가능
+            console.log($('#chk').data('dinner'))
+        }
+    </script>
+</head>
+<body>
+    <h1>첫번째</h1>
+    <h1>두번째</h1>
+    <h1>세번째</h1>
+    <div id = 'parent'>
+        부모
+        <div class = child> 자식 </div>
+    </div>
+
+    <!-- 체크 전달인자 실수 -->
+    <input type='checkbox' id="chk" value="ive" class="cb1" data-human="안유진" data-human="sale" checked='checked'>
+
+</body>
+</html>

@@ -149,25 +149,6 @@
         //     console.log(result)
         // }
 
-        let j = {}
-            j.tensi = 1
-            /*
-                {
-                    열시 : 1
-                }
-            */
-            j.tensi = 2
-            /*
-                {
-                    열시 : 2
-                }
-            */
-            // j['1100'] = {
-            //     온도 : value,
-            //     습도 : value
-            // }
-            console.log(j)
-
             window.addEventListener('load', function () {  // 필수요소 // 해결하느냐고 놓핌
                 document.querySelector('#btn4').addEventListener('click', function () {
                     const url = 'https://jsonplaceholder.typicode.com/users'
@@ -181,14 +162,14 @@
                     }
                     // 받는 것 // 놓침
                     console.log(1)
-                    fetch(url, option).then(function(response){
+                    fetch(url, option).then(function(response){ // promise 내장
                         console.log(2)
                         // response : fetch가 돌려준 응답객체
                         return response.json()
                         // console.log(data)
-                    }).then(function(data){ // 변수 입력 실수
+                    }).then(function(data){ // 변수 입력 실수 // 성공
                         console.log(data)
-                    }).catch(function(error){
+                    }).catch(function(error){ // 실패
                         console.log(error)
                     })
                     console.log(3)
@@ -196,6 +177,33 @@
                 // promise : 비동기방식이라 발생한 에러문구
                     // promise, async/await
             })
+
+        // let j = {}
+        // j.tensi = 1
+        // /*
+        //     {
+        //         열시 : 1
+        //     }
+        // */
+        // j.tensi = 2
+        // /*
+        //     {
+        //         열시 : 2
+        //     }
+        // */
+        // // j['1100'] = {
+        // //     온도 : value,
+        // //     습도 : value
+        // // }
+        // console.log(j)
+
+        // 네트워크~~~
+
+        // 다시 //
+        function ajax(url){
+
+        }
+
     </script>
 </head>
 
