@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> // 놓침
+        window.addEventListener('load', function(){
+            document.querySelector('#chkbox').addEventListener('click', function(){
+                const xhr = new XMLHttpRequest();
+                xhr.open('get', 'emp.json')
+                xhr.send()
+                xhr.onload = function(){
+                    console.log(xhr.responseText)
+
+                    let data = JSON.parse(xhr.responseText)
+                    console.log(data)
+
+                    const id = document.querySelector('#idbox')
+                    const pw = document.querySelector('#pwbox')
+
+                    // for(let i = 0; i<data.length; i++){
+                    //     if(emp[i].empno == id && emp[i].ename == pw){
+
+                    //     }
+                    // }
+
+                    let filtered = data.filter(function(p){
+                        if(p.empno == id && p.ename == pw){
+                            return ture
+                        }
+                    })
+                    console.log(filtered)
+                    if()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- 
+        사원번호와 이름을 입력하고
+        로그인 버튼을 누르면 emp.json안에 있는 회원인지 검샇고
+            회원이 맞으면 alert('환영합니다')
+            회원이 아니면 alert('회원이 아닙니다')
+    -->
+
+    <div id = 'loginbox'>
+        id : <input type = 'text' id = 'idbox' value = ''>
+        <br>
+        pw : <input type = 'password' id = 'pwbox' value = ''>
+        <br>
+        <button type = 'button' id = 'chkbox'>확인</button>
+    </div>
+</body>
+</html>

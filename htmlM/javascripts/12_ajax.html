@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
         // 놓침?? -- 설명
         window.addEventListener('load', function () {
@@ -124,6 +125,8 @@
                     // })
                     // console.log(filtered)
 
+                    
+
                 }
             })
         })
@@ -174,8 +177,52 @@
                 })
                 console.log(3)
             })
+
+            $('#btn5').off('click').on('click', function(){
+                    $.ajax({
+                        url : 'https://jsonplaceholder.typicode.com/users', //주소
+                        type : 'get', //method
+                        success : function(data){
+                            //다녀오기 성공
+                            console.log('성공')
+                            console.log(data)
+                        },
+                        error : function(data2){
+                            console.log('실패')
+                            console.log(data2)
+                        },
+                        complete : function(){
+                            console.log('무조건 실행')
+                        }
+                    })
+                })
+        
             // promise : 비동기방식이라 발생한 에러문구
             // promise, async/await
+
+            // 에러해결문
+            try{
+                // 강제에러발생
+                console.log(abc)
+            } catch(errorMsg){
+                console.log(errorMsg)
+            }
+
+            $('#btn6').off('click').on('click', function(){
+                $.ajax({
+                    url : 'https://jsonplaceholder.typicode.com/users', //주소
+                    type : 'get', //method
+                }).done(function(data){
+                        //다녀오기 성공
+                        console.log('성공')
+                        console.log(data)
+                }).fail(function(data2){
+                        console.log('실패')
+                        console.log(data2)
+                }).always(function(){
+                    console.log('무조건 실행')
+                })
+            })
         })
 
         // let j = {}
@@ -212,6 +259,7 @@
     <button type='button' id='btn2'>sm 주식 가져오기</button>
     <button type='button' id='btn3'>날씨</button>
     <button type='button' id='btn4'>fetch</button>
+    <button type='button' id='btn5'>ajax1</button>
+    <button type='button' id='btn6'>ajax2</button>
 </body>
-
 </html>
