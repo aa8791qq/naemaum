@@ -246,6 +246,55 @@
         // 놓침
         let test6 = a => a * 3;
         test6(6); // 18
+
+        console.log('------------------')
+        // console.log(z)// 초기화를 하지 않아서 오류뜸
+        // scope : 범위 -> 변수를 참조할 수 있는 범위
+        // let z = 10
+        
+        // 분리되는 과정
+        // 함수의 최상단
+        let z
+        // console.log(z) // 선언전
+        z = 10
+
+        function test(){
+            let z= 20
+            // let y = 100
+            y = 100 // 맨위로 올라감(앞에 아무것도 없으면)
+            console.log(z) // 20
+        }
+        test() // 신기함.... 빼면 원래 출력이 안되야 한다.
+        console.log(z) // 10
+        // console.log(y) // 지역변수 이탈
+        console.log(y) // 호이스팅일어나서 값이 나옴
+
+        console.log('----------------')
+        // let x1 = 10;
+        // function test10(){
+        //     console.log(x1) 
+            
+        //     let x2 = 20
+        //     test20()
+        // }
+        // function test20(){
+        //     console.log(x1)
+        //     console.log(x2)
+        // }
+        // test10()
+
+        // 놓침 // 미리선언하지 말고 필요할때마다 꺼내서 쓴다....(따로 선언)
+        let x3 = 10;
+        function test10(){
+            console.log(x3) 
+            let x4 = 20
+            setTimeout(function test20(){
+            console.log(x3)
+            console.log(x4)
+        }, 0)
+        }
+        test10()
+
     </script>
 
 </head>
@@ -254,4 +303,4 @@
 
 </body>
 
-</html>
+</h
