@@ -22,11 +22,11 @@ public class Pockemon {
 	}
 
 	public String[] pockeNames() { // 포켓몬 이름 배열 반환
-		return new String[] { "피카츄", "베렛네", "마자용", "냐옹" };
+		return new String[] { "피카츄", "베렛네", "마자용", "냐옹", "뮤" };
 	}
 
 	public String[] pockeTypes() { // 포켓몬 타입 배열 반환
-		return new String[] { "전기", "물", "화염", "사람말" };
+		return new String[] { "전기", "물", "화염", "사람말", "모든형태" };
 	}
 
 	void pocketinfoadd() {

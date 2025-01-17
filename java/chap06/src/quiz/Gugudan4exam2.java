@@ -9,7 +9,7 @@ public class Gugudan4exam2 {
 //		g.test();
 //		g.printDan(3);
 //		g.printMultiDan(4,6);
-		g.printMultiDan(x);
+		g.printMultiDan(x); //?
 		
 	}
 }
