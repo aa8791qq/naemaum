@@ -9,6 +9,7 @@ public class PocketmonExam {
 		Pockemonleauge play2 = new Pockemonleauge();
 		Pockemonleauge play3 = new Pockemonleauge();
 		Pockemonleauge play4 = new Pockemonleauge();
+		
 		play.Pockemonimport(); // 포켓몬 정보 추가 및 출력
 		play3.leagNm(); // 리그이름 정하기
 		play4.playlist(); // 플레이원 정보 불러오기

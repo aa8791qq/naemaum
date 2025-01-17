@@ -11,7 +11,7 @@ public class Pockemonleauge {
 		String name; // 리그이름 저장공간 변수선언
 		// 무한 루프(입력값이 유효할때까지)
 		do {
-			System.out.print("진행하실 리그이름을 입력하세요: ");
+			System.out.print("진행하실 리그이름을 입력하세요 ");
 			name = scanner.nextLine(); // 스캐너로 입력받은 내용을 저장한다.
 			// 만약에 이름이 없다면 다시 입력받게 하기
 			if (name.isEmpty()) { // 빈값을 입력했는지 체크해준다.
@@ -19,7 +19,7 @@ public class Pockemonleauge {
 			}
 		} while (name.isEmpty()); // 빈값이 입력될경우 반복
 
-		System.out.println("리그 이름은 : " + name + "입니다");
+		System.out.println("리그 이름은 " + name + "입니다");
 
 		scanner.close(); // 스캐너 닫기(누수방지), 재입력을 요구하기 전에 닫아줘야 한다.(반복문 끝나고 동작)
 //		return; // void에서는 작업 후에는 자동으로 종료됨
@@ -32,9 +32,9 @@ public class Pockemonleauge {
 		// 중복출력이 되서 위치를 조정함
 		System.out.println("리그에 참가한 포켓몬은 " + names[0] + ", " + names[1] + ", " + names[2] + "입니다.");
 		// 3개의 포켓몬이 공격한다. 배열에 저장되어 있는 값으로 참가포켓몬을 불러옴
-		System.out.println(names[0] + " 이 공격하였습니다.");
-		System.out.println(names[1] + " 이 공격하였습니다.");
-		System.out.println(names[2] + " 이 공격하였습니다.");
+		System.out.println(names[0] + "이 공격하였습니다.");
+		System.out.println(names[1] + "이 공격하였습니다.");
+		System.out.println(names[2] + "이 공격하였습니다.");
 		System.out.println("한번 더 쳐보시지~~~ 이제 내 차례군~"); // 무한루프문 만들자?(체력 값이 따로 주어지지 않았음)
 //		여러 값이 올 경우에는 ,가 아니고 +로 입력해준다.
 	}
