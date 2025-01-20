@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  meworkspace:
+    image: meworkspace
+    build:
+      context: .
+      dockerfile: ./Dockerfile
