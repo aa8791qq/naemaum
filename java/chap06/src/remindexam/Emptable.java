@@ -15,7 +15,7 @@ public class Emptable {
 	// emp 관리
 	ArrayList empmanger = new ArrayList();
 	Emp[] arrEmpmanger = new Emp[3];
-	
+
 	// 추가(리스트만 출력)
 	Emptable(String emp) { // 생성자.. (중복오류)
 		System.out.println(emp);
@@ -36,24 +36,24 @@ public class Emptable {
 //		System.out.println(mgr);
 //		this.mgr = mgr;
 //	}
-	
+
 	// 출력(모든사원의 모든 정보를 출력)
 	void add(Emp mg) {
-		this.empmanger.add(mg); //막혔어..(배열에는 .add가 없음)
+		this.empmanger.add(mg); // 막혔어..(배열에는 .add가 없음)
 	}
-	
+
 	// 변수 호출 및 메소드 호출 실수 (for문이 없어서 오류)
 	void print() {
 		System.out.println("-----------------");
-		for(int i = 0; i < empmanger.size(); i++) {
+		for (int i = 0; i < empmanger.size(); i++) {
 			Emp mg = (Emp) empmanger.get(i);
-			System.out.println(mg.empno); 
-			System.out.println(mg.ename); 
-			System.out.println(mg.sal); 
-			System.out.println(mg.mgr); 
+			System.out.println(mg.empno);
+			System.out.println(mg.ename);
+			System.out.println(mg.sal);
+			System.out.println(mg.mgr);
 		}
 	}
-	
+
 	Emp[] getArray() {
 		return arrEmpmanger;
 	}
