@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,13 @@ public class Emptable2 {
 			System.out.println(e.ename);
 			System.out.println(e.sal);
 			System.out.println(e.mgr);
+			System.out.println("--------------");
+		}
+	}
+	
+	void filter() { // i don't know
+		if(e.sal >= 3000) {
+			System.out.println(this.emp);
 		}
 	}
 }

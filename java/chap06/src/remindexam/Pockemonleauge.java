@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 
 import java.util.Random; // 랜덤프로세스 실행
 import java.util.Scanner; // 스캐너 프로세스 실행

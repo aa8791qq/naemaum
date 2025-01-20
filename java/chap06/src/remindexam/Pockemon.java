@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 
 // 포켓몬정보
 public class Pockemon {

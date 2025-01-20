@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 
 public class EmpExam2 {
 
@@ -24,6 +24,7 @@ public class EmpExam2 {
 		
 		// empTable의 emp 정보의 출력
 		et.select();
+		et.filter();
 	}
 
 }

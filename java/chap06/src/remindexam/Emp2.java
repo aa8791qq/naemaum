@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 
 public class Emp2 {
 

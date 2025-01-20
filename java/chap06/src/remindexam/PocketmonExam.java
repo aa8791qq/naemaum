@@ -1,4 +1,4 @@
-package quiz;
+package remindexam;
 // 리그생성, 목록생성
 public class PocketmonExam {
 
