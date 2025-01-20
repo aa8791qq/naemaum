@@ -24,7 +24,7 @@ public class EmpExam2 {
 
 		// empTable의 emp 정보의 출력
 		et.select();
-		et.filter();
+//		et.filter();
 	}
 
 }
