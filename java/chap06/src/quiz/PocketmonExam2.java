@@ -3,6 +3,7 @@ package quiz;
 public class PocketmonExam2 {
 
 	public static void main(String[] args) {
+		// Pockmon2.java 파일을 활용함
 		Pockemon2 p1 = new Pockemon2();
 		p1.name = "피카츄";
 		p1.type = "전기";

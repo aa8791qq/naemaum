@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 // 실제리그 진행
 public class Pockemonleauge2 {
-	String name; // 먼저 변수 저장공간 생성
+	String name; // 먼저 변수 저장공간 생성 // 포켓몬리그이름
 	ArrayList list = new ArrayList(); // 리스트 패키지 실행
 	Pockemon2[] arrPockemon2 = new Pockemon2[10]; // 배열선언
 	
 	// 생성자 생성
-	Pockemonleauge2(String name){ // 전달인자가 없음 //타입은 String
+	Pockemonleauge2(String name){ // 전달인자가 없음 // 타입은 String
 		System.out.println(name);
 		this.name = name; // 같은 필드접근법 // 저장하기 위해(핗요한 곳에다가 쓸쑤 없음)
 	}
