@@ -27,25 +27,100 @@
             font-weight: lighter;
             color : white;
         }
+        
+        p{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        
+        #board{
+            font-size : 15px;
+            font-weight: bolder;
+        }
+
+        .boardheder {
+            border : 1px solid black;
+            background-color: aqua;
+            display: inline-block;
+        }
+
+        .boardheder > td {
+            font-size : 13px;
+            text-align: center;
+        }
+
+        #num{
+            width : 30px;
+        }
+
+        #title{
+            width : 150px;
+        }
+
+        #writeuser{
+            width : 50px;
+        }
+
+        #writedate{
+            width : 70px;
+        }
     </style>
 </head>
 <body>
     <div class = 'menu'>
         <div id = 'menu1'>
-            회사소개
+            기준관리
         </div>
         <div id = 'menu2'>
-            뉴스 및 이벤트
+            매출현황
         </div>
         <div id = 'menu3'>
-            연락처
+            회사리포트
         </div>
     </div>
     <div class = 'contents'>
-        div
+        <div id = 'content1'>
+            <p>기준관리 현황 게시판</p><hr>
+            <table>
+            <tr> <td id = 'board'> 게시판 </td></tr>
+            <tr class = 'boardheder'>
+                <td id = 'num'> 번호 </td>
+                <td id = 'title'> 제목 </td>
+                <td id = 'writeuser'> 작성자 </td>
+                <td id = 'writedate'> 작성날짜 </td>
+            </tr>
+        </table>
+            <button id = 'button' type = "button">글쓰기</button>
+        </div>
+        <div id = 'content2'>
+            <p>매출현황 게시판</p><hr>
+            <table>
+            <tr> <td id = 'board'> 게시판 </td></tr>
+            <tr class = 'boardheder'>
+                <td id = 'num'> 번호 </td>
+                <td id = 'title'> 제목 </td>
+                <td id = 'writeuser'> 작성자 </td>
+                <td id = 'writedate'> 작성날짜 </td>
+            </tr>
+        </table>
+            <button id = 'button' type = "button">글쓰기</button>
+        </div>
+    </div>
+        <div id = 'content3'>
+            <p>회사리포트 게시판</p><hr>
+            <table>
+            <tr> <td id = 'board'> 게시판 </td></tr>
+            <tr class = 'boardheder'>
+                <td id = 'num'> 번호 </td>
+                <td id = 'title'> 제목 </td>
+                <td id = 'writeuser'> 작성자 </td>
+                <td id = 'writedate'> 작성날짜 </td>
+            </tr>
+        </table>
+            <button id = 'button' type = "button">글쓰기</button>
+        </div>
     </div>
     <div class = 'comments'>
         div
     </div>
-</body>
-</html>
+</bo
