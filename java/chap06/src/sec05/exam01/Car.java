@@ -16,7 +16,7 @@ public class Car {
 //	필드의 model을 출력
 	
 	void printModel(/* 전달인자 */) {
-		int a = 8; /* 잠깐 생겼다 사라짐, 밖에서 접근 불가 */
+//		int a = 8; /* 잠깐 생겼다 사라짐, 밖에서 접근 불가 */
 		System.out.println(this.model);
 	}
 }
