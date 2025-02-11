@@ -26,8 +26,8 @@ public class CalcExam {
 		Calc.out.println("글씨");
 		
 //		test(); // 선발대에서는 못쓴다.(static으로 바꾸기)
-		CalcExam ce = new CalcExam(); // 클래스를 해당되는 부분에 새로 생성한다.(37번째줄 이어서)
-		ce.test();
+//		CalcExam ce = new CalcExam(); // 클래스를 해당되는 부분에 새로 생성한다.(37번째줄 이어서)
+//		ce.test();
 //		ce.main(new String[] {"abc"});
 		
 //		CalcExam.main(null); // 가능
