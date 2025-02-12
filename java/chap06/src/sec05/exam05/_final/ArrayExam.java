@@ -11,7 +11,7 @@ public class ArrayExam {
 		// array 구현(놓침)
 		// 생성하고 나서
 		// add()에 값을 넣으면 자동으로 index 값에 추가
-		// 		단, 크기를 벗어나지 못함(에러문구)
+			// 단, 크기를 벗어나지 못함(에러문구)
 		// get()에 index를 넣으면 그 index의 값을 return함
 		
 		Array array = new Array(3);
