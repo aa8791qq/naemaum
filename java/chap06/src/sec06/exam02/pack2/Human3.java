@@ -1,8 +1,9 @@
 package sec06.exam02.pack2;
 
-import sec06.exam02.pack1.Human1;
-//import sec06.exam02.pack3.Human1;(클래스 명 앞에 적는 방법으로)
-import sec06.exam02.pack1.Human4;
+//import sec06.exam02.pack1.Human1;
+// //import sec06.exam02.pack3.Human1;(클래스 명 앞에 적는 방법으로)
+//import sec06.exam02.pack1.Human4;
+import sec06.exam02.pack1.*; // 해당 패키지의 모든 클래스 가져오기(하위 패키지의 클래스는 가져오지 않음)
 
 public class Human3 {
 
