@@ -2,7 +2,7 @@ package sec05.exam02._static;
 
 public class Singleton {
 
-	// 원리
+	// 원리(놓?)
 //	Singleton singleton = null;
 //	
 //	Singleton getInstance() {
@@ -15,5 +15,10 @@ public class Singleton {
 //	}
 //	
 //}
+	
+	// 실무(놓침)
 	private Singleton() {}
+	
+	static Singleton singleton = new Singleton();
+	
 }
