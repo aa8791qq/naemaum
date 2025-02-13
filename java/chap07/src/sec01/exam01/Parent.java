@@ -1,6 +1,6 @@
 package sec01.exam01;
 
-public class Parent {
+public class Parent /* extends Child (순환참조) */{
 
 	String name = "Parent의 name";
 	
@@ -9,6 +9,10 @@ public class Parent {
 		return this.name;
 	}
 
-	// 이후 다 놓침
+	// ---- 이후 다 놓침
+	
+	Parent(){
+		System.out.println("Parent");
+	}
 	
 }
