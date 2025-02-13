@@ -11,7 +11,12 @@ public class Parent /* extends Child (순환참조) */{
 
 	// ---- 이후 다 놓침
 	
-	Parent(){
+//	Parent(){
+//		System.out.println("Parent");
+//	}
+	
+	// 놓침
+	Parent(int a){
 		System.out.println("Parent");
 	}
 	

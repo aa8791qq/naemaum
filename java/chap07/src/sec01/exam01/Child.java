@@ -9,10 +9,16 @@ public class Child extends Parent{
 //	Child(int a){
 //	}
 	
-	// 상속을 받았을 때의 기본생성자
+	// 상속을 받았을 때의 기본생성자 // 놓침
 	Child(){
-		super(); // 부모의 생성자, 생략가능
+//		this(2); // super()와 this()는 모두 첫줄에 적어야 하므로 같이 사용할 수 없다.
+//		super(); // 부모의 생성자, 생략가능(자동생성)
+		super(1); // 부모의 생성자도 전달인자를 맞춰줘야 한다(생략불가)
 		System.out.println("Child");
+	}
+	
+	Child(int a){
+		super(1);
 	}
 	
 	void printName() {
