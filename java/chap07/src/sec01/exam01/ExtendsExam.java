@@ -17,6 +17,7 @@ public class ExtendsExam {
 		String pName = c.parentName();
 		System.out.println(pName);
 		
+		System.out.println("----------------------------");
 		Child c2 = new Child("새로운 이름");
 		String pName2 = c2.parentName();
 		System.out.println(pName2); // "새로운 이름"
