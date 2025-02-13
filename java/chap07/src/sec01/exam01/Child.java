@@ -31,12 +31,24 @@ public class Child extends Parent{
 	// 놓침
 	// 쉐도우(전달인자가 필드를 가리는 현상) 주의
 	void setName(String name) {
-		this.name = name; // this를 안쓰면 필드를 덮어쓰게됨 // this를 쓰면?
+		this.name = name; // this를 안쓰면 지역변수(중괄호가 끝나면 최적화작업) // this를 쓰면 필드임 		////를 덮어쓰게됨
 	}
 	
+	// 놓침
 	int age;
 	// 부모의 필드를 가리는 현상(overshadow)
 	String name = "child의 name"; // 덮어쓰기됨
 	
+	String parentName() {
+		String name = null; // 지역변수
+		String cname = this.name; // 내 필드
+		String pname = super.name; // 부모 필드
+		
+		return super.name; // 부모값을 불러옴
+	}
 	
+	Child(String name){
+		super(name);
+//		super.name = name; // 실무에는 private로 막혀있음
+	}
 }

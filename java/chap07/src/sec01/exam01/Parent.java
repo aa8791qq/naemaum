@@ -20,4 +20,9 @@ public class Parent /* extends Child (순환참조) */{
 		System.out.println("Parent");
 	}
 	
+	// 실습
+	Parent(String name){
+		this.name = name;
+	}
+	
 }
