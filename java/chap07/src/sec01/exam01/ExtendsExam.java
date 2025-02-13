@@ -11,6 +11,7 @@ public class ExtendsExam {
 		System.out.println("-------------------------");
 		System.out.println("cName : " + cName);
 		System.out.println("c.name : " + c.name);
+//		System.out.println();
 	}
 
 }
