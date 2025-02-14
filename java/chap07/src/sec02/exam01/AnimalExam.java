@@ -25,19 +25,22 @@ public class AnimalExam {
 //		a3.push(); // 모르기때문에 실행안됨(animal 속성)
 		
 		// 생략전
-//		Dog dog = new Dog();
 //		Animal a5 = (Animal)dog;
-		Dog dog = new Dog();
+//		Dog dog = new Dog();
+
+		//생략후
 		Animal a4 = new Dog();
+		
 		a4.eat();
 		a4.sound();
 		
 		// 놓침
 		catMom(cat); // static으로 안쓰면 안됨. // main이 static이기 때문에
-//		Dog dog = new Dog();
+		Dog dog = new Dog();
 //		catMom(dog); // 전달인자가 없기 때문에
 		
 		Animal a6 = (Animal)cat;
+		System.out.println("a6 == cat : " + (a6 == cat));
 		feed(a6);
 		feed(dog); // 가능
 //		feed(new Dog()); // 가능
