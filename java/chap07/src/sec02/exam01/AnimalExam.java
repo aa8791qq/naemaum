@@ -24,15 +24,24 @@ public class AnimalExam {
 		a3.sound();
 //		a3.push(); // 모르기때문에 실행안됨(animal 속성)
 		
-		Dog dog = new Dog();
-		Animal a4 = new Dog();
 		// 생략전
 //		Dog dog = new Dog();
 //		Animal a5 = (Animal)dog;
+		Dog dog = new Dog();
+		Animal a4 = new Dog();
 		a4.eat();
 		a4.sound();
 		
-		catMom(cat); // static으로 안쓰면 안됨. //?
+		// 놓침
+		catMom(cat); // static으로 안쓰면 안됨. // main이 static이기 때문에
+//		Dog dog = new Dog();
+//		catMom(dog); // 전달인자가 없기 때문에
+		
+		Animal a6 = (Animal)cat;
+		feed(a6);
+		feed(dog); // 가능
+//		feed(new Dog()); // 가능
+		
 	}
 	
 	// 놓침
@@ -42,7 +51,8 @@ public class AnimalExam {
 		cat.push();
 	}
 
-	void feed(Animal animal) {
+	static void feed(Animal animal) {
+		System.out.println("--feed실행할건데--");
 		animal.eat();
 		animal.sound();
 	}
