@@ -45,6 +45,17 @@ public class AnimalExam {
 		feed(dog); // 가능
 //		feed(new Dog()); // 가능
 		
+		a6.age = 3;
+		feed(a6);
+		
+		//cat에 age추가
+		a6.age = 4;
+		feed(a6);
+		
+		Cat cat2 = new Cat();
+		cat2.age = 5; // 자식에게 5를 선언해서 부모에게 전달해야됨
+		cat2.setAge(50); //놓침
+		feed(cat2);
 	}
 	
 	// 놓침
@@ -58,5 +69,9 @@ public class AnimalExam {
 		System.out.println("--feed실행할건데--");
 		animal.eat();
 		animal.sound();
+		System.out.println("--나이실행할건데--");
+		System.out.println("나이는 : " + animal.age);
 	}
+	
+	// override 막는법 : final, static
 }
