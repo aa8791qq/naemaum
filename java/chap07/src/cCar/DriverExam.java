@@ -13,11 +13,11 @@ public class DriverExam {
 		Landover l = new Landover();
 		d.run(l); // 부모님한테 상속을 받았으니
 		
-		Hcar h = new Hcar(); // 형변환이 안됨
-		d.run(h);
-		
 		Car c1 = new Car();
 		Landover land = (Landover) c1;
+		
+		Hcar h = new Hcar(); // 형변환이 안됨
+		d.run(h);
 	}
 
 }
