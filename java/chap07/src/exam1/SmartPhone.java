@@ -1,6 +1,6 @@
 package exam1;
 
-public class SmartPhone extends Phone{
+public class SmartPhone extends Picherphone{
 	
 	SmartPhone(String keyword){
 		super(keyword);
