@@ -1,6 +1,6 @@
 package sec03.exam02;
 
-public abstract class Animal {
+public abstract class Animal { // abstaract가 없으면 안됨
 
 	String kind;
 	
