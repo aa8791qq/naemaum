@@ -13,7 +13,8 @@ public interface RemoteControl {
 	
 	// 이해못함(default 부분)
 	default void mic(String text) {
-		
+		// 추상메소드를 못쓰기 때문에 실행블럭을 못쓰는 방식을
+		// 해결하기 위해 defalut를 붙임
 	}
 	
 	
