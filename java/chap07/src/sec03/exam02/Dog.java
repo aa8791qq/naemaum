@@ -6,6 +6,8 @@ public class Dog extends Animal{
 //		super(name);
 //	}
 
+	String name;
+	
 	Dog(){
 		super(null);
 	}
