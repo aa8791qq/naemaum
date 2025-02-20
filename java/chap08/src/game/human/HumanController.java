@@ -1,9 +1,5 @@
 package game.human;
 
-class Test{
-	
-}
-
 public class HumanController {
 
 	public static void main(String[] args) {
