@@ -40,8 +40,8 @@ public class InputExam {
 			
 			while( (result = is.read(datas)) != -1) {
 				data += new String(datas, 0, result);
-				System.out.println("-------------------");
-				System.out.println(data);
+//				System.out.println("-------------------");
+//				System.out.println(data);
 			}
 			
 			System.out.println(data);
