@@ -16,9 +16,10 @@ public class InputExam {
 			InputStream is = new FileInputStream(path);
 		){
 			
+			// 퍼담을 바가지 설정
 //			int BUFFER_SIZE = 1024*8;
 			int BUFFER_SIZE = 10;
-			byte[] datas = new byte[BUFFER_SIZE]
+			byte[] datas = new byte[BUFFER_SIZE];
 			
 			
 		} catch (FileNotFoundException e) {
