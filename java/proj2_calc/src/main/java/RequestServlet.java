@@ -39,10 +39,12 @@ public class RequestServlet extends HttpServlet {
 		String[] nums = request.getParameterValues("num1");
 		
 		// 일반 for문
-//		for (int i = 0; i < nums.length; i++) {
-//			System.out.println("nums : " + nums[i]);
-//		}; ??
+		for (int i = 0; i < nums.length; i++) {
+			System.out.println("nums : " + nums[i]);
+		};
 
+		System.out.println("--------------------");
+		
 		// 항상된 for문(null 방어)
 		if (nums != null) {
 			for (String num : nums) {
