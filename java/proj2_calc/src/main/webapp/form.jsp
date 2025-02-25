@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="get">
+<!-- 	<form method="get" action = "http://127.0.0.1:8080/proj2_calc/req"> -->
+<!-- 	<form method="get" action = "/proj2_calc/req"> -->
+	<form method="get" action = "req">
 		<input type="text" name="num1">
 		<input type="submit" value="get 전송">
 	</form>
