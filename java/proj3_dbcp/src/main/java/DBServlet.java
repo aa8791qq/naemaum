@@ -81,11 +81,13 @@ public class DBServlet extends HttpServlet {
 			
 			EmpDTO map = list.get(0);
 			
-			
+			response.getWriter().println("<table><tr>1<td>1</td>1</tr></table>");
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 
