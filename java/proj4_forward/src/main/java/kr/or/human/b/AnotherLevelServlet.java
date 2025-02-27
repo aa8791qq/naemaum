@@ -15,10 +15,17 @@ public class AnotherLevelServlet extends HttpServlet {
 
 		String text = request.getParameter("text");
 		System.out.println("text : " + text);
+		
+		response.getWriter().println("okay bye~");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("another doPost 실행");
+		
+		String text = request.getParameter("text");
+		System.out.println("text : " + text);
+		
+		response.sendRedirect("another?text="+ text); // 파라미터포함 주소
 	}
 
 }
