@@ -79,6 +79,7 @@ public class DBServlet extends HttpServlet {
 				
 			}
 			
+			// view
 			// 사용하기(html 표시) - 푸는중...(애먹었음--> for 문에서)
 			for(int i = 0; i<list.size(); i++) {
 				EmpDTO map0 = list.get(i);
@@ -96,11 +97,7 @@ public class DBServlet extends HttpServlet {
 						+ "</tr>"
 						+ "</table>");
 			}
-			
-			
-			
-			// view
-			
+						
 			// 커넥선풀로 반환
 			con.close();
 			

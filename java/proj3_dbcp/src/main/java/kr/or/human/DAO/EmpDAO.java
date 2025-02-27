@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +18,8 @@ import kr.or.human.DTO.EmpDTO;
 public class EmpDAO {
 
 	public List selectEmpList() {
+		
+		System.out.println("아잉실행");
 		List resultList = new ArrayList();
 
 		try {
