@@ -24,10 +24,31 @@ for(int i = 1; i<=9; i++){
 %>
 	<h1>
 		<% out.write(""+ i); %>
+		<% out.println(""+ i); %>
 	</h1>
 <%
 }
 %>
+
+<% int a = 10;
+	System.out.println("a : " +a);
+%>
+
+<div> <% out.println(a); %></div>
+<div> <%= a %> </div>
+<div> <%= "----------------" %> </div>
+
+<%!
+	// 선언문(메소드 밖으로 빠짐, [필드선언, 메소드선언 가능])
+	String str = "김다솜 사랑해";
+	String getStr(){
+		return this.str;
+	}
+%>
+
+<%@
+	include file="header.jsp"
+ %>
 
 </body>
 </html>
