@@ -66,6 +66,9 @@ public class EmpDAO {
 				resultList.add(empDTO);
 
 			}
+			
+			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
