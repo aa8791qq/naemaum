@@ -64,13 +64,13 @@ public class DBServlet extends HttpServlet {
 				System.out.println(hiredate);
 				
 				
-				Map map = new HashMap();
-				map.put("empno", empno);
-				map.put("ename", ename);
-				map.put("hiredate", hiredate);
+//				Map map = new HashMap();
+//				map.put("empno", empno);
+//				map.put("ename", ename);
+//				map.put("hiredate", hiredate);
 //				list.add(map);
 				
-				//실무
+				//실무적인 방식
 				EmpDTO empDTO = new EmpDTO();
 				empDTO.setEmpno(empno);
 				empDTO.setEname(ename);
@@ -79,9 +79,30 @@ public class DBServlet extends HttpServlet {
 				
 			}
 			
-			EmpDTO map = list.get(0);
+			// 사용하기(html 표시) - 푸는중...(애먹었음--> for 문에서)
+			for(int i = 0; i<list.size(); i++) {
+				EmpDTO map0 = list.get(i);
+				response.getWriter().println("<table border='1'>" // html 코드에서는 ''(홀따옴표)로 해야함.
+						+ "<tr>"
+						+ "<td>"
+						+ map0.getEmpno()
+						+ "</td>"
+						+ "<td>"
+						+ map0.getEname()
+						+ "</td>"
+						+ "<td>"
+						+ map0.getHiredate()
+						+ "</td>"
+						+ "</tr>"
+						+ "</table>");
+			}
 			
-			response.getWriter().println("<table><tr>1<td>1</td>1</tr></table>");
+			
+			
+			// view
+			
+			// 커넥선풀로 반환
+			con.close();
 			
 		} catch(Exception e) {
 			e.printStackTrace();
