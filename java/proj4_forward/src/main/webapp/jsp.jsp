@@ -7,7 +7,14 @@
 	language="java"
 	contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
+    
+	import = "java.util.ArrayList"
+	import = "java.util.List"
     %>
+    
+    <!-- page import="java.util.List -->
+    <!-- page import="java.util.ArrayList -->
+    <!-- page import="java.util.* -->
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +26,14 @@
 <!-- 스크립틀릿 -->
 <% // 자바문법만 가능 %>
 
+List list = new ArrayList();
 <% 
+Strimg text = request.getAsyncContext().Parameter("text");
+out.print(text);
+
+<%= text %>
+<%= request.getParameter("text") %>
+
 for(int i = 1; i<=9; i++){
 %>
 	<h1>
@@ -45,6 +59,8 @@ for(int i = 1; i<=9; i++){
 		return this.str;
 	}
 %>
+<!-- <% /* 메소드명 */%> --> <!-- 메소드실행 -->
+<%-- <% 메소드명 %> --%> <!-- 주석 -->
 
 <%@
 	include file="header.jsp"
