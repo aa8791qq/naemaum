@@ -20,7 +20,10 @@ public class TodoController extends HttpServlet {
 		
 		request.setAttribute("resultList", resultList); // 키, 값
 		
-		String url = "list.jsp";
+		// /로 시작하면 webapp을 뜻한다.
+		// WEB-INF 폴더는 보안영역이라서 보라우저에서는 접근할 수 없다.
+//		String url = "/WEB-INF/list.jsp";
+		String url = "/WEB-INF/views/list.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
@@ -28,15 +31,47 @@ public class TodoController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		
-		String todo = request.getParameter("todo");
-		System.out.println("todo : " + todo); //--> "" null = ?(  )
-		
-		TodoDTO todoDTO = new TodoDTO();
-		todoDTO.setTodo(todo);
-		
-		TodoDAO todoDAO = new TodoDAO();
-		int result = todoDAO.insertTodo(todoDTO);
-		System.out.println("result : " + result);// 몇개 추가됬는지 표시
+		String command = request.getParameter("command");
+		System.out.println("command : " + command);
+//		if(command !=null && command.equals("update")) {
+		if("update".equals(command)) {
+			// update 장소
+			String done = request.getParameter("done");
+			if(done == null) {
+				done = "N";
+			}
+			System.out.println("done : " + done);
+			
+			String str_todo_id = request.getParameter("todo_id");
+			int todo_id = Integer.parseInt(str_todo_id);
+			
+			TodoDTO todoDTO = new TodoDTO();
+			todoDTO.setDone(done);
+			todoDTO.setTodo_id(todo_id);
+			
+			TodoDAO todoDAO = new TodoDAO();
+			int result = todoDAO.updateTodo(todoDTO);
+			System.out.println("result : " + result);// 몇개 추가됬는지 표시
+			
+			
+			
+			String str_todo = request.getParameter("todo");
+			String todo = request.getParameter("todo");
+			System.out.println(todo);
+			
+		} else {
+			// insert 장소
+			String todo = request.getParameter("todo");
+			System.out.println("todo : " + todo); //--> "" null = ?(  )
+			
+			TodoDTO todoDTO = new TodoDTO();
+			todoDTO.setTodo(todo);
+			
+			TodoDAO todoDAO = new TodoDAO();
+			int result = todoDAO.insertTodo(todoDTO);
+			System.out.println("result : " + result);// 몇개 추가됬는지 표시
+			
+		}
 		
 		// 다시 추가화면으로 돌아오는...
 		String url = "todo";

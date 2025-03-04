@@ -39,5 +39,9 @@ public class TodoDTO {
 	public void setDone(String done) {
 		this.done = done;
 	}
-	
+	@Override
+	public String toString() {
+		return "TodoDTO [todo_id=" + todo_id + ", todo=" + todo + ", create_date=" + create_date + ", modify_date="
+				+ modify_date + ", done=" + done + "]";
+	}
 }

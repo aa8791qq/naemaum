@@ -8,6 +8,15 @@
 <head>
 <meta charset="UTF-8">
 <title>TODO 서비스</title>
+<style>
+	#table{
+	border :solid red;
+	}
+	
+	.scale:hover {
+            transform: scale(0.8);
+    }
+</style>
 </head>
 <body>
 	<form method="post" action="todo">
@@ -17,15 +26,26 @@
 
 	<hr>
 
-	<table border=1>
+	<table border=1 id="table" class = "scale">
 
 		<c:forEach var="dto" items="${resultList}">
 			<tr>
-				<td>${dto.todo_id }</td>
+				<form method="post" action="todo">
+				<td><input type="checkbox" name="done" value="Y"></td>
+				<td>
+					<input type="hidden" value="${dto.todo_id }" name="todo_id">
+<!-- 					// 요건 전송할 수 없음 -->
+					${dto.todo_id } 
+				</td>
 				<td>${dto.todo }</td>
 				<td>${dto.create_date }</td>
 				<td>${dto.modify_date }</td>
 				<td>${dto.done }</td>
+				<td>
+					<input type="hidden" name="command" value="update">
+					<input type="submit" value=" 수정">
+				</td>
+			</form>
 			</tr>
 		</c:forEach>
 	</table>
