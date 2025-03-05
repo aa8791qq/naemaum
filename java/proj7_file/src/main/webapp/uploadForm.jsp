@@ -15,9 +15,11 @@
 -->
 <form method = "post" action="upload.do" enctype = "multipart/form-data">
 	제목 : <input type="text" name = "title"><br>
-	내용 : <textarea rows="40" cols="50" name = "content"></textarea>
+	내용 : <textarea rows="10" cols="50" name = "content"></textarea><br>
 	첨푸파일 : <input type = "file" name = file1><br>
-	<input type = "submit" value = "등록">
+	<input type = "submit" value = "등록"><br>
+	<br>
+	<img src = "http://localhost:7500/proj7_file/download.do?filename=1741155347744_img_20220620090125_5f3e3a1c.png">
 </form>
 </body>
 </html>

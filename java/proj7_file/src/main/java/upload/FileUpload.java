@@ -24,7 +24,7 @@ public class FileUpload extends HttpServlet {
 		
 		try {
 			// File : 파일 또는 디렉토리(폴더)를 관리하는 class
-			File currentDirPath = new File("C:\\temp\\upload");
+			File currentDirPath = new File("C:\\temp2\\upload");
 			
 			// 세팅
 			DiskFileItemFactory factory = new DiskFileItemFactory();

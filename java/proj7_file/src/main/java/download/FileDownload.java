@@ -17,7 +17,7 @@ public class FileDownload extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String fileName = request.getParameter("filename");
-		String path = "C:\\temp\\upload";
+		String path = "C:\\temp2\\upload";
 		File file = new File(path + "\\" + fileName);
 		
 		// 브라우저 캐시를 사용하지 않도록 설정
