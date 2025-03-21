@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="8008" shutdown="SHUTDOWN">
+ --><Server port="8005" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -62,7 +62,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" maxParameterCount="1000" port="7500" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" maxParameterCount="1000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="proj1_hello" path="/proj1_hello" reloadable="true" source="org.eclipse.jst.jee.server:proj1_hello"/><Context docBase="proj2_calc" path="/proj2_calc" reloadable="true" source="org.eclipse.jst.jee.server:proj2_calc"/><Context docBase="proj3_dbcp" path="/proj3_dbcp" reloadable="true" source="org.eclipse.jst.jee.server:proj3_dbcp"/><Context docBase="proj4_forward" path="/proj4_forward" reloadable="true" source="org.eclipse.jst.jee.server:proj4_forward"/><Context docBase="proj5_example_todo" path="/proj5_todo" reloadable="true" source="org.eclipse.jst.jee.server:proj5_example_todo"/><Context docBase="proj7_file" path="/proj7_file" reloadable="true" source="org.eclipse.jst.jee.server:proj7_file"/><Context docBase="proj6_cookie" path="/proj6_cookie" reloadable="true" source="org.eclipse.jst.jee.server:proj6_cookie"/><Context docBase="proj6_session" path="/proj6_session" reloadable="true" source="org.eclipse.jst.jee.server:proj6_session"/><Context docBase="_proj1_hello" path="/_proj1_hello" reloadable="true" source="org.eclipse.jst.jee.server:_proj1_hello"/><Context docBase="_proj6_cookie_session" path="/_proj6_cookie_session" reloadable="true" source="org.eclipse.jst.jee.server:_proj6_cookie_session"/></Host>
+      <Context docBase="proj_kptn" path="/proj_kptn" reloadable="true" source="org.eclipse.jst.jee.server:proj_kptn"/></Host>
     </Engine>
   </Service>
 </Server>
