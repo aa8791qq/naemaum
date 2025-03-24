@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MemberDAOImpl2 implements MemberDAO {
 
-	@Override
+	@Override // 소스에서만 존재
 	public List selectList() {
 
 		List list = new ArrayList();
