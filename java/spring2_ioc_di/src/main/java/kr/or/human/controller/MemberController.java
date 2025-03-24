@@ -27,7 +27,6 @@ public class MemberController {
 		// 의존성 주입
 		// IoC로 생성한 클래스를 변수에 넣어준다.
 		
-	
 	@Autowired
 	MemberService memberService;
 	
@@ -35,7 +34,7 @@ public class MemberController {
 	void listMember() {
 		System.out.println("list 맴버 실행");
 		
-		MemberService memberService = new MemberServiceImpl();
+//		MemberService memberService = new MemberServiceImpl();
 		List memberList = memberService.getList();
 		
 		System.out.println(memberList);
