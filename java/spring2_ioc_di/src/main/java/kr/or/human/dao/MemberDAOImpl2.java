@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 // @Component
 public class MemberDAOImpl2 implements MemberDAO {
 	
+	MemberDAOImpl2(){
+		System.out.println("MemberServiceImpl2 생성자 실행");
+	}
+	
 	@Override
 	public List selectList() {
 
