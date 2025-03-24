@@ -15,6 +15,10 @@ public class MemberController {
 		System.out.println("생성자");
 	}
 
+	// 우선순위
+	// 1. 완전히 동일한 클래스
+	// 2. 자동 형 변환이 가능한 클래스
+	
 	// IOC
 		// Inversion of Control
 		// 제어의 역전
@@ -38,6 +42,8 @@ public class MemberController {
 		List memberList = memberService.getList();
 		
 		System.out.println(memberList);
+		
+		return "home"
 	}
 	
 	
