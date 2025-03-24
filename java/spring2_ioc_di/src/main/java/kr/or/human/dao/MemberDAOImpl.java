@@ -13,9 +13,9 @@ public class MemberDAOImpl implements MemberDAO {
 	public List selectList() {
 
 		List list = new ArrayList();
-		list.add("하나");
-		list.add("둘");
-		list.add("셋");
+		list.add(1);
+		list.add(2);
+		list.add(3);
 		
 		return list;
 	}
