@@ -35,7 +35,7 @@ public class MemberController {
 	MemberService memberService;
 	
 	@RequestMapping("/member")
-	void listMember() {
+	String listMember() { //?
 		System.out.println("list 맴버 실행");
 		
 //		MemberService memberService = new MemberServiceImpl();
