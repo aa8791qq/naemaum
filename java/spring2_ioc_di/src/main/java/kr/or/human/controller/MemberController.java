@@ -43,7 +43,7 @@ public class MemberController {
 		
 		System.out.println(memberList);
 		
-		return "home"
+		return "home";
 	}
 	
 	
