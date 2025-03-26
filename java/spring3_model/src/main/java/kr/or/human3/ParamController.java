@@ -7,12 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class LoginController {
+public class ParamController {
 
 	// 로그인 페이지 표시 목적
 	@RequestMapping("/login.do")
@@ -122,5 +123,19 @@ public class LoginController {
 		// 리턴타입이 void 또는 리턴 값이 null일때
 		// @requestmapping의 주소 중 마지막 쩜 앞의 글씨를 viewResolver로 보냄
 		
+	}
+	
+	@RequestMapping("/login8/{id}")
+	public String login8(@PathVariable("id") String id) {
+		System.out.println("id " + id);
+		return "result";
+	}
+	
+	@RequestMapping("/login9/{month}/add/{day}")
+	public String login9(@PathVariable("month") String m, @PathVariable("day") int d) {
+		// PathVariable를 생략하지 못한다.
+		System.out.println("m " + m);
+		System.out.println("d " + d);
+		return "result";
 	}
 }
