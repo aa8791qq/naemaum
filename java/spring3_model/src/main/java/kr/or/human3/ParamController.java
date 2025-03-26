@@ -9,10 +9,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/ive")
 public class ParamController {
 
 	// 로그인 페이지 표시 목적
@@ -138,4 +140,49 @@ public class ParamController {
 		System.out.println("d " + d);
 		return "result";
 	}
+	
+	@RequestMapping("/login10")
+	public String login10() {
+		return "result";
+	}
+	
+	@RequestMapping(value="/login11", method=RequestMethod.GET)
+	public String login11() {
+		return "result";
+	}
+	
+	@RequestMapping(value="/login12", method= {RequestMethod.GET, RequestMethod.POST})
+	public String login12() {
+		return "result";
+	}
+	
+	@RequestMapping(value={"/login13", "/login14"})
+	public String login13() {
+		System.out.println("13또는 14");
+		return "result";
+	}
+	
+	@RequestMapping(value="/login15",  method=RequestMethod.GET)
+	public String login15() {
+		System.out.println("15의 get");
+		return "result";
+	}
+	
+	@RequestMapping(value="/login15",  method=RequestMethod.POST)
+	public String login15_1() {
+		System.out.println("15의 Post");
+		return "result";
+	}
+	
+	@RequestMapping(value="/login16")
+	public String login16_1() {
+		System.out.println("16");
+		return "result";
+	}
+	
+//	@RequestMapping(value="/login16")
+//	public String login16_2() {
+//		System.out.println("16");
+//		return "result";
+//	}
 }
