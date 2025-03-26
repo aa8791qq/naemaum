@@ -110,6 +110,11 @@ public class ParamController {
 		return "redirect:login.do"; //샌드리다이렉트 방식
 	}
 	
+	@RequestMapping("/login5_1")
+	public String login5_1() { // res, req 다 보내줌(리다이렉트)
+		return "forward:login.do"; //포워드 방식
+	}
+	
 	@RequestMapping("/login6")
 	public String login6(Model model) {
 		
