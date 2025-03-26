@@ -73,28 +73,24 @@ public class LoginController {
 	}
 
 	@RequestMapping("/login3")
-
 	public ModelAndView login3(
-			// DTO에 알아서 넣어줌(파라메터에서 꺼내서)
-			@ModelAttribute
-			MemberDTO dto1, 
-			
-			//dto를 자동으로 채우고 모델에 넣어주기 까지 채워줌
-			//model에 mav.addObject("dto22", dto2) 생략가능
-			@ModelAttribute("dto22")
-			MemberDTO dto2,
-			
-			// DTO 타입의 앞글자만 소문자로 변경한 key로 모델에 넣어준다.
-			// @ModelAttribute("memberDTO")
-			MemberDTO dto3
-			) {
-		System.out.println("dto1 : "+ dto1);
+		// DTO에 알아서 넣어줌(파라메터에서 꺼내서)
+		@ModelAttribute MemberDTO dto1,
 
-		ModelAndView mav = new ModelAndView("result");
-		
-		mav.addObject("dto11", dto1);
-		
-		return mav;
-		
+		// dto를 자동으로 채우고 모델에 넣어주기 까지 채워줌
+		// model에 mav.addObject("dto22", dto2) 생략가능
+		@ModelAttribute("dto22") MemberDTO dto2,
+
+		// DTO 타입의 앞글자만 소문자로 변경한 key로 모델에 넣어준다.
+		// @ModelAttribute("memberDTO")
+		MemberDTO dto3) {
+			System.out.println("dto1 : " + dto1);
+	
+			ModelAndView mav = new ModelAndView("result");
+	
+			mav.addObject("dto11", dto1);
+	
+			return mav;
+
 	}
 }
