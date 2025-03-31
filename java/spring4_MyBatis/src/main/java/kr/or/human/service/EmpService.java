@@ -12,4 +12,5 @@ public interface EmpService {
 //	public EmpDTO getEmp1();
 	
 	public EmpDTO getEmpnoAsk();
+	public EmpDTO getEmpnoAsk2();
 }

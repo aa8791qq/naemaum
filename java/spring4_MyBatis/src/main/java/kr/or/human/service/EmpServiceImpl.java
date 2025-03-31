@@ -30,4 +30,9 @@ public class EmpServiceImpl implements EmpService {
 		EmpDTO list = empDAO.selectEmpnoAsk();
 		return list;
 	}
+	
+	public EmpDTO getEmpnoAsk2() {
+		EmpDTO list = empDAO.selectEmpnoAsk();
+		return list;
+	}
 }

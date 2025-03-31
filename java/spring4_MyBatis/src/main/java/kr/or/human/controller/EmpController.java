@@ -44,10 +44,21 @@ public class EmpController {
 		return "emp";
 	}
 	
-	@RequestMapping(value ="/emp5", method = RequestMethod.PUT) 
-	public String modifyEmp(Model model) {
-		System.out.println("들어왔어");
-		// 실제 update 장소
+//	@RequestMapping(value ="/emp5", method = RequestMethod.PUT) 
+//	public String modifyEmp(Model model) {
+//		System.out.println("들어왔어");
+//		// 실제 update 장소
+//		
+//	}
+	
+	@RequestMapping(value="/emp", method=RequestMethod.GET)
+	public String listEmp(Model model) {
 		
+		List<EmpDTO> list = empService.getEmpList();
+		System.out.println("list.size : "+ list.size());
+		
+		model.addAttribute("list", list);
+		
+		return "emp";
 	}
 }

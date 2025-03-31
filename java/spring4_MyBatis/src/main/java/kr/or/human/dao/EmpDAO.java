@@ -12,5 +12,6 @@ public interface EmpDAO {
 	public EmpDTO selectEmp1();
 	
 	public EmpDTO selectEmpnoAsk();
+	public EmpDTO selectEmpnoAsk2();
 	
 }
