@@ -23,5 +23,17 @@
 	<select id="selectEmpnoAsk" resultType = "empDTO" parameterType='int'>
 		select * from emp2 where empno = #{_parameter}
 	</select>
+	
+	<select id="selectEmpnoAsk" resultType = "empDTO" parameterType='string'>
+<!-- 	where ename = 'king' -->
+<!-- 	#{} : ''를 자동으로 붙여줌 | where ename = 'king' | where empno = 123 -->
+<!-- 	${} : ''를 안붙임 | where ename = king | where ename = '${_parameter}' -->
+		select * from emp2 where ename = #{_parameter}
+	</select>
+	
+	<select id="selectEmpnoAsk2" resultType = "empDTO" parameterType='empDTO'>
+<!-- 		getter 실행 -->
+		select * from emp2 where empno = #{empno}
+	</select>
 
 </mapper>
