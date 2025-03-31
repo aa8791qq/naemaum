@@ -7,5 +7,21 @@
 	<select id="selectEmp" resultType = "kr.or.human.dto.EmpDTO">
 		select * from emp2
 	</select>
+	
+<!-- 	놓침 -->
+	<select id="selectEmp1" resultType = "kr.or.human.dto.EmpDTO">
+		select * from emp2 where ename like 'S%'
+	</select>
+	
+<!-- 	놓침 -->
+	<!-- 	<select id="selectEmp1" resultType = "java.util.HashMap"> -->
+	<select id="selectEmp1map" resultType = "hashMap">
+		select * from emp2 where ename like 'S%'
+	</select>
+	
+<!-- 	parameterType = "java.lang.Integer"  -->
+	<select id="selectEmpnoAsk" resultType = "empDTO" parameterType='int'>
+		select * from emp2 where empno = #{_parameter}
+	</select>
 
 </mapper>

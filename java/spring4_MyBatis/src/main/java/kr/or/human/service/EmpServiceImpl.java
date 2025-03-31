@@ -16,6 +16,18 @@ public class EmpServiceImpl implements EmpService {
 	
 	@Override
 	public List<EmpDTO> getEmpList(){
-		return null;
+		List list = empDAO.selectEmplist();
+		return list;
+	}
+	
+//	놓침
+//	public EmpDTO getEmp1() {
+//		EmpDTO list = empDAO.selectEmp1();
+//		return list;
+//	}
+	
+	public EmpDTO getEmpnoAsk() {
+		EmpDTO list = empDAO.selectEmpnoAsk();
+		return list;
 	}
 }

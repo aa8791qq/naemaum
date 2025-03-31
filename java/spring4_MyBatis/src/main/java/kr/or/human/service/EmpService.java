@@ -7,4 +7,9 @@ import kr.or.human.dto.EmpDTO;
 public interface EmpService {
 
 	public List<EmpDTO> getEmpList();
+	
+//	놓침
+//	public EmpDTO getEmp1();
+	
+	public EmpDTO getEmpnoAsk();
 }

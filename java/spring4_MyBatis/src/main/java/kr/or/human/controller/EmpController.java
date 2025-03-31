@@ -24,4 +24,21 @@ public class EmpController {
 		return "emp";
 	}
 	
+//	놓침
+//	@RequestMapping(value ="/emp1", method = RequestMethod.GET) 
+//	public String Emp1() {
+//		System.out.println("들어왔어");
+//		EmpDTO a = empService.getEmp1();
+//		System.out.println("a : " + a);
+//		return "emp";
+//	}
+	
+	@RequestMapping(value ="/emp1", method = RequestMethod.GET) 
+	public String EmpAsk() {
+		System.out.println("들어왔어");
+		EmpDTO c = empService.getEmpnoAsk();
+		System.out.println("c : " + c);
+		return "emp";
+	}
+	
 }
