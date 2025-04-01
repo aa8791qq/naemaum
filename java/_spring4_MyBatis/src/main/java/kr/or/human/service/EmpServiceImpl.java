@@ -38,4 +38,10 @@ public class EmpServiceImpl implements EmpService {
 		return dto;
 	}
 	
+	@Override // 놓침
+	public int modifyEmp(EmpDTO empDTO) {
+		int upc = empDAO.updateEmp(empDTO);
+		return upc;
+	}
+	
 }

@@ -83,6 +83,10 @@ public class EmpController {
 		
 		System.out.println(empDTO);
 		
+		//놓침
+		int upc = empService.modifyEmp(empDTO);
+		System.out.println("없다는데 : " + upc);
+		
 		////////////////////////
 		return "redirect : emp";
 	}

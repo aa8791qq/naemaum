@@ -54,7 +54,7 @@
 		where empno = #{empno}
 		
 	</select>
-	
+<!-- 	이해완료부분 -->
 	<update id = "updateEmp" parameterType="empDTO">
 		update emp2
 			set ename = #{ename},
