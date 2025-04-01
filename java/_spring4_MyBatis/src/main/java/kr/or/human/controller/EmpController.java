@@ -77,4 +77,14 @@ public class EmpController {
 //		// 실제로 update 실행하는 곳
 //	}
 	
+	@RequestMapping(value="/emp", method=RequestMethod.POST)
+	public String modifyEmp2(Model model, @ModelAttribute EmpDTO empDTO) {
+		// 실제로 update 실행하는 곳
+		
+		System.out.println(empDTO);
+		
+		////////////////////////
+		return "redirect : emp";
+	}
+	
 }
