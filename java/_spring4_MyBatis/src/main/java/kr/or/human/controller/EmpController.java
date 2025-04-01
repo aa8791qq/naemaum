@@ -91,4 +91,11 @@ public class EmpController {
 		return "redirect:emp";
 	}
 	
+	@RequestMapping(value="/emp1111")
+	public String insertEmp(EmpDTO empDTO) {
+		System.out.println(empDTO);
+		
+		return "insertEmp"; // 임시 리턴장소
+	}
+	
 }

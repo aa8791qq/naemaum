@@ -46,5 +46,11 @@ public class EmpDAOImpl implements EmpDAO {
 		int upc = sqlSession.update("mapper.emp.updateEmp", empDTO);
 		return upc;
 	}
+	
+	@Override
+	public int insertEmp(EmpDTO empDTO) {
+		int dto = sqlSession.insert("mapper.emp.insertEmp", empDTO);
+		return dto;
+	}
 
 }

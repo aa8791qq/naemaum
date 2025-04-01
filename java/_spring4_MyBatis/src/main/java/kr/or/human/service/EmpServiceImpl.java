@@ -44,4 +44,10 @@ public class EmpServiceImpl implements EmpService {
 		return upc;
 	}
 	
+	@Override // stop
+	public int insertEmp(EmpDTO empDTO) {
+		int dto = empDAO.insertEmp(empDTO);
+		return dto;				
+	}
+	
 }
