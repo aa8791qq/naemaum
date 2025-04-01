@@ -36,4 +36,16 @@ public class EmpDAOImpl implements EmpDAO {
 		return result;
 	}
 
+	@Override
+	public EmpDTO selectEmpnoAsk2() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmpDTO updateEmp(EmpDTO empDTO) {
+		sqlsession.update("", empDTO);
+		return dto;
+	}
+
 }

@@ -35,5 +35,7 @@
 <!-- 		getter 실행 -->
 		select * from emp2 where empno = #{empno}
 	</select>
+	
+	
 
 </mapper>
