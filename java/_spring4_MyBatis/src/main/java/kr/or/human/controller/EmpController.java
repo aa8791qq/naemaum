@@ -88,7 +88,7 @@ public class EmpController {
 		System.out.println("없다는데 : " + upc);
 		
 		////////////////////////
-		return "redirect : emp";
+		return "redirect:emp";
 	}
 	
 }

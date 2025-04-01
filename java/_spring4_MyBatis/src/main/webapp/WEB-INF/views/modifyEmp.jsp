@@ -39,33 +39,33 @@
 	<input type="submit" id="modify" value="수정하기">
 </form>
 
-<script>
-// 	const empno = '${dto.empno}'
-	document.querySelector("#modify").addEventListener("click", function(event){
-		event.preventDefault();
-// 		document.querySelector("#form").submit()
+<!-- <script> -->
+// // 	const empno = '${dto.empno}'
+// 	document.querySelector("#modify").addEventListener("click", function(event){
+// 		event.preventDefault();
+// // 		document.querySelector("#form").submit()
 
-		let param = {
-			empno: empno,
-			ename: ename,
-			...
-		}
+// 		let param = {
+// 			empno: empno,
+// 			ename: ename,
+// 			...
+// 		}
 
-		// ajax
-		const xhr = XMLHttpRequest()
-		xhr.open('put', 'emp')
-		xhr.setReqeustHeader('Content-Type', 'application/json')
-		xhr.send( JSON.stringify(param) )
-		xhr.onload = function(){
-			if(xhr.responseText == '1'){
-				alert('수정 완료')
-				location.href = 'emp'
-			} else {
-				alert('수정 실패')
-			}
-		}
-	})
+// 		// ajax
+// 		const xhr = XMLHttpRequest()
+// 		xhr.open('put', 'emp')
+// 		xhr.setReqeustHeader('Content-Type', 'application/json')
+// 		xhr.send( JSON.stringify(param) )
+// 		xhr.onload = function(){
+// 			if(xhr.responseText == '1'){
+// 				alert('수정 완료')
+// 				location.href = 'emp'
+// 			} else {
+// 				alert('수정 실패')
+// 			}
+// 		}
+// 	})
 
-</script>
+<!-- </script> -->
 </body>
 </html>
