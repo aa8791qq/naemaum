@@ -11,6 +11,6 @@ public interface EmpService {
 	public EmpDTO getEmpno(int empno);
 	public EmpDTO getEmpno2(EmpDTO empDTO);
 	public int modifyEmp(EmpDTO empDTO); // 놓침
-	public int insertEmp(EmpDTO empDTO);
+	public int insertEmp(EmpDTO empDTO); //get, post 메소드
 	
 }

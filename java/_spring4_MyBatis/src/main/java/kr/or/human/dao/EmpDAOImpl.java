@@ -47,7 +47,7 @@ public class EmpDAOImpl implements EmpDAO {
 		return upc;
 	}
 	
-	@Override
+	@Override //get, post 메소드
 	public int insertEmp(EmpDTO empDTO) {
 		int dto = sqlSession.insert("mapper.emp.insertEmp", empDTO);
 		return dto;

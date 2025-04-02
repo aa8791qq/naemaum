@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -92,10 +93,23 @@ public class EmpController {
 		return "redirect:emp";
 	}
 	
-	@RequestMapping(value="/emp1111", method=RequestMethod.GET)
-	public String insertEmp(EmpDTO empDTO) {
+//	@RequestMapping(value="/emp1111", method=RequestMethod.GET)
+	@RequestMapping(value="/insertEmp", method=RequestMethod.GET)
+	public String insertEmpGet(EmpDTO empDTO) {
+		
+		
+		
 		System.out.println(empDTO);
 		
+		return "insertEmp"; // 임시 리턴장소
+	}
+	@RequestMapping(value="/insertEmp", method=RequestMethod.POST)
+	public String insertEmpPost(@RequestBody EmpDTO empDTO) {
+		
+
+		
+		System.out.println(empDTO);
+		// 전달, 확인, db삽입
 		return "insertEmp"; // 임시 리턴장소
 	}
 	

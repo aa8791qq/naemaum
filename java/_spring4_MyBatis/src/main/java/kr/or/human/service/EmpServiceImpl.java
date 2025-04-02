@@ -44,7 +44,7 @@ public class EmpServiceImpl implements EmpService {
 		return upc;
 	}
 	
-	@Override // stop
+	@Override // stop //get, post 메소드
 	public int insertEmp(EmpDTO empDTO) {
 		int dto = empDAO.insertEmp(empDTO);
 		return dto;				
