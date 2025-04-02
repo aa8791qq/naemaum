@@ -10,42 +10,64 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="get" action="detailEmp">
 		<table border="1">
 			<tr>
-				<th>empno</th>
-				<td><input type="text" name="empno" value="${dto.empno}"></td>
-			</tr>
-			<tr>
 				<th>ename</th>
-				<td><input type="text" name="ename" value="${dto.ename}"></td>
+				<td><input type="text" name="ename"></td>
 			</tr>
 			<tr>
 				<th>sal</th>
-				<td><input type="text" name="sal" value="${dto.sal}"></td>
+				<td><input type="text" name="sal""></td>
 			</tr>
 			<tr>
 				<th>comm</th>
-				<td><input type="text" name="comm" value="${dto.comm}"></td>
+				<td><input type="text" name="comm""></td>
 			</tr>
 			<tr>
 				<th>hiredate</th>
-				<td><input type="date" name="hiredate" value="${dto.hiredate}"></td>
+				<td><input type="date" name="hiredate"></td>
 			</tr>
 			<tr>
 				<th>deptno</th>
-				<td><input type="text" name="deptno" value="${dto.deptno}"></td>
+				<td><input type="text" name="deptno"></td>
 			</tr>
 			<tr>
 				<th>job</th>
-				<td><input type="text" name="job" value="${dto.job}"></td>
+				<td><input type="text" name="job"></td>
 			</tr>
 			<tr>
 				<th>mgr</th>
-				<td><input type="text" name="mgr" value="${dto.mgr}"></td>
+				<td><input type="text" name="mgr"></td>
 			</tr>
 		</table>
-		<button type="submit" id="insert">등록하기</button>
-	</form>
+		<input type="submit" value = "등록하기">
+		
+		<script>
+// 	const empno = '${dto.empno}'
+	document.querySelector("#modify").addEventListener("click", function(event){
+ 		event.preventDefault();
+//		document.querySelector("#form").submit()
+
+ 		let param = {
+ 			empno: empno,
+ 			ename: ename,
+ 			...
+ 		}
+
+ 		// ajax
+ 		const xhr = XMLHttpRequest()
+ 		xhr.open('put', 'emp')
+ 		xhr.setReqeustHeader('Content-Type', 'application/json')
+ 		xhr.send( JSON.stringify(param) )
+ 		xhr.onload = function(){
+ 			if(xhr.responseText == '1'){
+ 				alert('수정 완료')
+ 				location.href = 'emp'
+ 			} else {
+ 				alert('수정 실패')
+ 			}
+ 		}
+ 	})
+</script>
 </body>
 </html>
