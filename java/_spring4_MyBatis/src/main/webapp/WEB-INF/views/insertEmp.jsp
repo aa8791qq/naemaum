@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="emp">
+	<form method="get" action="detailEmp">
 		<table border="1">
 			<tr>
 				<th>empno</th>
@@ -45,7 +45,7 @@
 				<td><input type="text" name="mgr" value="${dto.mgr}"></td>
 			</tr>
 		</table>
-		<a herf = "emp"><input type="submit" id="insert" value="등록하기"></a>
+		<button type="submit" id="insert">등록하기</button>
 	</form>
 </body>
 </html>

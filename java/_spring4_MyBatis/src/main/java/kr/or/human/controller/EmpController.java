@@ -46,13 +46,14 @@ public class EmpController {
 		System.out.println("conroller dto : "+ dto);
 		return "emp";
 	}
-	@RequestMapping(value="/detailEmp", method=RequestMethod.GET)
+	@RequestMapping(value="/detailEmp", method=RequestMethod.POST)
 	public String empno2(
 			@ModelAttribute
 			EmpDTO empDTO,
 			
 			Model model
 			) {
+		System.out.println(empDTO);
 		EmpDTO dto = empService.getEmpno2(empDTO);
 		System.out.println("conroller empno2 : "+ dto);
 		model.addAttribute("dto", dto);
@@ -77,7 +78,7 @@ public class EmpController {
 //		// 실제로 update 실행하는 곳
 //	}
 	
-	@RequestMapping(value="/emp", method=RequestMethod.POST)
+	@RequestMapping(value="/emp2", method=RequestMethod.POST)
 	public String modifyEmp2(Model model, @ModelAttribute EmpDTO empDTO) {
 		// 실제로 update 실행하는 곳
 		
@@ -91,7 +92,7 @@ public class EmpController {
 		return "redirect:emp";
 	}
 	
-	@RequestMapping(value="/emp1111")
+	@RequestMapping(value="/emp1111", method=RequestMethod.GET)
 	public String insertEmp(EmpDTO empDTO) {
 		System.out.println(empDTO);
 		

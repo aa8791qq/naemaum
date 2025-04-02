@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="emp">
+<form method="post" action="emp2">
 	<table border="1">
 		<tr>
 		    <th>empno</th>

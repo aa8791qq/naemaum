@@ -33,6 +33,8 @@
 	    <td>${dto.hiredate}</td>
 	</tr>
 </table>
+
+	
 <a href="modifyEmp?empno=${dto.empno}"><button type="button">수정</button></a>
 <a href="emp"><button type="button">삭제</button></a>
 </body>

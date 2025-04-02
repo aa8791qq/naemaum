@@ -34,7 +34,7 @@
 			</c:if>
 		</tbody>
 	</table>
-	<a href="insertEmp"><input type="button" id="insert" value="등록하기"></a>
+	<a href="emp1111"><input type="submit" id="insert" value="등록하기"></a>
 
 </body>
 </html>
