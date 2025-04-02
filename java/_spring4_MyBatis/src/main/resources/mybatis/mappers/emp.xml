@@ -7,77 +7,86 @@
 	<select id="selectEmp" resultType="kr.or.human.dto.EmpDTO">
 		select * from emp2
 	</select>
-	
+
 	<select id="selectOneEmp" resultType="kr.or.human.dto.EmpDTO">
-		select * from emp2 
+		select * from emp2
 		where empno = 77888
 	</select>
-<!-- 	<select id="selectOneEmpMap" resultType="java.util.HashMap"> -->
+	<!-- <select id="selectOneEmpMap" resultType="java.util.HashMap"> -->
 	<select id="selectOneEmpMap" resultType="hashmap">
-		select * from emp2 
+		select * from emp2
 		where empno = 7788
 	</select>
-	
-<!-- 		parameterType="java.lang.Integer"> -->
-	<select id="selectEmpno" 
-		resultType="empDTO"
-		parameterType="int">
-		
-		select * from emp2 
+
+	<!-- parameterType="java.lang.Integer"> -->
+	<select id="selectEmpno" resultType="empDTO" parameterType="int">
+
+		select * from emp2
 		where empno = #{_parameter}
-		
-	</select>
-	
-	<select id="selectEmpno0" 
-		resultType="empDTO"
-		parameterType="string">
-		
-		select * from emp2 
-		where ename = #{_parameter}
-		<!-- 
-			#{} : ''를 자동으로 붙여줌
-			where ename = 'KING'
-			where empno = 123
-			
-			${} : ''를 안붙임
-			where ename = KING
-			그래서
-			where ename = '${_parameter}'
-		 -->
+
 	</select>
 
-	<select id="selectEmpno2" 
-		resultType="empDTO"
-		parameterType="empDTO">
-		
-		select * from emp2 
-		where empno = #{empno}
-		
+	<select id="selectEmpno0" resultType="empDTO"
+		parameterType="string">
+
+		select * from emp2
+		where ename = #{_parameter}
+		<!-- #{} : ''를 자동으로 붙여줌 where ename = 'KING' where empno = 123 ${} : ''를 
+			안붙임 where ename = KING 그래서 where ename = '${_parameter}' -->
 	</select>
-<!-- 	이해완료부분 -->
-	<update id = "updateEmp" parameterType="empDTO">
+
+	<select id="selectEmpno2" resultType="empDTO"
+		parameterType="empDTO">
+
+		select * from emp2
+		where empno = #{empno}
+
+	</select>
+	<!-- 이해완료부분 -->
+	<update id="updateEmp" parameterType="empDTO">
 		update emp2
-			set ename = #{ename},
-			sal = #{sal},
-			comm = #{comm},
-			hiredate = #{hiredate}
+		set ename = #{ename},
+		sal = #{sal},
+		comm = #{comm},
+		hiredate = #{hiredate}
 		where empno = #{empno}
 	</update>
-	
+
 	<insert id="insertEmp" parameterType="empDTO">
 		INSERT INTO emp2
-			values
-				empno = #{empno},
-				ename = #{ename},
-				job = #{job},
-				mgr = #{mgr},
-				hiredate = #{hiredate},
-				sal = #{sal},
-				comm = #{comm},
-				deptno = #{deptno},
+		values
+		empno = seq_emp2.nextval,
+		ename = #{ename},
+		job = #{job},
+		mgr = #{mgr},
+		hiredate = #{hiredate},
+		sal = #{sal},
+		comm = #{comm},
+		deptno = #{deptno}
 	</insert>
+
+	<!-- <delete id=""> -->
+
+	<!-- </delete> -->
+
+<!-- 	<select id="getSeq" resultType="int"> -->
+<!-- 		select seq_emp2.nextval from daul -->
+<!-- 	</select> -->
 	
-<!-- 	<delete id=""> -->
 	
-<!-- 	</delete> -->
+<!-- 	<insert id ="insertEmp2" parameterType="empDTO"> -->
+<!-- <selectKey keyProperty = "empno" resultType = "int order = BEFORE"> -->
+<!-- 	select seq_emp2.nextval from daul -->
+<!-- </selectKey> -->
+<!-- 		insert into emp2 (empno, ename, sal, comm, mgr, hiredate) -->
+<!-- 		values ( #{empno}, #{ename}, #{sal), #{comm), #{mgr), #{hiredate) -->
+<!-- 	</insert> -->
+	
+	<select id = "selectFillter" resultType = "empDTO" parameterType = "empDTO">
+		select * from emp2 where upper(ename) like upper('%' || #{ename} || '%');
+	</select>
+	
+	
+	
+	
 </mapper>

@@ -52,5 +52,12 @@ public class EmpDAOImpl implements EmpDAO {
 		int dto = sqlSession.insert("mapper.emp.insertEmp", empDTO);
 		return dto;
 	}
+	
+	@Override
+	public List<EmpDTO> selectFillter(EmpDTO EmpDTO) {
+		List<EmpDTO> result = sqlSession.selectList("mapper.emp.dynamic");
+		System.out.println("result : "+ result);
+		return result;
+	}
 
 }

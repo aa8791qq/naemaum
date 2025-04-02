@@ -16,101 +16,88 @@ import kr.or.human.service.EmpService;
 
 @Controller
 public class EmpController {
-	
+
 	@Autowired
 	EmpService empService;
 
-	@RequestMapping(value="/emp", method=RequestMethod.GET)
+	@RequestMapping(value = "/emp", method = RequestMethod.GET)
 	public String listEmp(Model model) {
-		
+
 		List<EmpDTO> list = empService.getEmpList();
-		System.out.println("list.size : "+ list.size());
-		
+		System.out.println("list.size : " + list.size());
+
 		model.addAttribute("list", list);
-		
+
 		return "emp";
 	}
 
-	@RequestMapping(value="/empOne", method=RequestMethod.GET)
+	@RequestMapping(value = "/empOne", method = RequestMethod.GET)
 	public String empOne() {
 		EmpDTO dto = empService.getEmpOne();
-		System.out.println("conroller dto : "+ dto);
+		System.out.println("conroller dto : " + dto);
 		return "emp";
 	}
-	
-	@RequestMapping(value="/empno", method=RequestMethod.GET)
-	public String empno(
-			@RequestParam("empno")
-			int empno
-	) {
+
+	@RequestMapping(value = "/empno", method = RequestMethod.GET)
+	public String empno(@RequestParam("empno") int empno) {
 		EmpDTO dto = empService.getEmpno(empno);
-		System.out.println("conroller dto : "+ dto);
+		System.out.println("conroller dto : " + dto);
 		return "emp";
 	}
-	@RequestMapping(value="/detailEmp", method=RequestMethod.POST)
-	public String empno2(
-			@ModelAttribute
-			EmpDTO empDTO,
-			
-			Model model
-			) {
+
+	@RequestMapping(value = "/detailEmp", method = RequestMethod.POST)
+	public String empno2(@ModelAttribute EmpDTO empDTO,
+
+			Model model) {
 		System.out.println(empDTO);
 		EmpDTO dto = empService.getEmpno2(empDTO);
-		System.out.println("conroller empno2 : "+ dto);
+		System.out.println("conroller empno2 : " + dto);
 		model.addAttribute("dto", dto);
 		return "detailEmp";
 	}
-	
-	@RequestMapping(value="/modifyEmp", method=RequestMethod.GET)
-	public String modifyEmp(
-			@ModelAttribute
-			EmpDTO empDTO,
-			
-			Model model
-			) {
+
+	@RequestMapping(value = "/modifyEmp", method = RequestMethod.GET)
+	public String modifyEmp(@ModelAttribute EmpDTO empDTO,
+
+			Model model) {
 		EmpDTO dto = empService.getEmpno2(empDTO);
 		model.addAttribute("dto", dto);
 		return "modifyEmp";
 	}
-	
-	
+
 //	@RequestMapping(value="/emp", method=RequestMethod.PUT)
 //	public String modifyEmp(Model model) {
 //		// 실제로 update 실행하는 곳
 //	}
-	
-	@RequestMapping(value="/emp2", method=RequestMethod.POST)
+
+	@RequestMapping(value = "/emp2", method = RequestMethod.POST)
 	public String modifyEmp2(Model model, @ModelAttribute EmpDTO empDTO) {
 		// 실제로 update 실행하는 곳
-		
+
 		System.out.println(empDTO);
-		
-		//놓침
+
+		// 놓침
 		int upc = empService.modifyEmp(empDTO);
 		System.out.println("없다는데 : " + upc);
-		
+
 		////////////////////////
 		return "redirect:emp";
 	}
-	
-//	@RequestMapping(value="/emp1111", method=RequestMethod.GET)
-	@RequestMapping(value="/insertEmp", method=RequestMethod.GET)
-	public String insertEmpGet(EmpDTO empDTO) {
-		
-		
-		
-		System.out.println(empDTO);
-		
-		return "insertEmp"; // 임시 리턴장소
-	}
-	@RequestMapping(value="/insertEmp", method=RequestMethod.POST)
-	public String insertEmpPost(@RequestBody EmpDTO empDTO) {
-		
 
-		
+//	@RequestMapping(value="/emp1111", method=RequestMethod.GET)
+	@RequestMapping(value = "/insertEmp", method = RequestMethod.GET)
+	public String insertEmpGet(EmpDTO empDTO) {
+
 		System.out.println(empDTO);
-		// 전달, 확인, db삽입
+
 		return "insertEmp"; // 임시 리턴장소
 	}
-	
+
+	@RequestMapping(value = "/insertEmp", method = RequestMethod.POST)
+	public String insertEmpPost(@RequestBody EmpDTO empDTO) {
+		// 전달, 확인, db삽입
+		System.out.println("[POST] joinEmp empDTO : " + empDTO);
+		return "insertEmp"; // 임시 리턴장소
+	}
+
 }

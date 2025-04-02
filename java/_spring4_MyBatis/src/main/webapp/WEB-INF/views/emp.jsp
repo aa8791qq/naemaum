@@ -19,6 +19,8 @@
 	<main>
 
 		<a herf="insertEmp">등록</a><br>
+		<input type = "text" id = "filter" name = "filterC">
+		<button type = "button">검색</button>
 		<section>
 			<article>
 				<table border="1">

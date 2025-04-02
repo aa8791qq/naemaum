@@ -46,7 +46,7 @@
 
 	<script>
 // 	const empno = '${dto.empno}'
-	document.querySelector("#submit").addEventListener("click", function(event){
+	document.querySelector("#join").addEventListener("click", function(event){
  		event.preventDefault(); // 원래기능 삭제
 
  		let param = {
@@ -75,12 +75,14 @@
  			return resp.json()
  		}).then((data)=>{
  			console.log(data)
+ 			//if
  		}).catch((err)=>{
  			console.error('error : ', err)
  		})
+	})
  		
- 		//promise 강의
- 		//놓침 (promise는 resolve()또는 reject()가 실행될때 까지 기달려준다.)
+ 		//promise 강의( 다 놓침 )
+ 		//promise는 resolve()또는 reject()가 실행될때 까지 기달려준다.
 //  		function test(){
 //  			return new promise ( function (resolve, reject) {
 //  	 			setTimeout( functiom(){
@@ -122,21 +124,21 @@
  		
 //  	})
 
-// 놓침
-async function async_await(){
-	await new promise ( function (resolve, reject) {
-	setTimeout( function(){
-		if(a == 10){
-			a = 20
-			resolve(a)
-		} else {
-			reject('errrrrrrrrr')
-		}
-	}, 1000 )
-})
-	// 위엒 끝날때까지 기다렸다가 이거 실행함
-		console.log(1)
-	}
+
+// async function async_await(){
+// 	await new promise ( function (resolve, reject) {
+// 	setTimeout( function(){
+// 		if(a == 10){
+// 			a = 20
+// 			resolve(a)
+// 		} else {
+// 			reject('errrrrrrrrr')
+// 		}
+// 	}, 1000 )
+// })
+// 	// 위엒 끝날때까지 기다렸다가 이거 실행함
+// 		console.log(1)
+// 	}
 </script>
 </body>
 </html>
