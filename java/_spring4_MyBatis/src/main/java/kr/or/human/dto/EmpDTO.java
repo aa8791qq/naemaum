@@ -1,6 +1,6 @@
 package kr.or.human.dto;
 import java.sql.Date;
-import java.util.Map;
+import java.util.List;
 
 import lombok.Data;
 
@@ -22,5 +22,10 @@ public class EmpDTO {
 	private int sal;
 	private Integer comm;
 	private int deptno;
+	
+	private String type;
+	private String keyword;
+	
+	private List empnos;
 
 }

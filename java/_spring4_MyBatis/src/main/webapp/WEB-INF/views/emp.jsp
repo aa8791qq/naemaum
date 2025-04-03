@@ -7,48 +7,60 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원목록 | emp 관리 시스템</title>
+<title>회원 목록 | Emp관리시스템</title>
 </head>
 <body>
 
 	<header>
 		Logo
-		<nav>emp 관리 > 회원목록</nav>
+		<nav>Emp관리시스템 > 회원 목록</nav>
 	</header>
-
 	<main>
-
-		<a herf="insertEmp">등록</a><br>
-		<input type = "text" id = "filter" name = "filterC">
-		<button type = "button">검색</button>
+		<a href="joinEmp">등록</a><br>
+		<form method="get" action="emp">
+			<select name="type">
+				<option value="ename">ename</option>
+				<option value="sal">sal(이상)</option>
+				<option value="ej">ename + job</option>
+			</select> <input type="text" id="search" name="keyword" value="${dto.ename }">
+			<button type="submit">검색</button>
+		</form>
 		<section>
 			<article>
-				<table border="1">
-					<thead>
-						<tr>
-							<th>empno</th>
-							<th>ename</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:if test="${ not empty list }">
-							<c:forEach var="dto" items="${list}" varStatus="loop">
-								<tr>
-									<td>${dto.empno}</td>
-									<td><a href="detailEmp?empno=${dto.empno}">${dto.ename}</a></td>
-								</tr>
-							</c:forEach>
-						</c:if>
-						<c:if test="${ empty list }">
+				<form method="get" action="emp">
+					<table border="1">
+						<thead>
 							<tr>
-								<td colspan=2>조회 내용이 없습니다</td>
+								<th>선택</th>
+								<th>empno</th>
+								<th>ename</th>
+								<th>sal</th>
 							</tr>
-						</c:if>
-					</tbody>
-				</table>
+						</thead>
+						<tbody>
+							<c:if test="${ not empty list }">
+								<c:forEach var="dto" items="${list}" varStatus="loop">
+									<tr>
+										<td>
+										<input type = "checkbox" name="empnos" value ="${dto.empno }">
+										</td>
+										<td>${dto.sempno}</td>
+										<td><a href="detailEmp?empno=${dto.empno}">${dto.ename}</a></td>
+										<td>${dto.sal}</td>
+									</tr>
+								</c:forEach>
+							</c:if>
+							<c:if test="${ empty list }">
+								<tr>
+									<td colspan=2>조회 내용이 없습니다</td>
+								</tr>
+							</c:if>
+
+						</tbody>
+					</table>
+				</form>
 			</article>
 		</section>
-		<a href="insertEmp"><input type="submit" id="insert" value="등록하기"></a>
 	</main>
 </body>
 </html>
