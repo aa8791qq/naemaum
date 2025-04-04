@@ -2,6 +2,8 @@ package kr.or.human.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +24,20 @@ public class EmpController {
 	EmpService empService;
 
 	@RequestMapping(value="/emp", method=RequestMethod.GET)
-	public String listEmp(Model model, EmpDTO dto) {
+	public String listEmp(Model model, @ModelAttribute EmpDTO dto, HttpServletRequest req) {
+		
+		System.out.println(dto);
+		
+		// 놓? //DTO에 박으면 불필요한 코드
+//		int page = 1;
+//		String strpage = req.getParameter("page");
+//		if(strpage != null) {
+//			page = Integer.parseInt(strpage);
+//		}
+//		
+//		int viewCount = 3;
+//		dto.setPage(page);
+//		dto.setViewCount(viewCount);
 		
 //		List<EmpDTO> list = empService.getEmpList();
 		List<EmpDTO> list = empService.getEmpSearchList(dto);

@@ -19,7 +19,7 @@ public class EmpDTO {
 	private String job;
 	private int mgr;
 	private Date hiredate;
-	private int sal;
+	private int sal = -1;
 	private Integer comm;
 	private int deptno;
 	
@@ -27,5 +27,10 @@ public class EmpDTO {
 	private String keyword;
 	
 	private List empnos;
+	
+	private int page = 1; // 현페이지
+	private int viewCount = 10; // 페이지당 보여줄 수 있는 내용 갯수
+	private int indexStart;
+	private int indexEnd;
 
 }
