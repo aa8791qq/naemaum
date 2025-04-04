@@ -43,27 +43,27 @@
 
 	</select>
 	<!-- 이해완료부분 -->
-	<update id="updateEmp" parameterType="empDTO">
-		update emp2
-		set ename = #{ename},
-		sal = #{sal},
-		comm = #{comm},
-		hiredate = #{hiredate}
-		where empno = #{empno}
-	</update>
+<!-- 	<update id="updateEmp" parameterType="empDTO"> -->
+<!-- 		update emp2 -->
+<!-- 		set ename = #{ename}, -->
+<!-- 		sal = #{sal}, -->
+<!-- 		comm = #{comm}, -->
+<!-- 		hiredate = #{hiredate} -->
+<!-- 		where empno = #{empno} -->
+<!-- 	</update> -->
 
-	<insert id="insertEmp" parameterType="empDTO">
-		INSERT INTO emp2
-		values
-		empno = seq_emp2.nextval,
-		ename = #{ename},
-		job = #{job},
-		mgr = #{mgr},
-		hiredate = #{hiredate},
-		sal = #{sal},
-		comm = #{comm},
-		deptno = #{deptno}
-	</insert>
+<!-- 	<insert id="insertEmp" parameterType="empDTO"> -->
+<!-- 		INSERT INTO emp2 -->
+<!-- 		values -->
+<!-- 		empno = seq_emp2.nextval, -->
+<!-- 		ename = #{ename}, -->
+<!-- 		job = #{job}, -->
+<!-- 		mgr = #{mgr}, -->
+<!-- 		hiredate = #{hiredate}, -->
+<!-- 		sal = #{sal}, -->
+<!-- 		comm = #{comm}, -->
+<!-- 		deptno = #{deptno} -->
+<!-- 	</insert> -->
 
 	<!-- <delete id=""> -->
 

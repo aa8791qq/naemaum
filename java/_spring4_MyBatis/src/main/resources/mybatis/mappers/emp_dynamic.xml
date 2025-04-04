@@ -34,13 +34,15 @@
 
 	<select id="foreach" resultType="empDTO" parameterType="empDTO">
 		select * from emp2
-		<!-- where empno in (7566,7678) -->
+		where empno in (7566,7678)
 		<where>
-<!-- 		empno in -->
-<!-- 			<foreach item="item" collection = "empnos" open = "(" separator = "," close=")"> -->
-			<foreach item="item" collection = "empnos" open = "empno in (" separator = "," close=")">
-			#{item}
-			</foreach>
+			empno in
+<!-- 			<foreach item="item" collection="empnos" open="(" -->
+<!-- 				separator="," close=")"> -->
+				<foreach item="item" collection="empnos" open="empno in ("
+					separator="," close=")">
+					#{item}
+				</foreach>
 		</where>
 	</select>
 </mapper>

@@ -1,6 +1,7 @@
 package kr.or.human.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -40,7 +41,7 @@ public class EmpController {
 //		dto.setViewCount(viewCount);
 		
 //		List<EmpDTO> list = empService.getEmpList();
-		List<EmpDTO> list = empService.getEmpSearchList(dto);
+		Map<String, Object> list = empService.getEmpSearchList(dto);
 		System.out.println("list.size : "+ list.size());
 		
 		model.addAttribute("list", list);
