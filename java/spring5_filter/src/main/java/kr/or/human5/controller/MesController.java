@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.or.human5.dto.MemberDTO;
 
+//?
 @Controller
 public class MesController {
 
@@ -39,34 +40,42 @@ public class MesController {
 		}
 	}
 	
+	//놓침;
 	@RequestMapping("/main")
 	public String main(HttpServletRequest req) {
 		//로그인 한 사람만 보기
 		//안한 사람은 login 이동
 		
-		HttpSession session = req.getSession();
-		MemberDTO dto = (MemberDTO)session.getAttribute("dto");
-		
-		if(dto == null) {
-			return "redirect:login";
-		} else {
-			return "main";
-		}
+//		HttpSession session = req.getSession();
+//		MemberDTO dto = (MemberDTO)session.getAttribute("dto");
+//		
+//		if(dto == null) {
+//			return "redirect:login";
+//		} else {
+//			return "main";
+//		}
+//		
+		return "main";
 	}
 	
+	//놓침;
 	@RequestMapping("/main2")
 	public String main2(HttpServletRequest req) {
-		//로그인 한 사람만 보기
-		//안한 사람은 login 이동
+//		//로그인 한 사람만 보기
+//		//안한 사람은 login 이동
+//		
+//		HttpSession session = req.getSession();
+//		MemberDTO dto = (MemberDTO)session.getAttribute("dto");
+//		
+//		if(dto == null) {
+//			return "redirect:login";
+//		} else {
+//			return "main2";
+//		}
 		
-		HttpSession session = req.getSession();
-		MemberDTO dto = (MemberDTO)session.getAttribute("dto");
-		
-		if(dto == null) {
-			return "redirect:login";
-		} else {
-			return "main2";
-		}
+		return "main2";
 	}
+	
+	//------------------------------
 	
 }
