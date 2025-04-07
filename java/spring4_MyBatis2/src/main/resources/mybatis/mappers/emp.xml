@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.emp">
+
+	<!-- emp 테이블 전체 조회 -->
+	<select id="selectEmp" resultType="kr.or.human.dto.EmpDTO">
+		select * from emp;
+	</select>
+
+	<!-- ename이 'S'로 시작하는 사원 조회 -->
+	<!--
+	<select id="selectEmp1" resultType="kr.or.human.dto.EmpDTO">
+		select * from emp2 where ename like 'S%'
+	</select>
+	-->
+
+	<!-- HashMap으로 결과 받기 예시 -->
+	<!--
+	<select id="selectEmp1map" resultType="hashMap">
+		select * from emp2 where ename like 'S%'
+	</select>
+	-->
+
+	<!-- empno 정수형 파라미터로 조회 -->
+	<!--
+	<select id="selectEmpnoAsk" resultType="empDTO" parameterType="int">
+		select * from emp2 where empno = #{_parameter}
+	</select>
+	-->
+
+	<!-- ename 문자열 파라미터로 조회 -->
+	<!--
+	<select id="selectEmpnoAskByName" resultType="empDTO" parameterType="string">
+		select * from emp2 where ename = #{_parameter}
+	</select>
+	-->
+
+	<!-- EmpDTO 객체를 파라미터로 넘기는 경우 -->
+	<!--
+	<select id="selectEmpnoAsk2" resultType="empDTO" parameterType="empDTO">
+		select * from emp2 where empno = #{empno}
+	</select>
+	-->
+
+</mapper>
