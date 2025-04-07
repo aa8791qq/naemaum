@@ -22,8 +22,13 @@ public class Cfilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		// utf-8 세팅
 		request.setCharacterEncoding("utf-8");
-//		response.setContentType("text/html; charset=utf-8;");
+		// 내보낼때 무조건 html로 안하는게 좋음
+		// response.setContentType("text/html; charset=utf-8;");
+		
+		
+		
 	}
 
 	@Override
